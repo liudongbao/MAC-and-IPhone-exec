@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RaiseMan
+
+  Created by 冬宝 刘 on 12-5-27.
+  Copyright (c) 2012年 derrik.org. All rights reserved.
+*/
+"REMOVE_MSG" = "确定删除人员信息?";
+"REMOVE_INF" = "%d 人员将被删除";
+"REMOVE" = "删除";
+"CANCEL" = "取消";

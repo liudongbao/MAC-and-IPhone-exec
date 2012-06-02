@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		690A29A51565C99D0056DF2F /* OpenMortal.icns in Resources */ = {isa = PBXBuildFile; fileRef = 690A29A41565C99D0056DF2F /* OpenMortal.icns */; };
+		696E66E915723664007EFDE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696E66E715723664007EFDE2 /* Localizable.strings */; };
+		69745769154ADAA500448548 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69745768154ADAA500448548 /* Cocoa.framework */; };
+		69745773154ADAA500448548 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69745771154ADAA500448548 /* InfoPlist.strings */; };
+		69745775154ADAA500448548 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69745774154ADAA500448548 /* main.m */; };
+		69745779154ADAA500448548 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 69745777154ADAA500448548 /* Credits.rtf */; };
+		6974577C154ADAA500448548 /* RMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 6974577B154ADAA500448548 /* RMDocument.m */; };
+		6974577F154ADAA500448548 /* RMDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6974577D154ADAA500448548 /* RMDocument.xib */; };
+		69745782154ADAA500448548 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69745780154ADAA500448548 /* MainMenu.xib */; };
+		6974578A154ADB1A00448548 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 69745789154ADB1A00448548 /* Person.m */; };
+		69AF16E215687F7D007C6455 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AF16E115687F7D007C6455 /* AppController.m */; };
+		69AF16EC1568820C007C6455 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AF16EA1568820C007C6455 /* PreferenceController.m */; };
+		69AF16EF156882BD007C6455 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69AF16EE156882BD007C6455 /* Preferences.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		690A29A41565C99D0056DF2F /* OpenMortal.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OpenMortal.icns; sourceTree = "<group>"; };
+		696E66E61572331C007EFDE2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/RMDocument.xib"; sourceTree = "<group>"; };
+		696E66E815723664007EFDE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		696E66EA157240DF007EFDE2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		69745764154ADAA400448548 /* RaiseMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69745768154ADAA500448548 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6974576B154ADAA500448548 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		6974576C154ADAA500448548 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6974576D154ADAA500448548 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		69745770154ADAA500448548 /* RaiseMan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RaiseMan-Info.plist"; sourceTree = "<group>"; };
+		69745772154ADAA500448548 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		69745774154ADAA500448548 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		69745776154ADAA500448548 /* RaiseMan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RaiseMan-Prefix.pch"; sourceTree = "<group>"; };
+		69745778154ADAA500448548 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		6974577A154ADAA500448548 /* RMDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMDocument.h; sourceTree = "<group>"; };
+		6974577B154ADAA500448548 /* RMDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMDocument.m; sourceTree = "<group>"; };
+		6974577E154ADAA500448548 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RMDocument.xib; sourceTree = "<group>"; };
+		69745781154ADAA500448548 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		69745788154ADB1A00448548 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		69745789154ADB1A00448548 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		69AF16E015687F7D007C6455 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		69AF16E115687F7D007C6455 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		69AF16E91568820C007C6455 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferenceController.h; path = ../PreferenceController.h; sourceTree = "<group>"; };
+		69AF16EA1568820C007C6455 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferenceController.m; path = ../PreferenceController.m; sourceTree = "<group>"; };
+		69AF16EE156882BD007C6455 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69745761154ADAA400448548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69745769154ADAA500448548 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69745759154ADAA400448548 = {
+			isa = PBXGroup;
+			children = (
+				6974576E154ADAA500448548 /* RaiseMan */,
+				69745767154ADAA400448548 /* Frameworks */,
+				69745765154ADAA400448548 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69745765154ADAA400448548 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69745764154ADAA400448548 /* RaiseMan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69745767154ADAA400448548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69745768154ADAA500448548 /* Cocoa.framework */,
+				6974576A154ADAA500448548 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6974576A154ADAA500448548 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6974576B154ADAA500448548 /* AppKit.framework */,
+				6974576C154ADAA500448548 /* CoreData.framework */,
+				6974576D154ADAA500448548 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		6974576E154ADAA500448548 /* RaiseMan */ = {
+			isa = PBXGroup;
+			children = (
+				69745788154ADB1A00448548 /* Person.h */,
+				69745789154ADB1A00448548 /* Person.m */,
+				6974577A154ADAA500448548 /* RMDocument.h */,
+				6974577B154ADAA500448548 /* RMDocument.m */,
+				6974577D154ADAA500448548 /* RMDocument.xib */,
+				69AF16E91568820C007C6455 /* PreferenceController.h */,
+				69AF16EA1568820C007C6455 /* PreferenceController.m */,
+				69AF16EE156882BD007C6455 /* Preferences.xib */,
+				69AF16E015687F7D007C6455 /* AppController.h */,
+				69AF16E115687F7D007C6455 /* AppController.m */,
+				69745780154ADAA500448548 /* MainMenu.xib */,
+				6974576F154ADAA500448548 /* Supporting Files */,
+			);
+			path = RaiseMan;
+			sourceTree = "<group>";
+		};
+		6974576F154ADAA500448548 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				690A29A41565C99D0056DF2F /* OpenMortal.icns */,
+				69745770154ADAA500448548 /* RaiseMan-Info.plist */,
+				69745771154ADAA500448548 /* InfoPlist.strings */,
+				69745774154ADAA500448548 /* main.m */,
+				69745776154ADAA500448548 /* RaiseMan-Prefix.pch */,
+				69745777154ADAA500448548 /* Credits.rtf */,
+				696E66E715723664007EFDE2 /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69745763154ADAA400448548 /* RaiseMan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69745785154ADAA500448548 /* Build configuration list for PBXNativeTarget "RaiseMan" */;
+			buildPhases = (
+				69745760154ADAA400448548 /* Sources */,
+				69745761154ADAA400448548 /* Frameworks */,
+				69745762154ADAA400448548 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RaiseMan;
+			productName = RaiseMan;
+			productReference = 69745764154ADAA400448548 /* RaiseMan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6974575B154ADAA400448548 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 6974575E154ADAA400448548 /* Build configuration list for PBXProject "RaiseMan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+			);
+			mainGroup = 69745759154ADAA400448548;
+			productRefGroup = 69745765154ADAA400448548 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69745763154ADAA400448548 /* RaiseMan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69745762154ADAA400448548 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69745773154ADAA500448548 /* InfoPlist.strings in Resources */,
+				69745779154ADAA500448548 /* Credits.rtf in Resources */,
+				6974577F154ADAA500448548 /* RMDocument.xib in Resources */,
+				69745782154ADAA500448548 /* MainMenu.xib in Resources */,
+				690A29A51565C99D0056DF2F /* OpenMortal.icns in Resources */,
+				69AF16EF156882BD007C6455 /* Preferences.xib in Resources */,
+				696E66E915723664007EFDE2 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69745760154ADAA400448548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69745775154ADAA500448548 /* main.m in Sources */,
+				6974577C154ADAA500448548 /* RMDocument.m in Sources */,
+				6974578A154ADB1A00448548 /* Person.m in Sources */,
+				69AF16E215687F7D007C6455 /* AppController.m in Sources */,
+				69AF16EC1568820C007C6455 /* PreferenceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		696E66E715723664007EFDE2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				696E66E815723664007EFDE2 /* en */,
+				696E66EA157240DF007EFDE2 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		69745771154ADAA500448548 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69745772154ADAA500448548 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		69745777154ADAA500448548 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69745778154ADAA500448548 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		6974577D154ADAA500448548 /* RMDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6974577E154ADAA500448548 /* en */,
+				696E66E61572331C007EFDE2 /* zh-Hans */,
+			);
+			name = RMDocument.xib;
+			sourceTree = "<group>";
+		};
+		69745780154ADAA500448548 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69745781154ADAA500448548 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69745783154ADAA500448548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		69745784154ADAA500448548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		69745786154ADAA500448548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RaiseMan/RaiseMan-Prefix.pch";
+				INFOPLIST_FILE = "RaiseMan/RaiseMan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		69745787154ADAA500448548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RaiseMan/RaiseMan-Prefix.pch";
+				INFOPLIST_FILE = "RaiseMan/RaiseMan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6974575E154ADAA400448548 /* Build configuration list for PBXProject "RaiseMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69745783154ADAA500448548 /* Debug */,
+				69745784154ADAA500448548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69745785154ADAA500448548 /* Build configuration list for PBXNativeTarget "RaiseMan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69745786154ADAA500448548 /* Debug */,
+				69745787154ADAA500448548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6974575B154ADAA400448548 /* Project object */;
+}
