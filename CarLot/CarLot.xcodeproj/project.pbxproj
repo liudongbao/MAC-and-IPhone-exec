@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69DCEF961567D830005C5647 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DCEF951567D830005C5647 /* Cocoa.framework */; };
+		69DCEFA01567D830005C5647 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69DCEF9E1567D830005C5647 /* InfoPlist.strings */; };
+		69DCEFA21567D830005C5647 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DCEFA11567D830005C5647 /* main.m */; };
+		69DCEFA61567D830005C5647 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 69DCEFA41567D830005C5647 /* Credits.rtf */; };
+		69DCEFA91567D830005C5647 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DCEFA81567D830005C5647 /* Document.m */; };
+		69DCEFAC1567D830005C5647 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DCEFAA1567D830005C5647 /* Document.xib */; };
+		69DCEFAF1567D830005C5647 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DCEFAD1567D830005C5647 /* MainMenu.xib */; };
+		69DCEFB21567D830005C5647 /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69DCEFB01567D830005C5647 /* Document.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		69DCEF911567D830005C5647 /* CarLot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarLot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69DCEF951567D830005C5647 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		69DCEF981567D830005C5647 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		69DCEF991567D830005C5647 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		69DCEF9A1567D830005C5647 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		69DCEF9D1567D830005C5647 /* CarLot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarLot-Info.plist"; sourceTree = "<group>"; };
+		69DCEF9F1567D830005C5647 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		69DCEFA11567D830005C5647 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		69DCEFA31567D830005C5647 /* CarLot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarLot-Prefix.pch"; sourceTree = "<group>"; };
+		69DCEFA51567D830005C5647 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		69DCEFA71567D830005C5647 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		69DCEFA81567D830005C5647 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		69DCEFAB1567D830005C5647 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Document.xib; sourceTree = "<group>"; };
+		69DCEFAE1567D830005C5647 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		69DCEFB11567D830005C5647 /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69DCEF8E1567D830005C5647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69DCEF961567D830005C5647 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69DCEF861567D82F005C5647 = {
+			isa = PBXGroup;
+			children = (
+				69DCEF9B1567D830005C5647 /* CarLot */,
+				69DCEF941567D830005C5647 /* Frameworks */,
+				69DCEF921567D830005C5647 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69DCEF921567D830005C5647 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69DCEF911567D830005C5647 /* CarLot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69DCEF941567D830005C5647 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69DCEF951567D830005C5647 /* Cocoa.framework */,
+				69DCEF971567D830005C5647 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69DCEF971567D830005C5647 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69DCEF981567D830005C5647 /* AppKit.framework */,
+				69DCEF991567D830005C5647 /* CoreData.framework */,
+				69DCEF9A1567D830005C5647 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		69DCEF9B1567D830005C5647 /* CarLot */ = {
+			isa = PBXGroup;
+			children = (
+				69DCEFA71567D830005C5647 /* Document.h */,
+				69DCEFA81567D830005C5647 /* Document.m */,
+				69DCEFAA1567D830005C5647 /* Document.xib */,
+				69DCEFAD1567D830005C5647 /* MainMenu.xib */,
+				69DCEFB01567D830005C5647 /* Document.xcdatamodeld */,
+				69DCEF9C1567D830005C5647 /* Supporting Files */,
+			);
+			path = CarLot;
+			sourceTree = "<group>";
+		};
+		69DCEF9C1567D830005C5647 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69DCEF9D1567D830005C5647 /* CarLot-Info.plist */,
+				69DCEF9E1567D830005C5647 /* InfoPlist.strings */,
+				69DCEFA11567D830005C5647 /* main.m */,
+				69DCEFA31567D830005C5647 /* CarLot-Prefix.pch */,
+				69DCEFA41567D830005C5647 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69DCEF901567D830005C5647 /* CarLot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69DCEFB51567D830005C5647 /* Build configuration list for PBXNativeTarget "CarLot" */;
+			buildPhases = (
+				69DCEF8D1567D830005C5647 /* Sources */,
+				69DCEF8E1567D830005C5647 /* Frameworks */,
+				69DCEF8F1567D830005C5647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarLot;
+			productName = CarLot;
+			productReference = 69DCEF911567D830005C5647 /* CarLot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69DCEF881567D82F005C5647 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 69DCEF8B1567D82F005C5647 /* Build configuration list for PBXProject "CarLot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 69DCEF861567D82F005C5647;
+			productRefGroup = 69DCEF921567D830005C5647 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69DCEF901567D830005C5647 /* CarLot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69DCEF8F1567D830005C5647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69DCEFA01567D830005C5647 /* InfoPlist.strings in Resources */,
+				69DCEFA61567D830005C5647 /* Credits.rtf in Resources */,
+				69DCEFAC1567D830005C5647 /* Document.xib in Resources */,
+				69DCEFAF1567D830005C5647 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69DCEF8D1567D830005C5647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69DCEFA21567D830005C5647 /* main.m in Sources */,
+				69DCEFA91567D830005C5647 /* Document.m in Sources */,
+				69DCEFB21567D830005C5647 /* Document.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		69DCEF9E1567D830005C5647 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69DCEF9F1567D830005C5647 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		69DCEFA41567D830005C5647 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69DCEFA51567D830005C5647 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		69DCEFAA1567D830005C5647 /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69DCEFAB1567D830005C5647 /* en */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		69DCEFAD1567D830005C5647 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69DCEFAE1567D830005C5647 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69DCEFB31567D830005C5647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		69DCEFB41567D830005C5647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		69DCEFB61567D830005C5647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarLot/CarLot-Prefix.pch";
+				INFOPLIST_FILE = "CarLot/CarLot-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		69DCEFB71567D830005C5647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarLot/CarLot-Prefix.pch";
+				INFOPLIST_FILE = "CarLot/CarLot-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69DCEF8B1567D82F005C5647 /* Build configuration list for PBXProject "CarLot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69DCEFB31567D830005C5647 /* Debug */,
+				69DCEFB41567D830005C5647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69DCEFB51567D830005C5647 /* Build configuration list for PBXNativeTarget "CarLot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69DCEFB61567D830005C5647 /* Debug */,
+				69DCEFB71567D830005C5647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		69DCEFB01567D830005C5647 /* Document.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				69DCEFB11567D830005C5647 /* Document.xcdatamodel */,
+			);
+			currentVersion = 69DCEFB11567D830005C5647 /* Document.xcdatamodel */;
+			path = Document.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 69DCEF881567D82F005C5647 /* Project object */;
+}

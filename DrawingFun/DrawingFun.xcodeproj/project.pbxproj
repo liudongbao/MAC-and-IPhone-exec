@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		696E66FB15726449007EFDE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696E66FA15726449007EFDE2 /* Cocoa.framework */; };
+		696E670515726449007EFDE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696E670315726449007EFDE2 /* InfoPlist.strings */; };
+		696E670715726449007EFDE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 696E670615726449007EFDE2 /* main.m */; };
+		696E670B15726449007EFDE2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 696E670915726449007EFDE2 /* Credits.rtf */; };
+		696E670E15726449007EFDE2 /* DrawingFunAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 696E670D15726449007EFDE2 /* DrawingFunAppDelegate.m */; };
+		696E671115726449007EFDE2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696E670F15726449007EFDE2 /* MainMenu.xib */; };
+		696E6719157264C7007EFDE2 /* StretchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 696E6718157264C7007EFDE2 /* StretchView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		696E66F615726449007EFDE2 /* DrawingFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		696E66FA15726449007EFDE2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		696E66FD15726449007EFDE2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		696E66FE15726449007EFDE2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		696E66FF15726449007EFDE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		696E670215726449007EFDE2 /* DrawingFun-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrawingFun-Info.plist"; sourceTree = "<group>"; };
+		696E670415726449007EFDE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		696E670615726449007EFDE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		696E670815726449007EFDE2 /* DrawingFun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawingFun-Prefix.pch"; sourceTree = "<group>"; };
+		696E670A15726449007EFDE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		696E670C15726449007EFDE2 /* DrawingFunAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingFunAppDelegate.h; sourceTree = "<group>"; };
+		696E670D15726449007EFDE2 /* DrawingFunAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingFunAppDelegate.m; sourceTree = "<group>"; };
+		696E671015726449007EFDE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		696E6717157264C7007EFDE2 /* StretchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StretchView.h; sourceTree = "<group>"; };
+		696E6718157264C7007EFDE2 /* StretchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StretchView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		696E66F315726449007EFDE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				696E66FB15726449007EFDE2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		696E66EB15726448007EFDE2 = {
+			isa = PBXGroup;
+			children = (
+				696E670015726449007EFDE2 /* DrawingFun */,
+				696E66F915726449007EFDE2 /* Frameworks */,
+				696E66F715726449007EFDE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		696E66F715726449007EFDE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				696E66F615726449007EFDE2 /* DrawingFun.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		696E66F915726449007EFDE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				696E66FA15726449007EFDE2 /* Cocoa.framework */,
+				696E66FC15726449007EFDE2 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		696E66FC15726449007EFDE2 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				696E66FD15726449007EFDE2 /* AppKit.framework */,
+				696E66FE15726449007EFDE2 /* CoreData.framework */,
+				696E66FF15726449007EFDE2 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		696E670015726449007EFDE2 /* DrawingFun */ = {
+			isa = PBXGroup;
+			children = (
+				696E6717157264C7007EFDE2 /* StretchView.h */,
+				696E6718157264C7007EFDE2 /* StretchView.m */,
+				696E670C15726449007EFDE2 /* DrawingFunAppDelegate.h */,
+				696E670D15726449007EFDE2 /* DrawingFunAppDelegate.m */,
+				696E670F15726449007EFDE2 /* MainMenu.xib */,
+				696E670115726449007EFDE2 /* Supporting Files */,
+			);
+			path = DrawingFun;
+			sourceTree = "<group>";
+		};
+		696E670115726449007EFDE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				696E670215726449007EFDE2 /* DrawingFun-Info.plist */,
+				696E670315726449007EFDE2 /* InfoPlist.strings */,
+				696E670615726449007EFDE2 /* main.m */,
+				696E670815726449007EFDE2 /* DrawingFun-Prefix.pch */,
+				696E670915726449007EFDE2 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		696E66F515726449007EFDE2 /* DrawingFun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 696E671415726449007EFDE2 /* Build configuration list for PBXNativeTarget "DrawingFun" */;
+			buildPhases = (
+				696E66F215726449007EFDE2 /* Sources */,
+				696E66F315726449007EFDE2 /* Frameworks */,
+				696E66F415726449007EFDE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawingFun;
+			productName = DrawingFun;
+			productReference = 696E66F615726449007EFDE2 /* DrawingFun.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		696E66ED15726448007EFDE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DrawingFun;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = derrik.org;
+			};
+			buildConfigurationList = 696E66F015726448007EFDE2 /* Build configuration list for PBXProject "DrawingFun" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 696E66EB15726448007EFDE2;
+			productRefGroup = 696E66F715726449007EFDE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				696E66F515726449007EFDE2 /* DrawingFun */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		696E66F415726449007EFDE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				696E670515726449007EFDE2 /* InfoPlist.strings in Resources */,
+				696E670B15726449007EFDE2 /* Credits.rtf in Resources */,
+				696E671115726449007EFDE2 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		696E66F215726449007EFDE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				696E670715726449007EFDE2 /* main.m in Sources */,
+				696E670E15726449007EFDE2 /* DrawingFunAppDelegate.m in Sources */,
+				696E6719157264C7007EFDE2 /* StretchView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		696E670315726449007EFDE2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				696E670415726449007EFDE2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		696E670915726449007EFDE2 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				696E670A15726449007EFDE2 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		696E670F15726449007EFDE2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				696E671015726449007EFDE2 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		696E671215726449007EFDE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		696E671315726449007EFDE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		696E671515726449007EFDE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawingFun/DrawingFun-Prefix.pch";
+				INFOPLIST_FILE = "DrawingFun/DrawingFun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		696E671615726449007EFDE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawingFun/DrawingFun-Prefix.pch";
+				INFOPLIST_FILE = "DrawingFun/DrawingFun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		696E66F015726448007EFDE2 /* Build configuration list for PBXProject "DrawingFun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				696E671215726449007EFDE2 /* Debug */,
+				696E671315726449007EFDE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		696E671415726449007EFDE2 /* Build configuration list for PBXNativeTarget "DrawingFun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				696E671515726449007EFDE2 /* Debug */,
+				696E671615726449007EFDE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 696E66ED15726448007EFDE2 /* Project object */;
+}
