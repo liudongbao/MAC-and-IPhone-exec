@@ -18,6 +18,6 @@
 @property (assign) float opacity;
 @property (strong) NSImage *image;
 -(NSPoint)randomPoint;
-- (NSRect)currentRect；
+- (NSRect)currentRect;
 
 @end

@@ -57,7 +57,7 @@
         NSRect imageRect;
         imageRect.origin = NSZeroPoint;
         imageRect.size = [image size];
-        NSRect drawingRect = imageRect;
+        NSRect drawingRect = [self currentRect];
         [image drawInRect:drawingRect
                  fromRect:imageRect
                 operation:NSCompositeSourceOver
@@ -88,6 +88,7 @@
     NSPoint p = [event locationInWindow];
     NSLog(@"mouseDragged:%@", NSStringFromPoint(p));
      currentPoint = [self convertPoint:p fromView:nil];
+    [self autoscroll:event];
     [self setNeedsDisplay:YES];
 }
 - (void)mouseUp:(NSEvent *)event
@@ -105,6 +106,10 @@
 - (void)setImage:(NSImage *)newImage
 {
     image = newImage;
+    NSSize imageSize = [newImage size];
+    downPoint = NSZeroPoint;
+    currentPoint.x = downPoint.x + imageSize.width;
+    currentPoint.y = downPoint.y + imageSize.height;
     [self setNeedsDisplay:YES];
 }
 - (float)opacity
