@@ -11,7 +11,9 @@
 @interface BigLetterView : NSView {
     NSColor     *bgColor;
     NSString    *string;
+    NSMutableDictionary *attributes;
 }
+-(void)prepareAttributes;
 @property (strong) NSColor  *bgColor;
 @property (copy) NSString   *string;
 @end

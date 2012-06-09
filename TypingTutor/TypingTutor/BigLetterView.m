@@ -19,7 +19,7 @@
         bgColor = [NSColor yellowColor];
         string = @" ";
     }
-
+    [self prepareAttributes];
     return self;
 }
 
@@ -29,7 +29,7 @@
 
     [bgColor set];
     [NSBezierPath fillRect:bounds];
-
+    [self drawStringCenteredIn:bounds];
     // Am I the window's first responder?
     if (([[self window] firstResponder] == self) &&
         [NSGraphicsContext currentContextDrawingToScreen]) {
@@ -93,6 +93,22 @@
     [self setString:@" "];
 }
 
+- (void)prepareAttributes
+{
+    attributes = [NSMutableDictionary dictionary];
+    [attributes setObject:[NSFont userFontOfSize:75]
+                   forKey:NSFontAttributeName];
+    [attributes setObject:[NSColor redColor]
+                   forKey:NSForegroundColorAttributeName];
+}
+- (void)drawStringCenteredIn:(NSRect)r
+{
+    NSSize strSize = [string sizeWithAttributes:attributes];
+    NSPoint strOrigin;
+    strOrigin.x = r.origin.x + (r.size.width - strSize.width)/2;
+    strOrigin.y = r.origin.y + (r.size.height - strSize.height)/2;
+    [string drawAtPoint:strOrigin withAttributes:attributes];
+}
 #pragma mark Accessors
 - (void)setBgColor:(NSColor *)c
 {
@@ -108,7 +124,8 @@
 - (void)setString:(NSString *)c
 {
     string = c;
-    NSLog(@"The string is now %@", string);
+    NSLog(@"The string: %@", string);
+    [self setNeedsDisplay:YES];
 }
 
 - (NSString *)string
