@@ -14,6 +14,7 @@
     NSMutableDictionary *attributes;
 }
 -(void)prepareAttributes;
+- (IBAction)savePDF:(id)sender;
 @property (strong) NSColor  *bgColor;
 @property (copy) NSString   *string;
 @end

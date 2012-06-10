@@ -109,6 +109,30 @@
     strOrigin.y = r.origin.y + (r.size.height - strSize.height)/2;
     [string drawAtPoint:strOrigin withAttributes:attributes];
 }
+
+- (IBAction)savePDF:(id)sender
+{
+    __block NSSavePanel *panel = [NSSavePanel savePanel];
+    [panel setAllowedFileTypes:[NSArray arrayWithObject:@"pdf"]];
+    [panel beginSheetModalForWindow:[self window]
+                  completionHandler:^ (NSInteger result) {
+                      if (result == NSOKButton)
+                      {
+                          NSRect r = [self bounds];
+                          NSData *data = [self dataWithPDFInsideRect:r];
+                          NSError *error;
+                          BOOL successful = [data writeToURL:[panel URL]
+                                                     options:0
+                                                       error:&error];
+                          if (!successful) {
+                              NSAlert *a = [NSAlert alertWithError:error];
+                              [a runModal];
+                          }
+                      }
+                      panel = nil; // avoid strong ref cycle
+                  }];
+}
+
 #pragma mark Accessors
 - (void)setBgColor:(NSColor *)c
 {
