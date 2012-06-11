@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		699F45891584953D00235FE7 /* NSString+FirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F45881584953D00235FE7 /* NSString+FirstLetter.m */; };
 		69C1D674158378BC00D9D90C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C1D673158378BC00D9D90C /* Cocoa.framework */; };
 		69C1D67E158378BD00D9D90C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69C1D67C158378BD00D9D90C /* InfoPlist.strings */; };
 		69C1D680158378BD00D9D90C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1D67F158378BD00D9D90C /* main.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		699F45871584953D00235FE7 /* NSString+FirstLetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FirstLetter.h"; sourceTree = "<group>"; };
+		699F45881584953D00235FE7 /* NSString+FirstLetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FirstLetter.m"; sourceTree = "<group>"; };
 		69C1D66F158378BC00D9D90C /* TypingTutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypingTutor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C1D673158378BC00D9D90C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		69C1D676158378BC00D9D90C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -85,6 +88,8 @@
 		69C1D679158378BC00D9D90C /* TypingTutor */ = {
 			isa = PBXGroup;
 			children = (
+				699F45871584953D00235FE7 /* NSString+FirstLetter.h */,
+				699F45881584953D00235FE7 /* NSString+FirstLetter.m */,
 				69C1D6901583792100D9D90C /* BigLetterView.h */,
 				69C1D6911583792100D9D90C /* BigLetterView.m */,
 				69C1D685158378BD00D9D90C /* TypingTutorAppDelegate.h */,
@@ -175,6 +180,7 @@
 				69C1D680158378BD00D9D90C /* main.m in Sources */,
 				69C1D687158378BD00D9D90C /* TypingTutorAppDelegate.m in Sources */,
 				69C1D6921583792100D9D90C /* BigLetterView.m in Sources */,
+				699F45891584953D00235FE7 /* NSString+FirstLetter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +302,7 @@
 				69C1D68F158378BE00D9D90C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

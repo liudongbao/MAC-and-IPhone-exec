@@ -12,6 +12,7 @@
     NSColor     *bgColor;
     NSString    *string;
     NSMutableDictionary *attributes;
+    NSEvent *mouseDownEvent;
 }
 -(void)prepareAttributes;
 - (IBAction)savePDF:(id)sender;
