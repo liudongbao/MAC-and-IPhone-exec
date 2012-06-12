@@ -15,6 +15,7 @@
 		69C1D687158378BD00D9D90C /* TypingTutorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1D686158378BD00D9D90C /* TypingTutorAppDelegate.m */; };
 		69C1D68A158378BE00D9D90C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69C1D688158378BE00D9D90C /* MainMenu.xib */; };
 		69C1D6921583792100D9D90C /* BigLetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C1D6911583792100D9D90C /* BigLetterView.m */; };
+		69EFDECC15877B4D000D35D4 /* TutorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EFDECB15877B4D000D35D4 /* TutorController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		69C1D689158378BE00D9D90C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		69C1D6901583792100D9D90C /* BigLetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigLetterView.h; sourceTree = "<group>"; };
 		69C1D6911583792100D9D90C /* BigLetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigLetterView.m; sourceTree = "<group>"; };
+		69EFDECA15877B4D000D35D4 /* TutorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TutorController.h; path = ../TutorController.h; sourceTree = "<group>"; };
+		69EFDECB15877B4D000D35D4 /* TutorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TutorController.m; path = ../TutorController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 		69C1D679158378BC00D9D90C /* TypingTutor */ = {
 			isa = PBXGroup;
 			children = (
+				69EFDECA15877B4D000D35D4 /* TutorController.h */,
+				69EFDECB15877B4D000D35D4 /* TutorController.m */,
 				699F45871584953D00235FE7 /* NSString+FirstLetter.h */,
 				699F45881584953D00235FE7 /* NSString+FirstLetter.m */,
 				69C1D6901583792100D9D90C /* BigLetterView.h */,
@@ -181,6 +186,7 @@
 				69C1D687158378BD00D9D90C /* TypingTutorAppDelegate.m in Sources */,
 				69C1D6921583792100D9D90C /* BigLetterView.m in Sources */,
 				699F45891584953D00235FE7 /* NSString+FirstLetter.m in Sources */,
+				69EFDECC15877B4D000D35D4 /* TutorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
