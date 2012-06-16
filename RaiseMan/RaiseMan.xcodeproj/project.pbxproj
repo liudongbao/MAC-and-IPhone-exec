@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		690A29A51565C99D0056DF2F /* OpenMortal.icns in Resources */ = {isa = PBXBuildFile; fileRef = 690A29A41565C99D0056DF2F /* OpenMortal.icns */; };
+		694664F4158CB5AF008BCCC9 /* PeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694664F3158CB5AF008BCCC9 /* PeopleView.m */; };
 		696E66E915723664007EFDE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696E66E715723664007EFDE2 /* Localizable.strings */; };
 		69745769154ADAA500448548 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69745768154ADAA500448548 /* Cocoa.framework */; };
 		69745773154ADAA500448548 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69745771154ADAA500448548 /* InfoPlist.strings */; };
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		690A29A41565C99D0056DF2F /* OpenMortal.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OpenMortal.icns; sourceTree = "<group>"; };
+		694664F2158CB5AF008BCCC9 /* PeopleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleView.h; sourceTree = "<group>"; };
+		694664F3158CB5AF008BCCC9 /* PeopleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleView.m; sourceTree = "<group>"; };
 		696E66E61572331C007EFDE2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/RMDocument.xib"; sourceTree = "<group>"; };
 		696E66E815723664007EFDE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		696E66EA157240DF007EFDE2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				69AF16E115687F7D007C6455 /* AppController.m */,
 				69745780154ADAA500448548 /* MainMenu.xib */,
 				6974576F154ADAA500448548 /* Supporting Files */,
+				694664F2158CB5AF008BCCC9 /* PeopleView.h */,
+				694664F3158CB5AF008BCCC9 /* PeopleView.m */,
 			);
 			path = RaiseMan;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				6974578A154ADB1A00448548 /* Person.m in Sources */,
 				69AF16E215687F7D007C6455 /* AppController.m in Sources */,
 				69AF16EC1568820C007C6455 /* PreferenceController.m in Sources */,
+				694664F4158CB5AF008BCCC9 /* PeopleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

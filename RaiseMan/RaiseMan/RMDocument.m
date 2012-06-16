@@ -8,6 +8,7 @@
 
 #import "RMDocument.h"
 #import "PreferenceController.h"
+#import "PeopleView.h"
 
 @implementation RMDocument
 - (id)init
@@ -267,6 +268,15 @@ static void *RMDocumentKVOContext;
     [tableView setBackgroundColor:color];
 }
 
-
+- (NSPrintOperation *)printOperationWithSettings:(NSDictionary *)ps
+                                           error:(NSError **)e;
+{
+    PeopleView *view = [[PeopleView alloc] initWithPeople:employees];
+    NSPrintInfo *printInfo = [self printInfo];
+    NSPrintOperation *printOp
+    = [NSPrintOperation printOperationWithView:view
+                                     printInfo:printInfo];
+    return printOp;
+}
 
 @end
