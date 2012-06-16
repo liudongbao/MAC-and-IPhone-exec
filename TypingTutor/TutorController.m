@@ -93,13 +93,14 @@
         [self resetElapsedTime];
     }
 }
+
 - (IBAction)showSpeedSheet:(id)sender
 {
-    [NSApp beginSheet:speedSheet
-       modalForWindow:[inLetterView window]
-        modalDelegate:nil
-       didEndSelector:NULL
-          contextInfo:NULL];
+    [NSApp  beginSheet      :speedSheet
+            modalForWindow  :[inLetterView window]
+            modalDelegate   :nil
+            didEndSelector  :NULL
+            contextInfo     :NULL];
 }
 
 - (IBAction)endSpeedSheet:(id)sender
@@ -110,5 +111,13 @@
     [speedSheet orderOut:sender];
 }
 
+- (BOOL)control                 :(NSControl *)control
+        didFailToFormatString   :(NSString *)string
+        errorDescription        :(NSString *)error
+{
+    NSLog(@"TutorController told that formatting of %@ failed: %@",
+        string, error);
+    return NO;
+}
 
 @end

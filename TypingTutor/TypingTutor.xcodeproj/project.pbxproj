@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		695C5CA8158C74DC0047A57B /* ColorFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 695C5CA7158C74DC0047A57B /* ColorFormatter.m */; };
 		699F45891584953D00235FE7 /* NSString+FirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 699F45881584953D00235FE7 /* NSString+FirstLetter.m */; };
 		69C1D674158378BC00D9D90C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C1D673158378BC00D9D90C /* Cocoa.framework */; };
 		69C1D67E158378BD00D9D90C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69C1D67C158378BD00D9D90C /* InfoPlist.strings */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		695C5CA6158C74DC0047A57B /* ColorFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorFormatter.h; sourceTree = "<group>"; };
+		695C5CA7158C74DC0047A57B /* ColorFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorFormatter.m; sourceTree = "<group>"; };
 		699F45871584953D00235FE7 /* NSString+FirstLetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FirstLetter.h"; sourceTree = "<group>"; };
 		699F45881584953D00235FE7 /* NSString+FirstLetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FirstLetter.m"; sourceTree = "<group>"; };
 		69C1D66F158378BC00D9D90C /* TypingTutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypingTutor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +104,8 @@
 				69C1D686158378BD00D9D90C /* TypingTutorAppDelegate.m */,
 				69C1D688158378BE00D9D90C /* MainMenu.xib */,
 				69C1D67A158378BD00D9D90C /* Supporting Files */,
+				695C5CA6158C74DC0047A57B /* ColorFormatter.h */,
+				695C5CA7158C74DC0047A57B /* ColorFormatter.m */,
 			);
 			path = TypingTutor;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				69C1D6921583792100D9D90C /* BigLetterView.m in Sources */,
 				699F45891584953D00235FE7 /* NSString+FirstLetter.m in Sources */,
 				69EFDECC15877B4D000D35D4 /* TutorController.m in Sources */,
+				695C5CA8158C74DC0047A57B /* ColorFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
