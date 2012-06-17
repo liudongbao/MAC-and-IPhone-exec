@@ -8,13 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^ScheduleFetcherResultBlock)(NSArray *classes,
+                                           NSError *error);
+
 @interface ScheduleFetcher : NSObject <NSXMLParserDelegate> {
+@private
     NSMutableArray *classes;
     NSMutableString *currentString;
     NSMutableDictionary *currentFields;
     NSDateFormatter *dateFormatter;
-}
-// Returns an NSArray of ScheduledClass objects if successful.
-// Returns nil on failure.
-- (NSArray *)fetchClassesWithError:(NSError **)outError;
+    ScheduleFetcherResultBlock resultBlock;
+    NSMutableData *responseData;
+    NSURLConnection *connection;
+}-
+(void)fetchClassesWithBlock:(ScheduleFetcherResultBlock)theBlock;
 @end

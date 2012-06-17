@@ -22,36 +22,28 @@
     return self;
 }
 
-- (NSArray *)fetchClassesWithError:(NSError **)outError
+- (void)fetchClassesWithBlock:(ScheduleFetcherResultBlock)theBlock
 {
-    BOOL    success;
-    NSURL   *xmlURL = [NSURL URLWithString:
-        @"http://bignerdranch.com/xml/schedule"];
-    NSURLRequest *req = [NSURLRequest   requestWithURL  :xmlURL
-                                        cachePolicy     :NSURLRequestReturnCacheDataElseLoad
-                                        timeoutInterval :30];
-    NSURLResponse   *resp = nil;
-    NSData          *data = [NSURLConnection    sendSynchronousRequest  :req
-                                                returningResponse       :&resp
-                                                error                   :outError];
-
-    if (!data) {
-        return nil;
+    // Copy the block to ensure that it is not kept on the stack:
+    resultBlock = [theBlock copy];
+    NSURL *xmlURL = [NSURL URLWithString:
+                     @"http://bignerdranch.com/xml/schedule"];
+    NSURLRequest *req = [NSURLRequest requestWithURL:xmlURL
+                                         cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                     timeoutInterval:30];
+    connection = [[NSURLConnection alloc] initWithRequest:req
+                                                 delegate:self];
+    if (connection)
+    {
+        responseData = [[NSMutableData alloc] init];
     }
+}
 
-    [classes removeAllObjects];
-    NSXMLParser *parser;
-    parser = [[NSXMLParser alloc] initWithData:data];
-    [parser setDelegate:self];
-    success = [parser parse];
-
-    if (!success) {
-        *outError = [parser parserError];
-        return nil;
-    }
-
-    NSArray *output = [classes copy];
-    return output;
+- (void)cleanup
+{
+    responseData = nil;
+    connection = nil;
+    resultBlock = nil;
 }
 
 #pragma mark -
@@ -111,4 +103,35 @@
     [currentString appendString:string];
 }
 
+#pragma mark -
+#pragma mark NSURLConnection Delegate
+- (void)connection:(NSURLConnection *)theConnection
+    didReceiveData:(NSData *)data
+{
+    [responseData appendData:data];
+}
+- (void)connectionDidFinishLoading:(NSURLConnection *)theConnection
+{
+    [classes removeAllObjects];
+    NSXMLParser *parser = [[NSXMLParser alloc]
+                           initWithData:responseData];
+    [parser setDelegate:self];
+    BOOL success = [parser parse];
+    if (!success)
+    {
+        resultBlock(nil, [parser parserError]);
+    }
+    else
+    {
+        NSArray *output = [classes copy];
+        resultBlock(output, nil);
+    }
+    [self cleanup];
+}
+- (void)connection:(NSURLConnection *)theConnection
+  didFailWithError:(NSError *)error
+{
+    resultBlock(nil, error);
+    [self cleanup];
+}
 @end
