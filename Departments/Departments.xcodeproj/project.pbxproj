@@ -16,6 +16,10 @@
 		696EB3A9158E113500EBD41F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 696EB3A7158E113500EBD41F /* MainMenu.xib */; };
 		696EB3AC158E113500EBD41F /* MyDocument.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 696EB3AA158E113500EBD41F /* MyDocument.xcdatamodeld */; };
 		696EB3B4158E140D00EBD41F /* ManagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696EB3B3158E140D00EBD41F /* ManagingViewController.m */; };
+		6975A9ED158F633500348B0B /* DepartmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6975A9EC158F633500348B0B /* DepartmentViewController.m */; };
+		6975A9F0158F636600348B0B /* DepartmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6975A9EF158F636600348B0B /* DepartmentView.xib */; };
+		6975A9F3158F64EA00348B0B /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6975A9F2158F64EA00348B0B /* EmployeeViewController.m */; };
+		6975A9F5158F651100348B0B /* EmployeeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6975A9F4158F651100348B0B /* EmployeeView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,12 @@
 		696EB3AB158E113500EBD41F /* MyDocument.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDocument.xcdatamodel; sourceTree = "<group>"; };
 		696EB3B2158E140D00EBD41F /* ManagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagingViewController.h; sourceTree = "<group>"; };
 		696EB3B3158E140D00EBD41F /* ManagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagingViewController.m; sourceTree = "<group>"; };
+		6975A9EB158F633500348B0B /* DepartmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepartmentViewController.h; sourceTree = "<group>"; };
+		6975A9EC158F633500348B0B /* DepartmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DepartmentViewController.m; sourceTree = "<group>"; };
+		6975A9EF158F636600348B0B /* DepartmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DepartmentView.xib; sourceTree = "<group>"; };
+		6975A9F1158F64EA00348B0B /* EmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeViewController.h; sourceTree = "<group>"; };
+		6975A9F2158F64EA00348B0B /* EmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
+		6975A9F4158F651100348B0B /* EmployeeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,12 @@
 				696EB396158E113400EBD41F /* Supporting Files */,
 				696EB3B2158E140D00EBD41F /* ManagingViewController.h */,
 				696EB3B3158E140D00EBD41F /* ManagingViewController.m */,
+				6975A9EB158F633500348B0B /* DepartmentViewController.h */,
+				6975A9EC158F633500348B0B /* DepartmentViewController.m */,
+				6975A9EF158F636600348B0B /* DepartmentView.xib */,
+				6975A9F1158F64EA00348B0B /* EmployeeViewController.h */,
+				6975A9F2158F64EA00348B0B /* EmployeeViewController.m */,
+				6975A9F4158F651100348B0B /* EmployeeView.xib */,
 			);
 			path = Departments;
 			sourceTree = "<group>";
@@ -169,6 +185,8 @@
 				696EB3A0158E113400EBD41F /* Credits.rtf in Resources */,
 				696EB3A6158E113400EBD41F /* MyDocument.xib in Resources */,
 				696EB3A9158E113500EBD41F /* MainMenu.xib in Resources */,
+				6975A9F0158F636600348B0B /* DepartmentView.xib in Resources */,
+				6975A9F5158F651100348B0B /* EmployeeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +201,8 @@
 				696EB3A3158E113400EBD41F /* MyDocument.m in Sources */,
 				696EB3AC158E113500EBD41F /* MyDocument.xcdatamodeld in Sources */,
 				696EB3B4158E140D00EBD41F /* ManagingViewController.m in Sources */,
+				6975A9ED158F633500348B0B /* DepartmentViewController.m in Sources */,
+				6975A9F3158F64EA00348B0B /* EmployeeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +332,7 @@
 				696EB3B1158E113500EBD41F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
