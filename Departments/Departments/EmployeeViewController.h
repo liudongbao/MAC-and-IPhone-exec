@@ -8,6 +8,8 @@
 
 #import "ManagingViewController.h"
 
-@interface EmployeeViewController : ManagingViewController
+@interface EmployeeViewController : ManagingViewController {
+    IBOutlet NSArrayController *employeeController; 
+}
 
 @end

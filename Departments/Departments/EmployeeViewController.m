@@ -23,5 +23,14 @@
     }
     return self;
 }
-
+// Accept key events
+- (void)keyDown:(NSEvent *)e
+{
+    [self interpretKeyEvents:[NSArray arrayWithObject:e]];
+}
+// Take care of the delete key
+- (void)deleteBackward:(id)sender
+{
+    [employeeController remove:nil];
+}
 @end

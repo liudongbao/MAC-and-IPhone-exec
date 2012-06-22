@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69540151159203270088FE35 /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = 69540150159203270088FE35 /* Department.m */; };
+		69540155159203490088FE35 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 69540154159203490088FE35 /* Employee.m */; };
 		696EB390158E113400EBD41F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696EB38F158E113400EBD41F /* Cocoa.framework */; };
 		696EB39A158E113400EBD41F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696EB398158E113400EBD41F /* InfoPlist.strings */; };
 		696EB39C158E113400EBD41F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 696EB39B158E113400EBD41F /* main.m */; };
@@ -23,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6954014F159203270088FE35 /* Department.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Department.h; path = ../Department.h; sourceTree = "<group>"; };
+		69540150159203270088FE35 /* Department.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Department.m; path = ../Department.m; sourceTree = "<group>"; };
+		69540153159203490088FE35 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		69540154159203490088FE35 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		696EB38B158E113400EBD41F /* Departments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Departments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696EB38F158E113400EBD41F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		696EB392158E113400EBD41F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -99,11 +105,15 @@
 		696EB395158E113400EBD41F /* Departments */ = {
 			isa = PBXGroup;
 			children = (
+				6954014F159203270088FE35 /* Department.h */,
+				69540150159203270088FE35 /* Department.m */,
 				696EB3A1158E113400EBD41F /* MyDocument.h */,
 				696EB3A2158E113400EBD41F /* MyDocument.m */,
 				696EB3A4158E113400EBD41F /* MyDocument.xib */,
 				696EB3A7158E113500EBD41F /* MainMenu.xib */,
 				696EB3AA158E113500EBD41F /* MyDocument.xcdatamodeld */,
+				69540153159203490088FE35 /* Employee.h */,
+				69540154159203490088FE35 /* Employee.m */,
 				696EB396158E113400EBD41F /* Supporting Files */,
 				696EB3B2158E140D00EBD41F /* ManagingViewController.h */,
 				696EB3B3158E140D00EBD41F /* ManagingViewController.m */,
@@ -203,6 +213,8 @@
 				696EB3B4158E140D00EBD41F /* ManagingViewController.m in Sources */,
 				6975A9ED158F633500348B0B /* DepartmentViewController.m in Sources */,
 				6975A9F3158F64EA00348B0B /* EmployeeViewController.m in Sources */,
+				69540151159203270088FE35 /* Department.m in Sources */,
+				69540155159203490088FE35 /* Employee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

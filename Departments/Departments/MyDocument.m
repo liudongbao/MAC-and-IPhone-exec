@@ -56,7 +56,10 @@
     [w setFrame:windowFrame
         display:YES
         animate:YES];
-    [box setContentView:v];
+   [box setContentView:v];
+    // Put the view controller in the responder chain
+    [v setNextResponder:vc];
+    [vc setNextResponder:box];
 }
 
 - (NSString *)windowNibName
