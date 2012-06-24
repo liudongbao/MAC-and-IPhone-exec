@@ -11,6 +11,7 @@
 @interface ScatteredAppDelegate : NSObject <NSApplicationDelegate> {
     IBOutlet NSView *view;
     CATextLayer *textLayer;
+    NSOperationQueue *processingQueue;
 }@
 property (assign) IBOutlet NSWindow *window;
 @end

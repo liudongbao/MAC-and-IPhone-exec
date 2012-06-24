@@ -16,6 +16,15 @@
 @end
 @implementation ScatteredAppDelegate
 @synthesize window;
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        processingQueue = [[NSOperationQueue alloc] init];
+        [processingQueue setMaxConcurrentOperationCount:4];
+    }
+    return self;
+}
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     srandom((unsigned)time(NULL));
@@ -83,45 +92,41 @@
 
 - (void)addImagesFromFolderURL:(NSURL *)folderURL
 {
-    NSTimeInterval          t0 = [NSDate timeIntervalSinceReferenceDate];
-    NSFileManager           *fileManager = [NSFileManager new];
-    NSDirectoryEnumerator   *dirEnum =
-        [fileManager    enumeratorAtURL             :folderURL
-                        includingPropertiesForKeys  :nil
-                        options                     :NSDirectoryEnumerationSkipsHiddenFiles
-                        errorHandler                :nil];
-    int allowedFiles = 10;
-
-    for (NSURL *url in dirEnum) {
-        // Skip directories:
-        NSNumber *isDirectory = nil;
-        [url    getResourceValue:&isDirectory
-                forKey          :NSURLIsDirectoryKey
-                error           :nil];
-
-        if ([isDirectory boolValue]) {
-            continue;
+    [processingQueue addOperationWithBlock:^(void) {
+        NSTimeInterval t0 = [NSDate timeIntervalSinceReferenceDate];
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        NSDirectoryEnumerator *dirEnum =
+        [fileManager enumeratorAtURL:folderURL
+          includingPropertiesForKeys:nil
+                             options:NSDirectoryEnumerationSkipsHiddenFiles
+                        errorHandler:nil];
+        for (NSURL *url in dirEnum)
+        {
+            // Skip directories:
+            NSNumber *isDirectory = nil;
+            [url getResourceValue:&isDirectory
+                           forKey:NSURLIsDirectoryKey
+                            error:nil];
+            if ([isDirectory boolValue])
+                continue;
+            [processingQueue addOperationWithBlock:^(void) {
+                NSLog(@"-- processing %@", [url lastPathComponent]);
+                NSImage *image = [[NSImage alloc]
+                                  initWithContentsOfURL:url];
+                if (!image)
+                    return;
+                NSImage *thumbImage = [self thumbImageFromImage:image];
+                [[NSOperationQueue mainQueue]
+                 addOperationWithBlock:^(void) {
+                     [self presentImage:thumbImage];
+                     [self setText:
+                      [NSString stringWithFormat:@"%0.1fs",
+                       [NSDate timeIntervalSinceReferenceDate] - t0]];
+                 }];
+            }];
         }
-
-        NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
-
-        if (!image) {
-            return;
-        }
-
-        allowedFiles--;
-
-        if (allowedFiles < 0) {
-            break;
-        }
-
-        NSImage *thumbImage = [self thumbImageFromImage:image];
-        [self presentImage:thumbImage];
-        [self setText:[NSString stringWithFormat:@"%0.1fs",
-                [NSDate timeIntervalSinceReferenceDate] - t0]];
-    }
+    }];
 }
-
 - (void)presentImage:(NSImage *)image
 {
     CGRect  superlayerBounds = view.layer.bounds;
