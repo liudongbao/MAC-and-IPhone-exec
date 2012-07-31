@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		690FD14515BBA14000C3D7A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690FD14415BBA14000C3D7A4 /* UIKit.framework */; };
+		690FD14715BBA14000C3D7A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690FD14615BBA14000C3D7A4 /* Foundation.framework */; };
+		690FD14915BBA14000C3D7A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690FD14815BBA14000C3D7A4 /* CoreGraphics.framework */; };
+		690FD14F15BBA14000C3D7A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 690FD14D15BBA14000C3D7A4 /* InfoPlist.strings */; };
+		690FD15115BBA14000C3D7A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 690FD15015BBA14000C3D7A4 /* main.m */; };
+		690FD15515BBA14000C3D7A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 690FD15415BBA14000C3D7A4 /* AppDelegate.m */; };
+		690FD15815BBA14000C3D7A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 690FD15715BBA14000C3D7A4 /* ViewController.m */; };
+		690FD15B15BBA14000C3D7A4 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690FD15915BBA14000C3D7A4 /* ViewController_iPhone.xib */; };
+		690FD15E15BBA14000C3D7A4 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690FD15C15BBA14000C3D7A4 /* ViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		690FD14015BBA14000C3D7A4 /* Button Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Button Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		690FD14415BBA14000C3D7A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		690FD14615BBA14000C3D7A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		690FD14815BBA14000C3D7A4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		690FD14C15BBA14000C3D7A4 /* Button Fun-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Button Fun-Info.plist"; sourceTree = "<group>"; };
+		690FD14E15BBA14000C3D7A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		690FD15015BBA14000C3D7A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		690FD15215BBA14000C3D7A4 /* Button Fun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Button Fun-Prefix.pch"; sourceTree = "<group>"; };
+		690FD15315BBA14000C3D7A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		690FD15415BBA14000C3D7A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		690FD15615BBA14000C3D7A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		690FD15715BBA14000C3D7A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		690FD15A15BBA14000C3D7A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		690FD15D15BBA14000C3D7A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		690FD13D15BBA14000C3D7A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				690FD14515BBA14000C3D7A4 /* UIKit.framework in Frameworks */,
+				690FD14715BBA14000C3D7A4 /* Foundation.framework in Frameworks */,
+				690FD14915BBA14000C3D7A4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		690FD13515BBA14000C3D7A4 = {
+			isa = PBXGroup;
+			children = (
+				690FD14A15BBA14000C3D7A4 /* Button Fun */,
+				690FD14315BBA14000C3D7A4 /* Frameworks */,
+				690FD14115BBA14000C3D7A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		690FD14115BBA14000C3D7A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				690FD14015BBA14000C3D7A4 /* Button Fun.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		690FD14315BBA14000C3D7A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				690FD14415BBA14000C3D7A4 /* UIKit.framework */,
+				690FD14615BBA14000C3D7A4 /* Foundation.framework */,
+				690FD14815BBA14000C3D7A4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		690FD14A15BBA14000C3D7A4 /* Button Fun */ = {
+			isa = PBXGroup;
+			children = (
+				690FD15315BBA14000C3D7A4 /* AppDelegate.h */,
+				690FD15415BBA14000C3D7A4 /* AppDelegate.m */,
+				690FD15615BBA14000C3D7A4 /* ViewController.h */,
+				690FD15715BBA14000C3D7A4 /* ViewController.m */,
+				690FD15915BBA14000C3D7A4 /* ViewController_iPhone.xib */,
+				690FD15C15BBA14000C3D7A4 /* ViewController_iPad.xib */,
+				690FD14B15BBA14000C3D7A4 /* Supporting Files */,
+			);
+			path = "Button Fun";
+			sourceTree = "<group>";
+		};
+		690FD14B15BBA14000C3D7A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				690FD14C15BBA14000C3D7A4 /* Button Fun-Info.plist */,
+				690FD14D15BBA14000C3D7A4 /* InfoPlist.strings */,
+				690FD15015BBA14000C3D7A4 /* main.m */,
+				690FD15215BBA14000C3D7A4 /* Button Fun-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		690FD13F15BBA14000C3D7A4 /* Button Fun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 690FD16115BBA14000C3D7A4 /* Build configuration list for PBXNativeTarget "Button Fun" */;
+			buildPhases = (
+				690FD13C15BBA14000C3D7A4 /* Sources */,
+				690FD13D15BBA14000C3D7A4 /* Frameworks */,
+				690FD13E15BBA14000C3D7A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Button Fun";
+			productName = "Button Fun";
+			productReference = 690FD14015BBA14000C3D7A4 /* Button Fun.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		690FD13715BBA14000C3D7A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = liudongbao;
+			};
+			buildConfigurationList = 690FD13A15BBA14000C3D7A4 /* Build configuration list for PBXProject "Button Fun" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 690FD13515BBA14000C3D7A4;
+			productRefGroup = 690FD14115BBA14000C3D7A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				690FD13F15BBA14000C3D7A4 /* Button Fun */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		690FD13E15BBA14000C3D7A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				690FD14F15BBA14000C3D7A4 /* InfoPlist.strings in Resources */,
+				690FD15B15BBA14000C3D7A4 /* ViewController_iPhone.xib in Resources */,
+				690FD15E15BBA14000C3D7A4 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		690FD13C15BBA14000C3D7A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				690FD15115BBA14000C3D7A4 /* main.m in Sources */,
+				690FD15515BBA14000C3D7A4 /* AppDelegate.m in Sources */,
+				690FD15815BBA14000C3D7A4 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		690FD14D15BBA14000C3D7A4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				690FD14E15BBA14000C3D7A4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		690FD15915BBA14000C3D7A4 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				690FD15A15BBA14000C3D7A4 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		690FD15C15BBA14000C3D7A4 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				690FD15D15BBA14000C3D7A4 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		690FD15F15BBA14000C3D7A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		690FD16015BBA14000C3D7A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		690FD16215BBA14000C3D7A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Button Fun/Button Fun-Prefix.pch";
+				INFOPLIST_FILE = "Button Fun/Button Fun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		690FD16315BBA14000C3D7A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Button Fun/Button Fun-Prefix.pch";
+				INFOPLIST_FILE = "Button Fun/Button Fun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		690FD13A15BBA14000C3D7A4 /* Build configuration list for PBXProject "Button Fun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				690FD15F15BBA14000C3D7A4 /* Debug */,
+				690FD16015BBA14000C3D7A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		690FD16115BBA14000C3D7A4 /* Build configuration list for PBXNativeTarget "Button Fun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				690FD16215BBA14000C3D7A4 /* Debug */,
+				690FD16315BBA14000C3D7A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 690FD13715BBA14000C3D7A4 /* Project object */;
+}

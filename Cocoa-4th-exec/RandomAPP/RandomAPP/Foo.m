@@ -24,6 +24,9 @@
     NSLog(@"generated = %d", generated);
     // Ask the text field to change what it is displaying
     [textField setIntValue:generated];
+    int i=43;
+    printf("%d\n",printf("%d",printf("%d",i)));
+
 }
 
 -(void)awakeFromNib{
