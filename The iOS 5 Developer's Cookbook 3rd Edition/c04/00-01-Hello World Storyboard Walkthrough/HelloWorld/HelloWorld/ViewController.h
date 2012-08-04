@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIPopoverControllerDelegate>
+// from prior walk-through
 - (IBAction)dismissModalController:(id)sender;
-
+// retain the popover during its lifetime
+@property (strong) UIPopoverController *popoverController;
 @end
+
