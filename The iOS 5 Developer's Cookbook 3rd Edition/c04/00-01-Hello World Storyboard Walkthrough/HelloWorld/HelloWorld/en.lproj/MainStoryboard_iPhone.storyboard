@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uiJ-Nq-3SN">
+                    <navigationItem key="navigationItem" title="Yellow" id="uiJ-Nq-3SN">
                         <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="ZQF-XR-eIQ">
                             <connections>
                                 <segue destination="h2l-Y5-yUg" kind="modal" id="Sx3-Ql-4BM"/>
@@ -41,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lhi-I9-VN2">
+                    <navigationItem key="navigationItem" title="Blue" id="Lhi-I9-VN2">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="C80-Dt-lx0">
                             <connections>
                                 <action selector="dismissModalController:" destination="HGh-Ls-kBD" id="bB8-Yj-2CJ"/>
@@ -71,13 +71,13 @@
         <scene sceneID="jrX-Ms-4lQ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcY-iL-ACi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="aPv-oQ-EQH" userLabel="Green" sceneMemberID="viewController">
+                <viewController title="Green" id="aPv-oQ-EQH" userLabel="Green" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nmn-a5-3Br">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Bm4-fD-2Nr">
+                    <navigationItem key="navigationItem" title="Green" id="Bm4-fD-2Nr">
                         <barButtonItem key="rightBarButtonItem" title="Red" id="Zdd-G9-JcO">
                             <connections>
                                 <segue destination="2j0-wy-Osa" kind="push" id="kV1-5p-KLL"/>
@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Sf-2l-RCV"/>
+                    <navigationItem key="navigationItem" title="Red" id="1Sf-2l-RCV"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1507" y="-855"/>
