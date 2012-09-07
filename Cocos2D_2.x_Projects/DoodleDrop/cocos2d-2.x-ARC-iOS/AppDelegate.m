@@ -9,7 +9,7 @@
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
-#import "HelloWorldLayer.h"
+#import "GameScene.h"
 
 @implementation AppController
 
@@ -33,8 +33,7 @@
 	director_ = (CCDirectorIOS*) [CCDirector sharedDirector];
 
 	director_.wantsFullScreenLayout = YES;
-
-	// Display FSP and SPF
+  	// Display FSP and SPF
 	[director_ setDisplayStats:YES];
 
 	// set FPS at 60
@@ -84,7 +83,7 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [HelloWorldLayer scene]]; 
+	[director_ pushScene: [GameScene scene]]; 
 
 	return YES;
 }
