@@ -15,7 +15,16 @@
 // HelloWorldLayer
 @interface GameScene : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
-    CCSprite * player;
+	CCSprite* player;
+	CGPoint playerVelocity;
+	
+	NSMutableArray* spiders;
+	float spiderMoveDuration;
+	int numSpidersMoved;
+	
+	int score;
+	CCNode<CCLabelProtocol>* scoreLabel;
+    int totalTime;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
