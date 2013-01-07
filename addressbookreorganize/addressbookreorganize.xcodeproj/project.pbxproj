@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6935BEEC169A813F0035A205 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6935BEEB169A813F0035A205 /* Cocoa.framework */; };
+		6935BEF6169A813F0035A205 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6935BEF4169A813F0035A205 /* InfoPlist.strings */; };
+		6935BEF8169A813F0035A205 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6935BEF7169A813F0035A205 /* main.m */; };
+		6935BEFC169A813F0035A205 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6935BEFA169A813F0035A205 /* Credits.rtf */; };
+		6935BEFF169A813F0035A205 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6935BEFE169A813F0035A205 /* AppDelegate.m */; };
+		6935BF02169A813F0035A205 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6935BF00169A813F0035A205 /* MainMenu.xib */; };
+		6935BF21169AB19A0035A205 /* AddressBookCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 6935BF20169AB19A0035A205 /* AddressBookCocoa.m */; };
+		6935BF23169AB3330035A205 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6935BF22169AB3330035A205 /* AddressBook.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6935BEE7169A813F0035A205 /* addressbookreorganize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = addressbookreorganize.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6935BEEB169A813F0035A205 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6935BEEE169A813F0035A205 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		6935BEEF169A813F0035A205 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6935BEF0169A813F0035A205 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6935BEF3169A813F0035A205 /* addressbookreorganize-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "addressbookreorganize-Info.plist"; sourceTree = "<group>"; };
+		6935BEF5169A813F0035A205 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6935BEF7169A813F0035A205 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6935BEF9169A813F0035A205 /* addressbookreorganize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "addressbookreorganize-Prefix.pch"; sourceTree = "<group>"; };
+		6935BEFB169A813F0035A205 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		6935BEFD169A813F0035A205 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6935BEFE169A813F0035A205 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6935BF01169A813F0035A205 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6935BF09169A81400035A205 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6935BF1F169AB19A0035A205 /* AddressBookCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookCocoa.h; sourceTree = "<group>"; };
+		6935BF20169AB19A0035A205 /* AddressBookCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookCocoa.m; sourceTree = "<group>"; };
+		6935BF22169AB3330035A205 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6935BEE4169A813F0035A205 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6935BF23169AB3330035A205 /* AddressBook.framework in Frameworks */,
+				6935BEEC169A813F0035A205 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6935BEDC169A813F0035A205 = {
+			isa = PBXGroup;
+			children = (
+				6935BEF1169A813F0035A205 /* addressbookreorganize */,
+				6935BEEA169A813F0035A205 /* Frameworks */,
+				6935BEE8169A813F0035A205 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6935BEE8169A813F0035A205 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6935BEE7169A813F0035A205 /* addressbookreorganize.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6935BEEA169A813F0035A205 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6935BF22169AB3330035A205 /* AddressBook.framework */,
+				6935BEEB169A813F0035A205 /* Cocoa.framework */,
+				6935BF09169A81400035A205 /* SenTestingKit.framework */,
+				6935BEED169A813F0035A205 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6935BEED169A813F0035A205 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6935BEEE169A813F0035A205 /* AppKit.framework */,
+				6935BEEF169A813F0035A205 /* CoreData.framework */,
+				6935BEF0169A813F0035A205 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		6935BEF1169A813F0035A205 /* addressbookreorganize */ = {
+			isa = PBXGroup;
+			children = (
+				6935BF1F169AB19A0035A205 /* AddressBookCocoa.h */,
+				6935BF20169AB19A0035A205 /* AddressBookCocoa.m */,
+				6935BEFD169A813F0035A205 /* AppDelegate.h */,
+				6935BEFE169A813F0035A205 /* AppDelegate.m */,
+				6935BF00169A813F0035A205 /* MainMenu.xib */,
+				6935BEF2169A813F0035A205 /* Supporting Files */,
+			);
+			path = addressbookreorganize;
+			sourceTree = "<group>";
+		};
+		6935BEF2169A813F0035A205 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6935BEF3169A813F0035A205 /* addressbookreorganize-Info.plist */,
+				6935BEF4169A813F0035A205 /* InfoPlist.strings */,
+				6935BEF7169A813F0035A205 /* main.m */,
+				6935BEF9169A813F0035A205 /* addressbookreorganize-Prefix.pch */,
+				6935BEFA169A813F0035A205 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6935BEE6169A813F0035A205 /* addressbookreorganize */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6935BF19169A81400035A205 /* Build configuration list for PBXNativeTarget "addressbookreorganize" */;
+			buildPhases = (
+				6935BEE3169A813F0035A205 /* Sources */,
+				6935BEE4169A813F0035A205 /* Frameworks */,
+				6935BEE5169A813F0035A205 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = addressbookreorganize;
+			productName = addressbookreorganize;
+			productReference = 6935BEE7169A813F0035A205 /* addressbookreorganize.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6935BEDE169A813F0035A205 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = liudongbao;
+			};
+			buildConfigurationList = 6935BEE1169A813F0035A205 /* Build configuration list for PBXProject "addressbookreorganize" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6935BEDC169A813F0035A205;
+			productRefGroup = 6935BEE8169A813F0035A205 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6935BEE6169A813F0035A205 /* addressbookreorganize */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6935BEE5169A813F0035A205 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6935BEF6169A813F0035A205 /* InfoPlist.strings in Resources */,
+				6935BEFC169A813F0035A205 /* Credits.rtf in Resources */,
+				6935BF02169A813F0035A205 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6935BEE3169A813F0035A205 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6935BEF8169A813F0035A205 /* main.m in Sources */,
+				6935BEFF169A813F0035A205 /* AppDelegate.m in Sources */,
+				6935BF21169AB19A0035A205 /* AddressBookCocoa.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6935BEF4169A813F0035A205 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6935BEF5169A813F0035A205 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6935BEFA169A813F0035A205 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6935BEFB169A813F0035A205 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		6935BF00169A813F0035A205 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6935BF01169A813F0035A205 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6935BF17169A81400035A205 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6935BF18169A81400035A205 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6935BF1A169A81400035A205 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "addressbookreorganize/addressbookreorganize-Prefix.pch";
+				INFOPLIST_FILE = "addressbookreorganize/addressbookreorganize-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6935BF1B169A81400035A205 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "addressbookreorganize/addressbookreorganize-Prefix.pch";
+				INFOPLIST_FILE = "addressbookreorganize/addressbookreorganize-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6935BEE1169A813F0035A205 /* Build configuration list for PBXProject "addressbookreorganize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6935BF17169A81400035A205 /* Debug */,
+				6935BF18169A81400035A205 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6935BF19169A81400035A205 /* Build configuration list for PBXNativeTarget "addressbookreorganize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6935BF1A169A81400035A205 /* Debug */,
+				6935BF1B169A81400035A205 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6935BEDE169A813F0035A205 /* Project object */;
+}
