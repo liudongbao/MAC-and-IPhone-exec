@@ -58,7 +58,9 @@
     IBOutlet id matchingRecords;
     IBOutlet id streetAddr;
     IBOutlet id workFaxPhone;
+    IBOutlet id updateContactsButton;    
 }
 - (IBAction)addElba:(id)sender;
 - (IBAction)findElba:(id)sender;
+- (IBAction) updateContacts:(id)sender;
 @end

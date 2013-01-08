@@ -134,6 +134,80 @@ Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int* in
 // Finds and displays a record from Address Book
 - (IBAction)findElba:(id)sender
 {
+    ABMutableMultiValue *multiValuePhone;
+    NSArray 			*results;
+    ABRecord			*firstRecord;
+    int					index = 0;
+    
+    // Get the address book; there is only one.
+    ABAddressBook *ab = [ABAddressBook sharedAddressBook];
+    
+    // find all contacts
+    //results = [ab people];
+    
+    ABSearchElement 	*find;
+    // Create a search element
+    find = [ABPerson searchElementForProperty: kABLastNameProperty
+                                        label: nil
+                                          key: nil
+                                        value: @"Elba"
+                                   comparison: kABEqual];
+    
+    // Run a search
+    results = [ab recordsMatchingSearchElement: find];
+
+    
+    // How many records matched?
+    if ([results count] > 0)
+    {
+        // Fill in the matching records UI
+        [matchingRecords setIntValue:[results count]];
+        
+        // Get the first record
+        firstRecord = [results objectAtIndex: 0];
+        
+        // Get the entry for the kABFirstNameProperty and fill in the first name UI
+        [firstName setStringValue: [firstRecord valueForProperty: kABFirstNameProperty]];
+        
+        multiValuePhone = [firstRecord valueForProperty: kABPhoneProperty];
+        NSString * strkABPhoneWorkLabel;
+        NSString * strkABPhoneHomeLabel;
+        NSString * strkABPhoneMobileLabel;
+        NSString * strkABPhoneMainLabel;
+        NSString * strkABPhoneHomeFAXLabel;
+        NSString * strkABPhoneWorkFAXLabel;
+        NSString * strkABPhonePagerLabel;
+        NSString * strkABOtherLabel;
+        if (FindFirstMatch(multiValuePhone, kABPhoneWorkLabel, &index)){
+            strkABPhoneWorkLabel = [multiValuePhone valueAtIndex: index] ;
+		}
+        if (FindFirstMatch(multiValuePhone, kABPhoneHomeLabel, &index)){
+            strkABPhoneHomeLabel = [multiValuePhone valueAtIndex: index] ;
+		}
+        if (FindFirstMatch(multiValuePhone, kABPhoneMobileLabel, &index)){
+            strkABPhoneMobileLabel = [multiValuePhone valueAtIndex: index] ;
+		}
+        if (FindFirstMatch(multiValuePhone, kABPhoneMainLabel, &index)){
+            strkABPhoneMainLabel = [multiValuePhone valueAtIndex: index] ;
+		}
+        if (FindFirstMatch(multiValuePhone, kABPhoneHomeFAXLabel, &index)){
+            strkABPhoneHomeFAXLabel = [multiValuePhone valueAtIndex: index] ;
+		}
+        if (FindFirstMatch(multiValuePhone, kABPhoneWorkFAXLabel, &index)){
+            strkABPhoneWorkFAXLabel = [multiValuePhone valueAtIndex: index] ;
+		}
+        if (FindFirstMatch(multiValuePhone, kABPhonePagerLabel, &index)){
+            strkABPhonePagerLabel = [multiValuePhone valueAtIndex: index] ;
+		}
+        if (FindFirstMatch(multiValuePhone, kABOtherLabel, &index)){
+            strkABOtherLabel = [multiValuePhone valueAtIndex: index] ;
+		}
+        
+        NSString * phones = [NSString stringWithFormat:@"Work=%@;Home=%@;Mobile=%@;Main=%@;HomeFAX=%@;WorkFAX=%@;Pager=%@;other=%@;", strkABPhoneWorkLabel,strkABPhoneHomeLabel,strkABPhoneMobileLabel,strkABPhoneMainLabel,strkABPhoneHomeFAXLabel,strkABPhoneWorkFAXLabel,strkABPhonePagerLabel ,strkABOtherLabel];
+       [ workFaxPhone setStringValue: phones];
+          
+    }
+    /*
     ABMutableMultiValue *multiValue;
     ABSearchElement 	*find;
     NSArray 			*results;
@@ -185,6 +259,7 @@ Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int* in
 			 [workFaxPhone setStringValue: [multiValue valueAtIndex: index]];
 		}
     }
+     */
 }
 
 Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int* index)
@@ -209,4 +284,33 @@ Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int* in
 	}
     return false;
 }
+
+- (IBAction) updateContacts:(id)sender{
+    
+    ABMutableMultiValue *multiValue;
+    NSArray 			*results;
+    ABRecord			*firstRecord;
+    int					index = 0;
+    
+    // Get the address book; there is only one.
+    ABAddressBook *ab = [ABAddressBook sharedAddressBook];
+      
+    // find all contacts
+    results = [ab people];
+    
+    // How many records matched?
+    if ([results count] > 0)
+    {
+        // Fill in the matching records UI
+        [matchingRecords setIntValue:[results count]];
+        
+        // Get the first record
+        firstRecord = [results objectAtIndex: 0];
+        [firstRecord setValue: @"" forProperty: kABLastNameProperty];
+        
+    }
+    
+    [ab save];
+}
+
 @end
