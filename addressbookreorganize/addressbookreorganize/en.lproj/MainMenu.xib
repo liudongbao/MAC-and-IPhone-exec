@@ -2223,7 +2223,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="717632687">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">4194304</int>
-								<string key="NSContents">kABAddressProperty</string>
+								<string key="NSContents">kABEmailProperty</string>
 								<reference key="NSSupport" ref="686062886"/>
 								<reference key="NSControlView" ref="701370331"/>
 								<reference key="NSBackgroundColor" ref="593237773"/>
@@ -3117,14 +3117,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">streetAddr</string>
-						<reference key="source" ref="308088230"/>
-						<reference key="destination" ref="684941834"/>
-					</object>
-					<int key="connectionID">815</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">workFaxPhone</string>
 						<reference key="source" ref="308088230"/>
 						<reference key="destination" ref="957238353"/>
@@ -3146,6 +3138,14 @@
 						<reference key="destination" ref="266546772"/>
 					</object>
 					<int key="connectionID">822</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">emailAddr</string>
+						<reference key="source" ref="308088230"/>
+						<reference key="destination" ref="684941834"/>
+					</object>
+					<int key="connectionID">840</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -8777,7 +8777,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">839</int>
+			<int key="maxID">840</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -8824,16 +8824,20 @@
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="addElbaButton">id</string>
+						<string key="emailAddr">id</string>
 						<string key="findElbaButton">id</string>
 						<string key="firstName">id</string>
 						<string key="matchingRecords">id</string>
-						<string key="streetAddr">id</string>
 						<string key="updateContactsButton">id</string>
 						<string key="workFaxPhone">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="addElbaButton">
 							<string key="name">addElbaButton</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="emailAddr">
+							<string key="name">emailAddr</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="findElbaButton">
@@ -8846,10 +8850,6 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="matchingRecords">
 							<string key="name">matchingRecords</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="streetAddr">
-							<string key="name">streetAddr</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="updateContactsButton">

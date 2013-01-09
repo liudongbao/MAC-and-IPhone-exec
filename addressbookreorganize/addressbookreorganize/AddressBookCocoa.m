@@ -113,11 +113,24 @@ Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int* in
     [multiValue addValue: @"408-974-4444" withLabel: kABPhoneHomeFAXLabel];
     [multiValue addValue: @"408-974-5555" withLabel: kABPhoneWorkFAXLabel];
     [multiValue addValue: @"408-974-6666" withLabel: kABPhonePagerLabel];
+    [multiValue addValue: @"408-974-7777" withLabel: kABOtherLabel];
 
     // Set value in record for kABPhoneProperty.
     [person setValue: multiValue forProperty: kABPhoneProperty];
     
   //  [multiValue release];
+
+    // kABEmailProperty is a multivalue,kABEmailWorkLabel, kABEmailHomeLabel,kABOtherLabel
+    // Create and populate a multiValue.
+    multiValue = [[ABMutableMultiValue alloc] init];
+    [multiValue addValue: @"work@qq.com" withLabel: kABEmailWorkLabel];
+    [multiValue addValue: @"home@qq.com" withLabel: kABEmailHomeLabel];
+    [multiValue addValue: @"other@qq.com" withLabel: kABOtherLabel];
+      
+    // Set value in record for kABPhoneProperty.
+    [person setValue: multiValue forProperty: kABEmailProperty];
+    
+    //  [multiValue release];
 
     // Add record to the Address Book
     if ([ab addRecord: person]){
@@ -134,9 +147,10 @@ Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int* in
 // Finds and displays a record from Address Book
 - (IBAction)findElba:(id)sender
 {
+    ABMutableMultiValue *multiValueEmail;
     ABMutableMultiValue *multiValuePhone;
     NSArray 			*results;
-    ABRecord			*firstRecord;
+    ABRecord			*person;
     int					index = 0;
     
     // Get the address book; there is only one.
@@ -164,46 +178,71 @@ Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int* in
         [matchingRecords setIntValue:[results count]];
         
         // Get the first record
-        firstRecord = [results objectAtIndex: 0];
+        person = [results objectAtIndex: 0];
         
-        // Get the entry for the kABFirstNameProperty and fill in the first name UI
-        [firstName setStringValue: [firstRecord valueForProperty: kABFirstNameProperty]];
+        // Get   the kABFirstNameProperty and kABLastNameProperty
+        [firstName setStringValue: [NSString stringWithFormat:@"first=%@;last=%@",
+         
+                                    [person valueForProperty: kABFirstNameProperty],[person valueForProperty: kABLastNameProperty]]];
+    
+        //get kABEmailProperty kABEmailWorkLabel, kABEmailHomeLabel,kABOtherLabel;
         
-        multiValuePhone = [firstRecord valueForProperty: kABPhoneProperty];
-        NSString * strkABPhoneWorkLabel;
-        NSString * strkABPhoneHomeLabel;
-        NSString * strkABPhoneMobileLabel;
-        NSString * strkABPhoneMainLabel;
-        NSString * strkABPhoneHomeFAXLabel;
-        NSString * strkABPhoneWorkFAXLabel;
-        NSString * strkABPhonePagerLabel;
-        NSString * strkABOtherLabel;
+        multiValueEmail = [person valueForProperty: kABEmailProperty];
+        NSString * emailkABEmailWorkLabel;
+        NSString * emailkABEmailHomeLabel;
+        NSString * emailkABOtherLabel;
+        if (FindFirstMatch(multiValueEmail, kABEmailWorkLabel, &index)){
+            emailkABEmailWorkLabel = [multiValueEmail valueAtIndex: index] ;
+		}
+        if (FindFirstMatch(multiValueEmail, kABEmailHomeLabel , &index)){
+            emailkABEmailHomeLabel = [multiValueEmail valueAtIndex: index] ;
+		}
+        if (FindFirstMatch(multiValueEmail, kABOtherLabel, &index)){
+            emailkABOtherLabel = [multiValueEmail valueAtIndex: index] ;
+		}
+
+        [emailAddr setStringValue: [NSString stringWithFormat:@"work=%@;home=%@;other=%@",
+                                    
+                                    emailkABEmailWorkLabel,emailkABEmailHomeLabel,emailkABOtherLabel]];
+        
+        //Get kABPhoneProperty
+
+        
+        multiValuePhone = [person valueForProperty: kABPhoneProperty];
+        NSString * phoneABPhoneWorkLabel;
+        NSString * phonekABPhoneHomeLabel;
+        NSString * phonekABPhoneMobileLabel;
+        NSString * phonekABPhoneMainLabel;
+        NSString * phonekABPhoneHomeFAXLabel;
+        NSString * phonekABPhoneWorkFAXLabel;
+        NSString * phonekABPhonePagerLabel;
+        NSString * phonekABOtherLabel;
         if (FindFirstMatch(multiValuePhone, kABPhoneWorkLabel, &index)){
-            strkABPhoneWorkLabel = [multiValuePhone valueAtIndex: index] ;
+            phoneABPhoneWorkLabel = [multiValuePhone valueAtIndex: index] ;
 		}
         if (FindFirstMatch(multiValuePhone, kABPhoneHomeLabel, &index)){
-            strkABPhoneHomeLabel = [multiValuePhone valueAtIndex: index] ;
+            phonekABPhoneHomeLabel = [multiValuePhone valueAtIndex: index] ;
 		}
         if (FindFirstMatch(multiValuePhone, kABPhoneMobileLabel, &index)){
-            strkABPhoneMobileLabel = [multiValuePhone valueAtIndex: index] ;
+            phonekABPhoneMobileLabel = [multiValuePhone valueAtIndex: index] ;
 		}
         if (FindFirstMatch(multiValuePhone, kABPhoneMainLabel, &index)){
-            strkABPhoneMainLabel = [multiValuePhone valueAtIndex: index] ;
+            phonekABPhoneMainLabel = [multiValuePhone valueAtIndex: index] ;
 		}
         if (FindFirstMatch(multiValuePhone, kABPhoneHomeFAXLabel, &index)){
-            strkABPhoneHomeFAXLabel = [multiValuePhone valueAtIndex: index] ;
+            phonekABPhoneHomeFAXLabel = [multiValuePhone valueAtIndex: index] ;
 		}
         if (FindFirstMatch(multiValuePhone, kABPhoneWorkFAXLabel, &index)){
-            strkABPhoneWorkFAXLabel = [multiValuePhone valueAtIndex: index] ;
+            phonekABPhoneWorkFAXLabel = [multiValuePhone valueAtIndex: index] ;
 		}
         if (FindFirstMatch(multiValuePhone, kABPhonePagerLabel, &index)){
-            strkABPhonePagerLabel = [multiValuePhone valueAtIndex: index] ;
+            phonekABPhonePagerLabel = [multiValuePhone valueAtIndex: index] ;
 		}
         if (FindFirstMatch(multiValuePhone, kABOtherLabel, &index)){
-            strkABOtherLabel = [multiValuePhone valueAtIndex: index] ;
+            phonekABOtherLabel = [multiValuePhone valueAtIndex: index] ;
 		}
         
-        NSString * phones = [NSString stringWithFormat:@"Work=%@;Home=%@;Mobile=%@;Main=%@;HomeFAX=%@;WorkFAX=%@;Pager=%@;other=%@;", strkABPhoneWorkLabel,strkABPhoneHomeLabel,strkABPhoneMobileLabel,strkABPhoneMainLabel,strkABPhoneHomeFAXLabel,strkABPhoneWorkFAXLabel,strkABPhonePagerLabel ,strkABOtherLabel];
+        NSString * phones = [NSString stringWithFormat:@"Work=%@;Home=%@;Mobile=%@;Main=%@;HomeFAX=%@;WorkFAX=%@;Pager=%@;other=%@;", phoneABPhoneWorkLabel,phonekABPhoneHomeLabel,phonekABPhoneMobileLabel,phonekABPhoneMainLabel,phonekABPhoneHomeFAXLabel,phonekABPhoneWorkFAXLabel,phonekABPhonePagerLabel ,phonekABOtherLabel];
        [ workFaxPhone setStringValue: phones];
           
     }
@@ -285,13 +324,31 @@ Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int* in
     return false;
 }
 
+NSArray*  FindMatchValue(ABMutableMultiValue *multiValue, NSString *label)
+{
+    NSMutableArray 	* results = [[NSMutableArray alloc] init];
+    unsigned long		mvCount = [multiValue count];
+   
+        for (int x = 0 ; x < mvCount; x++)
+        {
+            NSString *text = [multiValue labelAtIndex: x];
+            NSComparisonResult result = [text compare: label];
+            
+            if (result == NSOrderedSame)
+            {
+                [results addObject: [NSNumber numberWithInt:x]];
+            }
+         }
+
+    return [NSArray  arrayWithArray: results ];
+}
+
+
 - (IBAction) updateContacts:(id)sender{
     
-    ABMutableMultiValue *multiValue;
     NSArray 			*results;
-    ABRecord			*firstRecord;
-    int					index = 0;
-    
+    ABRecord			*person;
+       
     // Get the address book; there is only one.
     ABAddressBook *ab = [ABAddressBook sharedAddressBook];
       
@@ -299,18 +356,124 @@ Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int* in
     results = [ab people];
     
     // How many records matched?
-    if ([results count] > 0)
-    {
-        // Fill in the matching records UI
-        [matchingRecords setIntValue:[results count]];
-        
-        // Get the first record
-        firstRecord = [results objectAtIndex: 0];
-        [firstRecord setValue: @"" forProperty: kABLastNameProperty];
-        
+    const int kMaxTestCnt=10;
+    for (int i=0; i<[results count] ; i++)     {
+          // Get the first record
+         NSLog(@"person-%d;",i);
+         if(i>kMaxTestCnt) break;
+        person = [results objectAtIndex: i];
+       updatePhone(person);
+       updateEmail(person);
+      
+    }
+    [ab save];
+}
+
+Boolean updatePhone(ABRecord * person){
+    /*
+     目标是为所有的联系人仅保留work、home两个标签的电话及邮箱，先处理电话，再处理邮箱,各属性处理逻辑如下
+     1、若仅有一个信息，则保留work标签
+     2、若有两个信息，则保留work、home标签
+     3、若有多余两个信息，则忽略；
+     */
+    //Get kABPhoneProperty
+    
+    int					index = 0;
+
+    ABMutableMultiValue * multiValuePhone = [person valueForProperty: kABPhoneProperty];
+    NSArray * phoneABPhoneWorkLabel;
+    NSString * phonekABPhoneHomeLabel;
+    NSString * phonekABPhoneMobileLabel;
+    NSString * phonekABPhoneMainLabel;
+    NSString * phonekABPhoneHomeFAXLabel;
+    NSString * phonekABPhoneWorkFAXLabel;
+    NSString * phonekABPhonePagerLabel;
+    NSString * phonekABOtherLabel;
+    
+    ABMutableMultiValue * multiValue = [[ABMutableMultiValue alloc] init];
+   /*
+    [multiValue addValue: @"408-974-1111" withLabel: kABPhoneHomeLabel];
+    [multiValue addValue: @"408-974-2222" withLabel: kABPhoneMobileLabel];
+    [multiValue addValue: @"408-974-3333" withLabel: kABPhoneMainLabel];
+    [multiValue addValue: @"408-974-4444" withLabel: kABPhoneHomeFAXLabel];
+    [multiValue addValue: @"408-974-5555" withLabel: kABPhoneWorkFAXLabel];
+    [multiValue addValue: @"408-974-6666" withLabel: kABPhonePagerLabel];
+    [multiValue addValue: @"408-974-7777" withLabel: kABOtherLabel];
+   */ 
+   
+    phoneABPhoneWorkLabel = FindMatchValue(multiValuePhone, kABPhoneWorkLabel) ;
+    for(int i=0;i<[phoneABPhoneWorkLabel count];i++){
+         index++;
+        NSString * workPhone = [multiValuePhone valueAtIndex: [[phoneABPhoneWorkLabel objectAtIndex:i] intValue] ];
+        NSLog(@"Phone%d:%@",index,workPhone);
+        //set work phone;
+         [multiValue addValue: workPhone withLabel: kABPhoneWorkLabel];
+    }
+         
+    if (FindFirstMatch(multiValuePhone, kABPhoneWorkLabel, &index)){
+        phoneABPhoneWorkLabel = [multiValuePhone valueAtIndex: index] ;
+    }
+    if (FindFirstMatch(multiValuePhone, kABPhoneHomeLabel, &index)){
+        phonekABPhoneHomeLabel = [multiValuePhone valueAtIndex: index] ;
+    }
+    if (FindFirstMatch(multiValuePhone, kABPhoneMobileLabel, &index)){
+        phonekABPhoneMobileLabel = [multiValuePhone valueAtIndex: index] ;
+    }
+    if (FindFirstMatch(multiValuePhone, kABPhoneMainLabel, &index)){
+        phonekABPhoneMainLabel = [multiValuePhone valueAtIndex: index] ;
+    }
+    if (FindFirstMatch(multiValuePhone, kABPhoneHomeFAXLabel, &index)){
+        phonekABPhoneHomeFAXLabel = [multiValuePhone valueAtIndex: index] ;
+    }
+    if (FindFirstMatch(multiValuePhone, kABPhoneWorkFAXLabel, &index)){
+        phonekABPhoneWorkFAXLabel = [multiValuePhone valueAtIndex: index] ;
+    }
+    if (FindFirstMatch(multiValuePhone, kABPhonePagerLabel, &index)){
+        phonekABPhonePagerLabel = [multiValuePhone valueAtIndex: index] ;
+    }
+    if (FindFirstMatch(multiValuePhone, kABOtherLabel, &index)){
+        phonekABOtherLabel = [multiValuePhone valueAtIndex: index] ;
+    }
+    NSLog(@"Work=%@;Home=%@;Mobile=%@;Main=%@;HomeFAX=%@;WorkFAX=%@;Pager=%@;other=%@;", phoneABPhoneWorkLabel,phonekABPhoneHomeLabel,phonekABPhoneMobileLabel,phonekABPhoneMainLabel,phonekABPhoneHomeFAXLabel,phonekABPhoneWorkFAXLabel,phonekABPhonePagerLabel ,phonekABOtherLabel);
+;
+
+    // Set value in record for kABPhoneProperty.
+    //[person setValue: multiValue forProperty: kABPhoneProperty];
+    
+    return true;
+}
+
+Boolean updateEmail(ABRecord * person){
+    /*
+     目标是为所有的联系人仅保留work、home两个标签的电话及邮箱，先处理电话，再处理邮箱,各属性处理逻辑如下
+     1、若仅有一个信息，则保留work标签
+     2、若有两个信息，则保留work、home标签
+     3、若有多余两个信息，则忽略；
+     */
+    //get kABEmailProperty kABEmailWorkLabel, kABEmailHomeLabel,kABOtherLabel;
+    
+    int					index = 0;
+    
+    ABMutableMultiValue * multiValueEmail = [person valueForProperty: kABEmailProperty];
+    NSString * emailkABEmailWorkLabel;
+    NSString * emailkABEmailHomeLabel;
+    NSString * emailkABOtherLabel;
+    if (FindFirstMatch(multiValueEmail, kABEmailWorkLabel, &index)){
+        emailkABEmailWorkLabel = [multiValueEmail valueAtIndex: index] ;
+    }
+    if (FindFirstMatch(multiValueEmail, kABEmailHomeLabel , &index)){
+        emailkABEmailHomeLabel = [multiValueEmail valueAtIndex: index] ;
+    }
+    if (FindFirstMatch(multiValueEmail, kABOtherLabel, &index)){
+        emailkABOtherLabel = [multiValueEmail valueAtIndex: index] ;
     }
     
-    [ab save];
+    NSLog(@"work=%@;home=%@;other=%@",
+                                
+                                emailkABEmailWorkLabel,emailkABEmailHomeLabel,emailkABOtherLabel );
+    
+
+    return false;
 }
 
 @end

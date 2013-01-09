@@ -56,7 +56,7 @@
     IBOutlet id findElbaButton;
     IBOutlet id firstName;
     IBOutlet id matchingRecords;
-    IBOutlet id streetAddr;
+    IBOutlet id emailAddr;
     IBOutlet id workFaxPhone;
     IBOutlet id updateContactsButton;    
 }
