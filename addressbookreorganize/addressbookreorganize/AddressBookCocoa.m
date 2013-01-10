@@ -361,22 +361,24 @@ NSArray *FindMatchValue(ABMutableMultiValue *multiValue, NSString *label)
     results = [ab people];
 
     // How many records matched?
-    const int kMaxTestCnt = 10;
+    const int kMaxTestCnt = 10000;
+    Boolean needSave=false;
 
     for (int i = 0; i < [results count]; i++) {
         // Get the first record
-        NSLog(@"person-%d;", i);
+      //  NSLog(@"person-%d;", i);
 
         if (i > kMaxTestCnt) {
             break;
         }
 
         person = [results objectAtIndex:i];
-        updatePhone(person);
-        updateEmail(person);
+        NSLog(@"person :%@", person);
+        needSave =  updatePhone(person) || needSave  ;
+        needSave = updateEmail(person) || needSave  ;
     }
 
-    [ab save];
+    if (needSave) [ab save];
 }
 
 Boolean addPhone(ABMutableMultiValue * destPhone,NSString * destPhoneLabel, ABMutableMultiValue    * srcPerson,NSString * srcPhoneLabel){
@@ -411,7 +413,7 @@ Boolean updatePhone(ABRecord *person)
     Boolean isAddWork = false;
     Boolean isAddHome = false;
 
-    ABMutableMultiValue *multiValue = [[ABMutableMultiValue alloc] init];
+    ABMutableMultiValue *destPhone = [[ABMutableMultiValue alloc] init];
 
     /*
      *   [multiValue addValue: @"408-974-1111" withLabel: kABPhoneHomeLabel];
@@ -422,25 +424,25 @@ Boolean updatePhone(ABRecord *person)
      *   [multiValue addValue: @"408-974-6666" withLabel: kABPhonePagerLabel];
      *   [multiValue addValue: @"408-974-7777" withLabel: kABOtherLabel];
      */
-    ABMutableMultiValue *multiValuePhone = [person valueForProperty:kABPhoneProperty];
+    ABMutableMultiValue *srcPhone = [person valueForProperty:kABPhoneProperty];
     
     //check kABPhoneWorkLabel
-    isAddWork = addPhone(multiValue,kABPhoneWorkLabel,multiValuePhone,kABPhoneWorkLabel);
+    isAddWork = addPhone(destPhone,kABPhoneWorkLabel,srcPhone,kABPhoneWorkLabel);
     
     // check kABPhoneHomeLabel
     if(!isAddWork){
-        addPhone(multiValue,kABPhoneWorkLabel,multiValuePhone,kABPhoneHomeLabel);
+        addPhone(destPhone,kABPhoneWorkLabel,srcPhone,kABPhoneHomeLabel);
     }else {
-        isAddHome = addPhone(multiValue,kABPhoneHomeLabel,multiValuePhone,kABPhoneHomeLabel);
+        isAddHome = addPhone(destPhone,kABPhoneHomeLabel,srcPhone,kABPhoneHomeLabel);
         
     }
     // check kABPhoneMobileLabel
   
     if(!isAddWork){
-        addPhone(multiValue,kABPhoneWorkLabel,multiValuePhone,kABPhoneMobileLabel);
+        addPhone(destPhone,kABPhoneWorkLabel,srcPhone,kABPhoneMobileLabel);
     }else {
         if(!isAddHome){
-            addPhone(multiValue,kABPhoneHomeLabel,multiValuePhone,kABPhoneMobileLabel);
+            addPhone(destPhone,kABPhoneHomeLabel,srcPhone,kABPhoneMobileLabel);
         }
         
     }
@@ -448,62 +450,79 @@ Boolean updatePhone(ABRecord *person)
     // check kABPhoneMainLabel
     
     if(!isAddWork){
-        addPhone(multiValue,kABPhoneWorkLabel,multiValuePhone,kABPhoneMainLabel);
+        addPhone(destPhone,kABPhoneWorkLabel,srcPhone,kABPhoneMainLabel);
     }else {
         if(!isAddHome){
-            addPhone(multiValue,kABPhoneHomeLabel,multiValuePhone,kABPhoneMainLabel);
+            addPhone(destPhone,kABPhoneHomeLabel,srcPhone,kABPhoneMainLabel);
         }
         
     }
     // check kABPhoneHomeFAXLabel
     
     if(!isAddWork){
-        addPhone(multiValue,kABPhoneWorkLabel,multiValuePhone,kABPhoneHomeFAXLabel);
+        addPhone(destPhone,kABPhoneWorkLabel,srcPhone,kABPhoneHomeFAXLabel);
     }else {
         if(!isAddHome){
-            addPhone(multiValue,kABPhoneHomeLabel,multiValuePhone,kABPhoneHomeFAXLabel);
+            addPhone(destPhone,kABPhoneHomeLabel,srcPhone,kABPhoneHomeFAXLabel);
         }
         
     }
     // check kABPhoneWorkFAXLabel
     
     if(!isAddWork){
-        addPhone(multiValue,kABPhoneWorkLabel,multiValuePhone,kABPhoneWorkFAXLabel);
+        addPhone(destPhone,kABPhoneWorkLabel,srcPhone,kABPhoneWorkFAXLabel);
     }else {
         if(!isAddHome){
-            addPhone(multiValue,kABPhoneHomeLabel,multiValuePhone,kABPhoneWorkFAXLabel);
+            addPhone(destPhone,kABPhoneHomeLabel,srcPhone,kABPhoneWorkFAXLabel);
         }
         
     }
     // check kABPhonePagerLabel
     
     if(!isAddWork){
-        addPhone(multiValue,kABPhoneWorkLabel,multiValuePhone,kABPhonePagerLabel);
+        addPhone(destPhone,kABPhoneWorkLabel,srcPhone,kABPhonePagerLabel);
     }else {
         if(!isAddHome){
-            addPhone(multiValue,kABPhoneHomeLabel,multiValuePhone,kABPhonePagerLabel);
+            addPhone(destPhone,kABPhoneHomeLabel,srcPhone,kABPhonePagerLabel);
         }
         
     }
     // check kABOtherLabel
     
     if(!isAddWork){
-        addPhone(multiValue,kABPhoneWorkLabel,multiValuePhone,kABOtherLabel);
+        addPhone(destPhone,kABPhoneWorkLabel,srcPhone,kABOtherLabel);
     }else {
         if(!isAddHome){
-            addPhone(multiValue,kABPhoneHomeLabel,multiValuePhone,kABOtherLabel);
+            addPhone(destPhone,kABPhoneHomeLabel,srcPhone,kABOtherLabel);
         }
         
     }
     
-   NSLog(@"new phone Value =%@;",multiValue);
+  // NSLog(@"new phone Value =%@;",destPhone);
 
     // Set value in record for kABPhoneProperty.
-    // [person setValue: multiValue forProperty: kABPhoneProperty];
+    return [person setValue: destPhone forProperty: kABPhoneProperty];
+ }
 
-    return true;
+Boolean addEmail(ABMutableMultiValue * destEmail,NSString * destEmailLabel, ABMutableMultiValue    * srcPerson,NSString * srcEmailLabel){
+    
+    NSArray      *emailIndexs= FindMatchValue(srcPerson, srcEmailLabel);
+    
+    long countPhone = [emailIndexs count];
+    
+    if (countPhone > 0) {
+        for (int i = 0; i < countPhone; i++) {
+            NSString * emailValue = [srcPerson valueAtIndex:[[emailIndexs objectAtIndex:i] intValue]];
+           // NSLog(@"Email%d:%@", i,  emailValue);
+            // set Email;
+            [destEmail addValue: emailValue withLabel:destEmailLabel];
+        }
+        
+        return true;
+    }
+    
+    return false;
 }
-
 Boolean updateEmail(ABRecord *person)
 {
     /*
@@ -513,31 +532,39 @@ Boolean updateEmail(ABRecord *person)
      *   3、若有多余两个信息，则忽略；
      */
     // get kABEmailProperty kABEmailWorkLabel, kABEmailHomeLabel,kABOtherLabel;
-
-    int index = 0;
-
-    ABMutableMultiValue *multiValueEmail = [person valueForProperty:kABEmailProperty];
-    NSString            *emailkABEmailWorkLabel;
-    NSString            *emailkABEmailHomeLabel;
-    NSString            *emailkABOtherLabel;
-
-    if (FindFirstMatch(multiValueEmail, kABEmailWorkLabel, &index)) {
-        emailkABEmailWorkLabel = [multiValueEmail valueAtIndex:index];
+    Boolean isAddWork = false;
+    Boolean isAddHome = false;
+    
+    ABMutableMultiValue *destEmail = [[ABMutableMultiValue alloc] init];
+       ABMutableMultiValue *srcEmail = [person valueForProperty:kABEmailProperty];
+    
+    //check kABEmailWorkLabel
+    isAddWork = addEmail(destEmail,kABEmailWorkLabel,srcEmail,kABEmailWorkLabel);
+    
+    // check kABEmailHomeLabel
+    if(!isAddWork){
+        addEmail(destEmail,kABEmailWorkLabel,srcEmail,kABEmailHomeLabel);
+    }else {
+        isAddHome = addEmail(destEmail,kABEmailHomeLabel,srcEmail,kABEmailHomeLabel);
+        
     }
-
-    if (FindFirstMatch(multiValueEmail, kABEmailHomeLabel, &index)) {
-        emailkABEmailHomeLabel = [multiValueEmail valueAtIndex:index];
+    // check kABOtherLabel
+    
+    if(!isAddWork){
+        addEmail(destEmail,kABEmailWorkLabel,srcEmail,kABOtherLabel);
+    }else {
+        if(!isAddHome){
+            addEmail(destEmail,kABEmailHomeLabel,srcEmail,kABOtherLabel);
+        }
+        
     }
+    NSLog(@"new Email Value =%@;",destEmail);
 
-    if (FindFirstMatch(multiValueEmail, kABOtherLabel, &index)) {
-        emailkABOtherLabel = [multiValueEmail valueAtIndex:index];
-    }
-
-    NSLog(@"work=%@;home=%@;other=%@",
-
-        emailkABEmailWorkLabel, emailkABEmailHomeLabel, emailkABOtherLabel);
-
-    return false;
+    // Set value in record for kABEmailProperty.
+   return [person setValue: destEmail forProperty: kABEmailProperty];
+    
+      
+ 
 }
 
 @end
