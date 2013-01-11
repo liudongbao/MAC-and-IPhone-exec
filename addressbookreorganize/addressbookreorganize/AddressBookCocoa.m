@@ -374,22 +374,24 @@ NSArray *FindMatchValue(ABMutableMultiValue *multiValue, NSString *label)
 
         person = [results objectAtIndex:i];
         NSLog(@"person :%@", person);
-        needSave =  updatePhone(person) || needSave  ;
-        needSave = updateEmail(person) || needSave  ;
+       // needSave =  updatePhone(person) || needSave  ;
+       // needSave = updateEmail(person) || needSave  ;
+        needSave = updateNotes(person) || needSave  ;
+        
     }
 
     if (needSave) [ab save];
 }
 
-Boolean addPhone(ABMutableMultiValue * destPhone,NSString * destPhoneLabel, ABMutableMultiValue    * srcPerson,NSString * srcPhoneLabel){
+Boolean addPhone(ABMutableMultiValue * destPhone,NSString * destPhoneLabel, ABMutableMultiValue    * srcPhone,NSString * srcPhoneLabel){
     
-    NSArray      *phoneIndexs= FindMatchValue(srcPerson, srcPhoneLabel);
+    NSArray      *phoneIndexs= FindMatchValue(srcPhone, srcPhoneLabel);
     
     long countPhone = [phoneIndexs count];
     
     if (countPhone > 0) {
         for (int i = 0; i < countPhone; i++) {
-            NSString * phoneValue = [srcPerson valueAtIndex:[[phoneIndexs objectAtIndex:i] intValue]];
+            NSString * phoneValue = [srcPhone valueAtIndex:[[phoneIndexs objectAtIndex:i] intValue]];
             NSLog(@"Phone%d:%@", i,  phoneValue);
             // set work phone;
             [destPhone addValue: phoneValue withLabel:destPhoneLabel];
@@ -567,4 +569,81 @@ Boolean updateEmail(ABRecord *person)
  
 }
 
+Boolean isExistsPhoneAndEmailNotes( NSString *  notes){
+    /*
+     * 目标是为所有的联系人在现有Notes上增加：Phone&Email：13922790527&liudongbao@139.com；
+     增加前需要先检查当前Notes中是否已经添加了相应信息： 判断是否包含“Phone&Email”。
+     [notes rangeOfString(@"Phone&Email")]
+     */
+    if(notes==nil){
+        return false;
+    }
+    NSRange  range = [notes rangeOfString:@"Phone&Email"];
+    Boolean isExists = ( range.location != NSNotFound);
+    
+    NSLog(@"notes=%@,range = %lu,NSNotFound =%lu,hasExists=%d,notes=%d ",notes,range.location,NSNotFound ,(int)isExists,(int)(notes==nil));
+
+    return isExists ;
+}
+
+NSString *  getWorkPhones(ABRecord *person)
+{
+    ABMutableMultiValue *srcPhone = [person valueForProperty:kABPhoneProperty];
+    NSArray      *phoneIndexs= FindMatchValue(srcPhone, kABPhoneWorkLabel);
+    
+    long countPhone = [phoneIndexs count];
+    NSMutableString * phones = [[NSMutableString alloc] init];
+    if (countPhone > 0) {
+        for (int i = 0; i < countPhone; i++) {
+               [phones appendFormat:@"[%@]",
+            [srcPhone valueAtIndex:[[phoneIndexs objectAtIndex:i] intValue]]];
+          }
+        return phones;
+     }
+
+    return @"";
+}
+NSString *  getWorkEmails(ABRecord *person)
+{
+    ABMutableMultiValue *srcEmail = [person valueForProperty:kABEmailProperty];
+    NSArray      *emailIndexs= FindMatchValue(srcEmail, kABEmailWorkLabel);
+    
+    long countEmails = [emailIndexs count];
+    NSMutableString * emails = [[NSMutableString alloc] init];
+    if (countEmails > 0) {
+        for (int i = 0; i < countEmails; i++) {
+            [emails appendFormat:@"[%@]",
+             [srcEmail valueAtIndex:[[emailIndexs objectAtIndex:i] intValue]]];
+        }
+        return emails;
+    }
+    
+    return @"";
+}
+Boolean updateNotes(ABRecord *person){
+    /*
+     * 目标是为所有的联系人在现有Notes上增加：Phone&Email：13922790527&liudongbao@139.com；
+       增加前需要先检查当前Notes中是否已经添加了相应信息： 判断是否包含“Phone&Email”。
+       [notes rangeOfString(@"Phone&Email")]
+       并且若没有电话号码，则不添加相应信息；
+     */
+    // get  kABNoteProperty and set kABNoteProperty;
+    NSString * notes = [person valueForProperty:kABNoteProperty];
+      //nil;
+    //@"目标是为所有的联系人在现有Notes上增加：";
+    //@"目标是为所有的联系人在现有Notes上增加：Phone&Email：13922790527&liudongbao@139.com";
+   // @"Phone&Email：13922790527&liudongbao@139.com";
+    if (isExistsPhoneAndEmailNotes(notes)) return false;
+    NSString * workPhones = getWorkPhones(person);
+    if([workPhones caseInsensitiveCompare:@"" ]== NSOrderedSame) return false;
+    NSString * workEmails = getWorkEmails(person);
+    NSString * newNotes = nil;
+     if(notes!=nil)
+      newNotes = [NSString stringWithFormat:@"%@:Phone&Email：%@&%@",notes,workPhones,workEmails];
+    else
+      newNotes = [NSString stringWithFormat:@"Phone&Email：%@&%@",workPhones,workEmails];     
+    NSLog(@"newNotes=%@",newNotes);
+    return  [person setValue:newNotes forProperty:kABNoteProperty];
+  
+}
 @end
