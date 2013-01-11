@@ -49,6 +49,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
+//extern NSString * const   kNotePhoneAndEmailTag;// kNotePhoneAndEmailTag= @"Phone&Email";
 
 @interface MyObject : NSObject
 {
@@ -63,4 +64,5 @@
 - (IBAction)addElba:(id)sender;
 - (IBAction)findElba:(id)sender;
 - (IBAction) updateContacts:(id)sender;
+ 
 @end

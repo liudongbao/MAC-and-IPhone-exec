@@ -51,7 +51,10 @@
 #import <AddressBook/AddressBook.h>
 #import "AddressBookCocoa.h"
 
+NSString * const kNotePhoneAndEmailTag= @"Phone&Email";
+
 @implementation MyObject
+
 Boolean FindFirstMatch(ABMutableMultiValue *multiValue, NSString *label, int *index);
 
 #pragma mark Add contact
@@ -538,7 +541,7 @@ Boolean updateEmail(ABRecord *person)
     Boolean isAddHome = false;
     
     ABMutableMultiValue *destEmail = [[ABMutableMultiValue alloc] init];
-       ABMutableMultiValue *srcEmail = [person valueForProperty:kABEmailProperty];
+    ABMutableMultiValue *srcEmail = [person valueForProperty:kABEmailProperty];
     
     //check kABEmailWorkLabel
     isAddWork = addEmail(destEmail,kABEmailWorkLabel,srcEmail,kABEmailWorkLabel);
@@ -569,7 +572,7 @@ Boolean updateEmail(ABRecord *person)
  
 }
 
-Boolean isExistsPhoneAndEmailNotes( NSString *  notes){
+Boolean isExistsPhoneAndEmailNotes( NSString *  notes ){
     /*
      * 目标是为所有的联系人在现有Notes上增加：Phone&Email：13922790527&liudongbao@139.com；
      增加前需要先检查当前Notes中是否已经添加了相应信息： 判断是否包含“Phone&Email”。
@@ -578,14 +581,13 @@ Boolean isExistsPhoneAndEmailNotes( NSString *  notes){
     if(notes==nil){
         return false;
     }
-    NSRange  range = [notes rangeOfString:@"Phone&Email"];
+    NSRange  range = [notes rangeOfString:kNotePhoneAndEmailTag];
     Boolean isExists = ( range.location != NSNotFound);
     
     NSLog(@"notes=%@,range = %lu,NSNotFound =%lu,hasExists=%d,notes=%d ",notes,range.location,NSNotFound ,(int)isExists,(int)(notes==nil));
 
     return isExists ;
 }
-
 NSString *  getWorkPhones(ABRecord *person)
 {
     ABMutableMultiValue *srcPhone = [person valueForProperty:kABPhoneProperty];
@@ -633,15 +635,24 @@ Boolean updateNotes(ABRecord *person){
     //@"目标是为所有的联系人在现有Notes上增加：";
     //@"目标是为所有的联系人在现有Notes上增加：Phone&Email：13922790527&liudongbao@139.com";
    // @"Phone&Email：13922790527&liudongbao@139.com";
-    if (isExistsPhoneAndEmailNotes(notes)) return false;
+    NSMutableString * newNotes = [[NSMutableString alloc]init];
+
+    if (isExistsPhoneAndEmailNotes(notes))
+    {
+         NSRange  range = [notes rangeOfString:kNotePhoneAndEmailTag];
+         [newNotes appendString: [notes substringToIndex: range.location] ];
+    }
+          else{
+               if(notes!=nil)
+              [newNotes appendString: notes];
+          }
+    [newNotes appendString: kNotePhoneAndEmailTag];
     NSString * workPhones = getWorkPhones(person);
-    if([workPhones caseInsensitiveCompare:@"" ]== NSOrderedSame) return false;
+   // if([workPhones caseInsensitiveCompare:@"" ]== NSOrderedSame) return false;
     NSString * workEmails = getWorkEmails(person);
-    NSString * newNotes = nil;
-     if(notes!=nil)
-      newNotes = [NSString stringWithFormat:@"%@:Phone&Email：%@&%@",notes,workPhones,workEmails];
-    else
-      newNotes = [NSString stringWithFormat:@"Phone&Email：%@&%@",workPhones,workEmails];     
+ 
+    [newNotes appendFormat:@":%@:%@&%@",[person valueForProperty:kABFirstNameProperty],workPhones,workEmails];
+    
     NSLog(@"newNotes=%@",newNotes);
     return  [person setValue:newNotes forProperty:kABNoteProperty];
   
