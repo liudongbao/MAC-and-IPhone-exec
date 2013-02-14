@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.17" GSCVersion="0.9.91">
+  <sounds>
+    <sound name="classic_explode">
+      <file name="classic_explode.ogg" size="13969" />
+    </sound>
+    <sound name="classic_fire">
+      <file name="classic_fire.ogg" size="6955" />
+    </sound>
+    <sound name="explode">
+      <file name="explode.ogg" size="5167" />
+    </sound>
+    <sound name="heartbeat_background">
+      <file name="heartbeat_background.ogg" size="31480" />
+    </sound>
+  </sounds>
+  <images>
+    <image name="ship-paper-64x64">
+      <file name="ship-paper-64x64.png" size="5858" />
+    </image>
+    <image name="missle-paper-16x16">
+      <file name="missle-paper-16x16.png" size="713" />
+    </image>
+    <image name="asteroid-sm-paper-32x32">
+      <file name="asteroid-sm-paper-32x32.png" size="2564" />
+    </image>
+    <image name="asteroid-paper-64x64">
+      <file name="asteroid-paper-64x64.png" size="7315" />
+    </image>
+    <image name="small_alien_ship-paper">
+      <file name="small_alien_ship-paper.png" size="18248" />
+    </image>
+  </images>
+  <behaviors />
+</assets>

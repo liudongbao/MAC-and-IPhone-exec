@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id174712" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">READ ME FIRST!!!</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">64</real>
+      <real id="height">64</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">0.992356</real>
+      <real id="blue">0.998089</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">Flower</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id632884" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note - Tutorial 1 - Enabling and Disabling</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">Click the ON button on a behavior to switch it to OFF and disable it. Click it again to enable it. 
+
+
+
+</text>
+      </attributes>
+    </behavior>
+    <behavior id="id451331" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note - Tutorial 2 - definition of commenting</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">Any behavior, rule or group that is ON will act out as normal when the game is running. Any behavior, rule, or group that is OFF will not carry out when the game is running. This is commonly referred as "commenting" in and out. By commenting in and out you can quickly apply, test and modify the properties of your actors without worrying about branching your project or losing previous iterations. 
+</text>
+      </attributes>
+    </behavior>
+    <behavior id="id507089" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note - Tutorial 3 - commented out not included at run time</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">Don't worry if you have a lot of things commented out. When you build and run your game, anything that is OFF will not be included. 
+</text>
+      </attributes>
+    </behavior>
+    <behavior id="id230000" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note - Explanation of this actor</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">This actor behaves as an emitter for particles of different colors and properties. The emitter has a built in motion that also affects the way the particles shoot out. </text>
+      </attributes>
+    </behavior>
+    <behavior id="id103272" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">GROUP - Emitter motion</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id245887" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">You can comment out individual behaviors below or even comment an ENTIRE series of behaviors by grouping them and then commenting the group in and out by toggling ON and OFF.
+
+Try commenting out each Behavior below individually, in pairs, or as a group to see how the actor's movement is affected.
+</text>
+          </attributes>
+        </behavior>
+        <behavior id="id196877" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain Attribute: Modify the rotation of the actor</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.rotation</text>
+            <text id="RHS">
+              <expression>
+                <string>180*cos(</string>
+                <reference keypath="self.attributes.time" />
+                <string>*160)</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id218966" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain Attribute: Modify the X position of the actor</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.x</text>
+            <text id="RHS">
+              <expression>
+                <string>240+30*cos(</string>
+                <reference keypath="self.attributes.time" />
+                <string>*160)</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id676411" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain Attribute: Modify the Y position of the actor</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.y</text>
+            <text id="RHS">
+              <expression>
+                <string>160-30*sin(</string>
+                <reference keypath="self.attributes.time" />
+                <string>*160)</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id433030" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">GROUP - Particle Behaviors</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id360281" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Each particle generator below corresponds to a different color. 
+
+By commenting in and out we can quickly and easily build up the quantity or scale back as needed without losing any ideas we may want to come back to later. 
+</text>
+          </attributes>
+        </behavior>
+        <behavior id="id237913" class="ParticlesBehavior" enabled="true">
+          <attributes>
+            <text id="name">Particles: Green</text>
+            <text id="bundleName">Particles.behavior</text>
+            <index id="numParticles">50</index>
+            <real id="size">10</real>
+            <real id="lifetime">2</real>
+            <real id="startupTime">2</real>
+            <angle id="direction">
+              <expression>
+                <string>random(135,225)</string>
+              </expression>
+            </angle>
+            <real id="speed">200</real>
+            <image id="image">Pollen</image>
+            <angle id="rotation">0</angle>
+            <real id="angularVelocity">0</real>
+            <index id="directionRelativity">0</index>
+            <real id="emitterOffsetX">0</real>
+            <real id="emitterOffsetY">0</real>
+            <boolean id="colorChange">false</boolean>
+            <boolean id="sizeChange">false</boolean>
+            <real id="colorTransitionTime">1</real>
+            <real id="sizeTarget">5</real>
+            <real id="sizeTransitionTime">0</real>
+            <color id="color">
+              <real id="red">0</real>
+              <real id="green">1</real>
+              <real id="blue">0.0582531</real>
+              <real id="alpha">1</real>
+            </color>
+            <color id="colorTarget">
+              <real id="red">1</real>
+              <real id="green">1</real>
+              <real id="blue">1</real>
+              <real id="alpha">1</real>
+            </color>
+            <boolean id="affectedByGravity">true</boolean>
+            <enumeration id="blendingMode">0</enumeration>
+          </attributes>
+        </behavior>
+        <behavior id="id512829" class="ParticlesBehavior" enabled="true">
+          <attributes>
+            <text id="name">Particles: White</text>
+            <text id="bundleName">Particles.behavior</text>
+            <index id="numParticles">50</index>
+            <real id="size">10</real>
+            <real id="lifetime">2</real>
+            <real id="startupTime">2</real>
+            <angle id="direction">
+              <expression>
+                <string>random(-45,45)</string>
+              </expression>
+            </angle>
+            <real id="speed">200</real>
+            <image id="image">Pollen</image>
+            <angle id="rotation">0</angle>
+            <real id="angularVelocity">0</real>
+            <index id="directionRelativity">0</index>
+            <real id="emitterOffsetX">0</real>
+            <real id="emitterOffsetY">0</real>
+            <boolean id="colorChange">false</boolean>
+            <boolean id="sizeChange">false</boolean>
+            <real id="colorTransitionTime">1</real>
+            <real id="sizeTarget">5</real>
+            <real id="sizeTransitionTime">0</real>
+            <color id="color">
+              <real id="red">1</real>
+              <real id="green">1</real>
+              <real id="blue">1</real>
+              <real id="alpha">1</real>
+            </color>
+            <color id="colorTarget">
+              <real id="red">1</real>
+              <real id="green">1</real>
+              <real id="blue">1</real>
+              <real id="alpha">1</real>
+            </color>
+            <boolean id="affectedByGravity">true</boolean>
+            <enumeration id="blendingMode">0</enumeration>
+          </attributes>
+        </behavior>
+        <behavior id="id427182" class="ParticlesBehavior" enabled="true">
+          <attributes>
+            <text id="name">Particles: Red</text>
+            <text id="bundleName">Particles.behavior</text>
+            <index id="numParticles">50</index>
+            <real id="size">10</real>
+            <real id="lifetime">2</real>
+            <real id="startupTime">2</real>
+            <angle id="direction">
+              <expression>
+                <string>random(45,135)</string>
+              </expression>
+            </angle>
+            <real id="speed">300</real>
+            <image id="image">Pollen</image>
+            <angle id="rotation">0</angle>
+            <real id="angularVelocity">0</real>
+            <index id="directionRelativity">0</index>
+            <real id="emitterOffsetX">0</real>
+            <real id="emitterOffsetY">0</real>
+            <boolean id="colorChange">true</boolean>
+            <boolean id="sizeChange">false</boolean>
+            <real id="colorTransitionTime">3</real>
+            <real id="sizeTarget">5</real>
+            <real id="sizeTransitionTime">0</real>
+            <color id="color">
+              <real id="red">1</real>
+              <real id="green">0.171871</real>
+              <real id="blue">0.0536411</real>
+              <real id="alpha">1</real>
+            </color>
+            <color id="colorTarget">
+              <real id="red">1</real>
+              <real id="green">0.0146632</real>
+              <real id="blue">0.870675</real>
+              <real id="alpha">0.52</real>
+            </color>
+            <boolean id="affectedByGravity">true</boolean>
+            <enumeration id="blendingMode">0</enumeration>
+          </attributes>
+        </behavior>
+        <behavior id="id959653" class="ParticlesBehavior" enabled="true">
+          <attributes>
+            <text id="name">Particles: Yellow</text>
+            <text id="bundleName">Particles.behavior</text>
+            <index id="numParticles">20</index>
+            <real id="size">10</real>
+            <real id="lifetime">2</real>
+            <real id="startupTime">2</real>
+            <angle id="direction">135</angle>
+            <real id="speed">250</real>
+            <image id="image">Pollen</image>
+            <angle id="rotation">0</angle>
+            <real id="angularVelocity">0</real>
+            <index id="directionRelativity">0</index>
+            <real id="emitterOffsetX">0</real>
+            <real id="emitterOffsetY">0</real>
+            <boolean id="colorChange">false</boolean>
+            <boolean id="sizeChange">false</boolean>
+            <real id="colorTransitionTime">3</real>
+            <real id="sizeTarget">5</real>
+            <real id="sizeTransitionTime">0</real>
+            <color id="color">
+              <real id="red">1</real>
+              <real id="green">0.994031</real>
+              <real id="blue">0</real>
+              <real id="alpha">1</real>
+            </color>
+            <color id="colorTarget">
+              <real id="red">1</real>
+              <real id="green">0.0146632</real>
+              <real id="blue">0.870675</real>
+              <real id="alpha">0.52</real>
+            </color>
+            <boolean id="affectedByGravity">false</boolean>
+            <enumeration id="blendingMode">0</enumeration>
+          </attributes>
+        </behavior>
+        <behavior id="id596796" class="ParticlesBehavior" enabled="true">
+          <attributes>
+            <text id="name">Particles: Orange</text>
+            <text id="bundleName">Particles.behavior</text>
+            <index id="numParticles">20</index>
+            <real id="size">10</real>
+            <real id="lifetime">2</real>
+            <real id="startupTime">2</real>
+            <angle id="direction">45</angle>
+            <real id="speed">250</real>
+            <image id="image">Pollen</image>
+            <angle id="rotation">0</angle>
+            <real id="angularVelocity">0</real>
+            <index id="directionRelativity">0</index>
+            <real id="emitterOffsetX">0</real>
+            <real id="emitterOffsetY">0</real>
+            <boolean id="colorChange">false</boolean>
+            <boolean id="sizeChange">false</boolean>
+            <real id="colorTransitionTime">3</real>
+            <real id="sizeTarget">5</real>
+            <real id="sizeTransitionTime">0</real>
+            <color id="color">
+              <real id="red">1</real>
+              <real id="green">0.675466</real>
+              <real id="blue">0.0357716</real>
+              <real id="alpha">1</real>
+            </color>
+            <color id="colorTarget">
+              <real id="red">1</real>
+              <real id="green">0.0146632</real>
+              <real id="blue">0.870675</real>
+              <real id="alpha">0.52</real>
+            </color>
+            <boolean id="affectedByGravity">false</boolean>
+            <enumeration id="blendingMode">0</enumeration>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">50</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">false</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

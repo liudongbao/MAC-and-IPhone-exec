@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		3C426B0014374E0200C564BB /* InAppWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C426AFF14374E0200C564BB /* InAppWebView.xib */; };
+		3C7CEFD414D120C40049804C /* ModalActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CEFD314D120C40049804C /* ModalActivityView.xib */; };
+		3C9CD0D813F1BFB9002BE2FD /* KeyboardInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9CD0D713F1BFB9002BE2FD /* KeyboardInputViewController.xib */; };
+		3C9CD0E213F1C71D002BE2FD /* WebpageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9CD0E113F1C71D002BE2FD /* WebpageView.xib */; };
+		7C059E95152CF31800EA2DF5 /* loading_spinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C059E94152CF31800EA2DF5 /* loading_spinner.png */; };
+		7C48A11B151BB0E000FA0A10 /* stubbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C48A11A151BB0E000FA0A10 /* stubbg.png */; };
+		D772EB6913A12DE900983F79 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4BC88313A121C00009B43B /* CFNetwork.framework */; };
+		D772EB6A13A12DEC00983F79 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4BC88513A121D80009B43B /* MobileCoreServices.framework */; };
+		D794FA77127A3A2D00B9F5B9 /* libGameSaladViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FA76127A3A2D00B9F5B9 /* libGameSaladViewer.a */; };
+		D794FA7B127A3A3900B9F5B9 /* engine32.luo in Resources */ = {isa = PBXBuildFile; fileRef = D794FA7A127A3A3900B9F5B9 /* engine32.luo */; };
+		D794FA86127A3B1500B9F5B9 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA82127A3B1500B9F5B9 /* Icon-72.png */; };
+		D794FA87127A3B1500B9F5B9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA83127A3B1500B9F5B9 /* Icon.png */; };
+		D794FA88127A3B1500B9F5B9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA84127A3B1500B9F5B9 /* Icon@2x.png */; };
+		D794FA89127A3B1500B9F5B9 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = D794FA85127A3B1500B9F5B9 /* iTunesArtwork */; };
+		D794FADA127A3B2000B9F5B9 /* AccountView-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FA8B127A3B2000B9F5B9 /* AccountView-iPad.xib */; };
+		D794FADB127A3B2000B9F5B9 /* CreateAccountView-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FA8D127A3B2000B9F5B9 /* CreateAccountView-iPad.xib */; };
+		D794FADC127A3B2000B9F5B9 /* DownloadingView-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FA8F127A3B2000B9F5B9 /* DownloadingView-iPad.xib */; };
+		D794FADD127A3B2000B9F5B9 /* GameList-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FA91127A3B2000B9F5B9 /* GameList-iPad.xib */; };
+		D794FADE127A3B2000B9F5B9 /* Instructions-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FA93127A3B2000B9F5B9 /* Instructions-iPad.xib */; };
+		D794FADF127A3B2000B9F5B9 /* MainView-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FA95127A3B2000B9F5B9 /* MainView-iPad.xib */; };
+		D794FAE0127A3B2000B9F5B9 /* arrow_left-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA98127A3B2000B9F5B9 /* arrow_left-iPad.png */; };
+		D794FAE1127A3B2000B9F5B9 /* arrow_left_highlight-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA99127A3B2000B9F5B9 /* arrow_left_highlight-iPad.png */; };
+		D794FAE2127A3B2000B9F5B9 /* arrow_right-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA9A127A3B2000B9F5B9 /* arrow_right-iPad.png */; };
+		D794FAE3127A3B2000B9F5B9 /* arrow_right_highlight-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA9B127A3B2000B9F5B9 /* arrow_right_highlight-iPad.png */; };
+		D794FAE4127A3B2000B9F5B9 /* BackgroundTexture-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA9C127A3B2000B9F5B9 /* BackgroundTexture-iPad.png */; };
+		D794FAE5127A3B2000B9F5B9 /* Bowlboy-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA9D127A3B2000B9F5B9 /* Bowlboy-iPad.png */; };
+		D794FAE6127A3B2000B9F5B9 /* Default-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA9E127A3B2000B9F5B9 /* Default-iPad.png */; };
+		D794FAE7127A3B2000B9F5B9 /* dot_green-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FA9F127A3B2000B9F5B9 /* dot_green-iPad.png */; };
+		D794FAE8127A3B2000B9F5B9 /* dot_red-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAA0127A3B2000B9F5B9 /* dot_red-iPad.png */; };
+		D794FAE9127A3B2000B9F5B9 /* dot_yellow-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAA1127A3B2000B9F5B9 /* dot_yellow-iPad.png */; };
+		D794FAEA127A3B2000B9F5B9 /* load_screen_progressbar-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAA2127A3B2000B9F5B9 /* load_screen_progressbar-iPad.png */; };
+		D794FAEB127A3B2000B9F5B9 /* loading_screen_background_1024-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAA3127A3B2000B9F5B9 /* loading_screen_background_1024-iPad.png */; };
+		D794FAEC127A3B2000B9F5B9 /* Step1-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAA4127A3B2000B9F5B9 /* Step1-iPad.png */; };
+		D794FAED127A3B2000B9F5B9 /* Step2-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAA5127A3B2000B9F5B9 /* Step2-iPad.png */; };
+		D794FAEE127A3B2000B9F5B9 /* Step2wifi-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAA6127A3B2000B9F5B9 /* Step2wifi-iPad.png */; };
+		D794FAEF127A3B2000B9F5B9 /* Step3-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAA7127A3B2000B9F5B9 /* Step3-iPad.png */; };
+		D794FAF0127A3B2000B9F5B9 /* Step4-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAA8127A3B2000B9F5B9 /* Step4-iPad.png */; };
+		D794FAF1127A3B2000B9F5B9 /* AccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FAAA127A3B2000B9F5B9 /* AccountView.xib */; };
+		D794FAF2127A3B2000B9F5B9 /* CreateAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FAAC127A3B2000B9F5B9 /* CreateAccountView.xib */; };
+		D794FAF3127A3B2000B9F5B9 /* DownloadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FAAE127A3B2000B9F5B9 /* DownloadingView.xib */; };
+		D794FAF4127A3B2000B9F5B9 /* GameList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FAB0127A3B2000B9F5B9 /* GameList.xib */; };
+		D794FAF5127A3B2000B9F5B9 /* Instructions.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FAB2127A3B2000B9F5B9 /* Instructions.xib */; };
+		D794FAF6127A3B2000B9F5B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D794FAB4127A3B2000B9F5B9 /* Localizable.strings */; };
+		D794FAF7127A3B2000B9F5B9 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D794FAB6127A3B2000B9F5B9 /* MainView.xib */; };
+		D794FAFA127A3B2000B9F5B9 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FABD127A3B2000B9F5B9 /* arrow_left.png */; };
+		D794FAFB127A3B2000B9F5B9 /* arrow_left_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FABE127A3B2000B9F5B9 /* arrow_left_highlight.png */; };
+		D794FAFC127A3B2000B9F5B9 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FABF127A3B2000B9F5B9 /* arrow_right.png */; };
+		D794FAFD127A3B2000B9F5B9 /* arrow_right_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC0127A3B2000B9F5B9 /* arrow_right_highlight.png */; };
+		D794FAFE127A3B2000B9F5B9 /* BackgroundTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC1127A3B2000B9F5B9 /* BackgroundTexture.png */; };
+		D794FAFF127A3B2000B9F5B9 /* BackgroundTexture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC2127A3B2000B9F5B9 /* BackgroundTexture@2x.png */; };
+		D794FB00127A3B2000B9F5B9 /* Bowlboy.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC3127A3B2000B9F5B9 /* Bowlboy.png */; };
+		D794FB01127A3B2000B9F5B9 /* Bowlboy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC4127A3B2000B9F5B9 /* Bowlboy@2x.png */; };
+		D794FB02127A3B2000B9F5B9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC5127A3B2000B9F5B9 /* Default.png */; };
+		D794FB03127A3B2000B9F5B9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC6127A3B2000B9F5B9 /* Default@2x.png */; };
+		D794FB04127A3B2000B9F5B9 /* dot_green.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC7127A3B2000B9F5B9 /* dot_green.png */; };
+		D794FB05127A3B2000B9F5B9 /* dot_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC8127A3B2000B9F5B9 /* dot_green@2x.png */; };
+		D794FB06127A3B2000B9F5B9 /* dot_red.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAC9127A3B2000B9F5B9 /* dot_red.png */; };
+		D794FB07127A3B2000B9F5B9 /* dot_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FACA127A3B2000B9F5B9 /* dot_red@2x.png */; };
+		D794FB08127A3B2000B9F5B9 /* dot_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FACB127A3B2000B9F5B9 /* dot_yellow.png */; };
+		D794FB09127A3B2000B9F5B9 /* dot_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FACC127A3B2000B9F5B9 /* dot_yellow@2x.png */; };
+		D794FB0A127A3B2000B9F5B9 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FACD127A3B2000B9F5B9 /* gradient.png */; };
+		D794FB0B127A3B2000B9F5B9 /* load_screen_progressbar.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FACE127A3B2000B9F5B9 /* load_screen_progressbar.png */; };
+		D794FB0C127A3B2000B9F5B9 /* loading_screen_background_480.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FACF127A3B2000B9F5B9 /* loading_screen_background_480.png */; };
+		D794FB0D127A3B2000B9F5B9 /* Step1.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD0127A3B2000B9F5B9 /* Step1.png */; };
+		D794FB0E127A3B2000B9F5B9 /* Step1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD1127A3B2000B9F5B9 /* Step1@2x.png */; };
+		D794FB0F127A3B2000B9F5B9 /* Step2.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD2127A3B2000B9F5B9 /* Step2.png */; };
+		D794FB10127A3B2000B9F5B9 /* Step2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD3127A3B2000B9F5B9 /* Step2@2x.png */; };
+		D794FB11127A3B2000B9F5B9 /* Step2wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD4127A3B2000B9F5B9 /* Step2wifi.png */; };
+		D794FB12127A3B2000B9F5B9 /* Step2wifi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD5127A3B2000B9F5B9 /* Step2wifi@2x.png */; };
+		D794FB13127A3B2000B9F5B9 /* Step3.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD6127A3B2000B9F5B9 /* Step3.png */; };
+		D794FB14127A3B2000B9F5B9 /* Step3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD7127A3B2000B9F5B9 /* Step3@2x.png */; };
+		D794FB15127A3B2000B9F5B9 /* Step4.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD8127A3B2000B9F5B9 /* Step4.png */; };
+		D794FB16127A3B2000B9F5B9 /* Step4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D794FAD9127A3B2000B9F5B9 /* Step4@2x.png */; };
+		D794FBB2127A3BC300B9F5B9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FBAB127A3BC300B9F5B9 /* OpenAL.framework */; };
+		D794FBB3127A3BC300B9F5B9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FBAC127A3BC300B9F5B9 /* AudioToolbox.framework */; };
+		D794FBB4127A3BC300B9F5B9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FBAD127A3BC300B9F5B9 /* Security.framework */; };
+		D794FBB5127A3BC300B9F5B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FBAE127A3BC300B9F5B9 /* SystemConfiguration.framework */; };
+		D794FBB6127A3BC300B9F5B9 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FBAF127A3BC300B9F5B9 /* libsqlite3.0.dylib */; };
+		D794FBB7127A3BC300B9F5B9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FBB0127A3BC300B9F5B9 /* libxml2.dylib */; };
+		D794FBB8127A3BC300B9F5B9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FBB1127A3BC300B9F5B9 /* libz.dylib */; };
+		D794FC4E127A3BD400B9F5B9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FC49127A3BD400B9F5B9 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D794FC4F127A3BD400B9F5B9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FC4A127A3BD400B9F5B9 /* AVFoundation.framework */; };
+		D794FC50127A3BD400B9F5B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FC4B127A3BD400B9F5B9 /* QuartzCore.framework */; };
+		D794FC51127A3BD400B9F5B9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FC4C127A3BD400B9F5B9 /* CoreGraphics.framework */; };
+		D794FC52127A3BD400B9F5B9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D794FC4D127A3BD400B9F5B9 /* OpenGLES.framework */; };
+		E7C55BB7161F75D700DABFB1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7C55BB6161F75D700DABFB1 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* GameSalad Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameSalad Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* GameSalad_Viewer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSalad_Viewer_Prefix.pch; sourceTree = "<group>"; };
+		3C426AFF14374E0200C564BB /* InAppWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InAppWebView.xib; sourceTree = "<group>"; };
+		3C4BC88313A121C00009B43B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3C4BC88513A121D80009B43B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3C7CEFD314D120C40049804C /* ModalActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalActivityView.xib; sourceTree = "<group>"; };
+		3C9CD0D713F1BFB9002BE2FD /* KeyboardInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardInputViewController.xib; sourceTree = "<group>"; };
+		3C9CD0E113F1C71D002BE2FD /* WebpageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebpageView.xib; sourceTree = "<group>"; };
+		7C059E94152CF31800EA2DF5 /* loading_spinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_spinner.png; sourceTree = "<group>"; };
+		7C48A11A151BB0E000FA0A10 /* stubbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stubbg.png; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* GameSalad_Viewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GameSalad_Viewer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D794FA76127A3A2D00B9F5B9 /* libGameSaladViewer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGameSaladViewer.a; sourceTree = "<group>"; };
+		D794FA7A127A3A3900B9F5B9 /* engine32.luo */ = {isa = PBXFileReference; lastKnownFileType = file; path = engine32.luo; sourceTree = "<group>"; };
+		D794FA82127A3B1500B9F5B9 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		D794FA83127A3B1500B9F5B9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D794FA84127A3B1500B9F5B9 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D794FA85127A3B1500B9F5B9 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		D794FA8C127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = "English.lproj/AccountView-iPad.xib"; sourceTree = "<group>"; };
+		D794FA8E127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = "English.lproj/CreateAccountView-iPad.xib"; sourceTree = "<group>"; };
+		D794FA90127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = "English.lproj/DownloadingView-iPad.xib"; sourceTree = "<group>"; };
+		D794FA92127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = "English.lproj/GameList-iPad.xib"; sourceTree = "<group>"; };
+		D794FA94127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = "English.lproj/Instructions-iPad.xib"; sourceTree = "<group>"; };
+		D794FA96127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = "English.lproj/MainView-iPad.xib"; sourceTree = "<group>"; };
+		D794FA98127A3B2000B9F5B9 /* arrow_left-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left-iPad.png"; sourceTree = "<group>"; };
+		D794FA99127A3B2000B9F5B9 /* arrow_left_highlight-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left_highlight-iPad.png"; sourceTree = "<group>"; };
+		D794FA9A127A3B2000B9F5B9 /* arrow_right-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right-iPad.png"; sourceTree = "<group>"; };
+		D794FA9B127A3B2000B9F5B9 /* arrow_right_highlight-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right_highlight-iPad.png"; sourceTree = "<group>"; };
+		D794FA9C127A3B2000B9F5B9 /* BackgroundTexture-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundTexture-iPad.png"; sourceTree = "<group>"; };
+		D794FA9D127A3B2000B9F5B9 /* Bowlboy-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowlboy-iPad.png"; sourceTree = "<group>"; };
+		D794FA9E127A3B2000B9F5B9 /* Default-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-iPad.png"; sourceTree = "<group>"; };
+		D794FA9F127A3B2000B9F5B9 /* dot_green-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_green-iPad.png"; sourceTree = "<group>"; };
+		D794FAA0127A3B2000B9F5B9 /* dot_red-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_red-iPad.png"; sourceTree = "<group>"; };
+		D794FAA1127A3B2000B9F5B9 /* dot_yellow-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_yellow-iPad.png"; sourceTree = "<group>"; };
+		D794FAA2127A3B2000B9F5B9 /* load_screen_progressbar-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "load_screen_progressbar-iPad.png"; sourceTree = "<group>"; };
+		D794FAA3127A3B2000B9F5B9 /* loading_screen_background_1024-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_screen_background_1024-iPad.png"; sourceTree = "<group>"; };
+		D794FAA4127A3B2000B9F5B9 /* Step1-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step1-iPad.png"; sourceTree = "<group>"; };
+		D794FAA5127A3B2000B9F5B9 /* Step2-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step2-iPad.png"; sourceTree = "<group>"; };
+		D794FAA6127A3B2000B9F5B9 /* Step2wifi-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step2wifi-iPad.png"; sourceTree = "<group>"; };
+		D794FAA7127A3B2000B9F5B9 /* Step3-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step3-iPad.png"; sourceTree = "<group>"; };
+		D794FAA8127A3B2000B9F5B9 /* Step4-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step4-iPad.png"; sourceTree = "<group>"; };
+		D794FAAB127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/AccountView.xib; sourceTree = "<group>"; };
+		D794FAAD127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/CreateAccountView.xib; sourceTree = "<group>"; };
+		D794FAAF127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/DownloadingView.xib; sourceTree = "<group>"; };
+		D794FAB1127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GameList.xib; sourceTree = "<group>"; };
+		D794FAB3127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Instructions.xib; sourceTree = "<group>"; };
+		D794FAB5127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D794FAB7127A3B2000B9F5B9 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainView.xib; sourceTree = "<group>"; };
+		D794FABD127A3B2000B9F5B9 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
+		D794FABE127A3B2000B9F5B9 /* arrow_left_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_highlight.png; sourceTree = "<group>"; };
+		D794FABF127A3B2000B9F5B9 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
+		D794FAC0127A3B2000B9F5B9 /* arrow_right_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right_highlight.png; sourceTree = "<group>"; };
+		D794FAC1127A3B2000B9F5B9 /* BackgroundTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundTexture.png; sourceTree = "<group>"; };
+		D794FAC2127A3B2000B9F5B9 /* BackgroundTexture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackgroundTexture@2x.png"; sourceTree = "<group>"; };
+		D794FAC3127A3B2000B9F5B9 /* Bowlboy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bowlboy.png; sourceTree = "<group>"; };
+		D794FAC4127A3B2000B9F5B9 /* Bowlboy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bowlboy@2x.png"; sourceTree = "<group>"; };
+		D794FAC5127A3B2000B9F5B9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D794FAC6127A3B2000B9F5B9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D794FAC7127A3B2000B9F5B9 /* dot_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_green.png; sourceTree = "<group>"; };
+		D794FAC8127A3B2000B9F5B9 /* dot_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_green@2x.png"; sourceTree = "<group>"; };
+		D794FAC9127A3B2000B9F5B9 /* dot_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_red.png; sourceTree = "<group>"; };
+		D794FACA127A3B2000B9F5B9 /* dot_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_red@2x.png"; sourceTree = "<group>"; };
+		D794FACB127A3B2000B9F5B9 /* dot_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot_yellow.png; sourceTree = "<group>"; };
+		D794FACC127A3B2000B9F5B9 /* dot_yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot_yellow@2x.png"; sourceTree = "<group>"; };
+		D794FACD127A3B2000B9F5B9 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
+		D794FACE127A3B2000B9F5B9 /* load_screen_progressbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = load_screen_progressbar.png; sourceTree = "<group>"; };
+		D794FACF127A3B2000B9F5B9 /* loading_screen_background_480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_screen_background_480.png; sourceTree = "<group>"; };
+		D794FAD0127A3B2000B9F5B9 /* Step1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step1.png; sourceTree = "<group>"; };
+		D794FAD1127A3B2000B9F5B9 /* Step1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step1@2x.png"; sourceTree = "<group>"; };
+		D794FAD2127A3B2000B9F5B9 /* Step2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step2.png; sourceTree = "<group>"; };
+		D794FAD3127A3B2000B9F5B9 /* Step2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step2@2x.png"; sourceTree = "<group>"; };
+		D794FAD4127A3B2000B9F5B9 /* Step2wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step2wifi.png; sourceTree = "<group>"; };
+		D794FAD5127A3B2000B9F5B9 /* Step2wifi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step2wifi@2x.png"; sourceTree = "<group>"; };
+		D794FAD6127A3B2000B9F5B9 /* Step3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step3.png; sourceTree = "<group>"; };
+		D794FAD7127A3B2000B9F5B9 /* Step3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step3@2x.png"; sourceTree = "<group>"; };
+		D794FAD8127A3B2000B9F5B9 /* Step4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step4.png; sourceTree = "<group>"; };
+		D794FAD9127A3B2000B9F5B9 /* Step4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Step4@2x.png"; sourceTree = "<group>"; };
+		D794FBAB127A3BC300B9F5B9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		D794FBAC127A3BC300B9F5B9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		D794FBAD127A3BC300B9F5B9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		D794FBAE127A3BC300B9F5B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		D794FBAF127A3BC300B9F5B9 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		D794FBB0127A3BC300B9F5B9 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = /usr/lib/libxml2.dylib; sourceTree = "<absolute>"; };
+		D794FBB1127A3BC300B9F5B9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = "<absolute>"; };
+		D794FC49127A3BD400B9F5B9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		D794FC4A127A3BD400B9F5B9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D794FC4B127A3BD400B9F5B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D794FC4C127A3BD400B9F5B9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D794FC4D127A3BD400B9F5B9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E7C55BB6161F75D700DABFB1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				D794FA77127A3A2D00B9F5B9 /* libGameSaladViewer.a in Frameworks */,
+				D794FBB2127A3BC300B9F5B9 /* OpenAL.framework in Frameworks */,
+				D794FBB3127A3BC300B9F5B9 /* AudioToolbox.framework in Frameworks */,
+				D794FBB4127A3BC300B9F5B9 /* Security.framework in Frameworks */,
+				D794FBB5127A3BC300B9F5B9 /* SystemConfiguration.framework in Frameworks */,
+				D794FBB6127A3BC300B9F5B9 /* libsqlite3.0.dylib in Frameworks */,
+				D794FBB7127A3BC300B9F5B9 /* libxml2.dylib in Frameworks */,
+				D794FBB8127A3BC300B9F5B9 /* libz.dylib in Frameworks */,
+				D794FC4E127A3BD400B9F5B9 /* iAd.framework in Frameworks */,
+				D772EB6913A12DE900983F79 /* CFNetwork.framework in Frameworks */,
+				D772EB6A13A12DEC00983F79 /* MobileCoreServices.framework in Frameworks */,
+				D794FC4F127A3BD400B9F5B9 /* AVFoundation.framework in Frameworks */,
+				D794FC50127A3BD400B9F5B9 /* QuartzCore.framework in Frameworks */,
+				D794FC51127A3BD400B9F5B9 /* CoreGraphics.framework in Frameworks */,
+				D794FC52127A3BD400B9F5B9 /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* GameSalad Viewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28EEBF621118D79A00187D67 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* GameSalad_Viewer-Info.plist */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				E7C55BB6161F75D700DABFB1 /* Default-568h@2x.png */,
+				29B97315FDCFA39411CA2CEA /* Sources */,
+				28EEBF621118D79A00187D67 /* Shared */,
+				D7B5154A127A27850094BE21 /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* GameSalad_Viewer_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				D794FA76127A3A2D00B9F5B9 /* libGameSaladViewer.a */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D794FC49127A3BD400B9F5B9 /* iAd.framework */,
+				3C4BC88313A121C00009B43B /* CFNetwork.framework */,
+				D794FC4A127A3BD400B9F5B9 /* AVFoundation.framework */,
+				3C4BC88513A121D80009B43B /* MobileCoreServices.framework */,
+				D794FC4B127A3BD400B9F5B9 /* QuartzCore.framework */,
+				D794FC4C127A3BD400B9F5B9 /* CoreGraphics.framework */,
+				D794FC4D127A3BD400B9F5B9 /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				D794FBAB127A3BC300B9F5B9 /* OpenAL.framework */,
+				D794FBAC127A3BC300B9F5B9 /* AudioToolbox.framework */,
+				D794FBAD127A3BC300B9F5B9 /* Security.framework */,
+				D794FBAE127A3BC300B9F5B9 /* SystemConfiguration.framework */,
+				D794FBAF127A3BC300B9F5B9 /* libsqlite3.0.dylib */,
+				D794FBB0127A3BC300B9F5B9 /* libxml2.dylib */,
+				D794FBB1127A3BC300B9F5B9 /* libz.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D794FA8A127A3B2000B9F5B9 /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				D794FA8B127A3B2000B9F5B9 /* AccountView-iPad.xib */,
+				D794FA8D127A3B2000B9F5B9 /* CreateAccountView-iPad.xib */,
+				D794FA8F127A3B2000B9F5B9 /* DownloadingView-iPad.xib */,
+				D794FA91127A3B2000B9F5B9 /* GameList-iPad.xib */,
+				D794FA93127A3B2000B9F5B9 /* Instructions-iPad.xib */,
+				D794FA95127A3B2000B9F5B9 /* MainView-iPad.xib */,
+				D794FA97127A3B2000B9F5B9 /* Images */,
+			);
+			path = "Resources-iPad";
+			sourceTree = "<group>";
+		};
+		D794FA97127A3B2000B9F5B9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D794FA98127A3B2000B9F5B9 /* arrow_left-iPad.png */,
+				D794FA99127A3B2000B9F5B9 /* arrow_left_highlight-iPad.png */,
+				D794FA9A127A3B2000B9F5B9 /* arrow_right-iPad.png */,
+				D794FA9B127A3B2000B9F5B9 /* arrow_right_highlight-iPad.png */,
+				D794FA9C127A3B2000B9F5B9 /* BackgroundTexture-iPad.png */,
+				D794FA9D127A3B2000B9F5B9 /* Bowlboy-iPad.png */,
+				D794FA9E127A3B2000B9F5B9 /* Default-iPad.png */,
+				D794FA9F127A3B2000B9F5B9 /* dot_green-iPad.png */,
+				D794FAA0127A3B2000B9F5B9 /* dot_red-iPad.png */,
+				D794FAA1127A3B2000B9F5B9 /* dot_yellow-iPad.png */,
+				D794FAA2127A3B2000B9F5B9 /* load_screen_progressbar-iPad.png */,
+				D794FAA3127A3B2000B9F5B9 /* loading_screen_background_1024-iPad.png */,
+				D794FAA4127A3B2000B9F5B9 /* Step1-iPad.png */,
+				D794FAA5127A3B2000B9F5B9 /* Step2-iPad.png */,
+				D794FAA6127A3B2000B9F5B9 /* Step2wifi-iPad.png */,
+				D794FAA7127A3B2000B9F5B9 /* Step3-iPad.png */,
+				D794FAA8127A3B2000B9F5B9 /* Step4-iPad.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		D794FAA9127A3B2000B9F5B9 /* Resources-iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				D794FAAA127A3B2000B9F5B9 /* AccountView.xib */,
+				D794FAAC127A3B2000B9F5B9 /* CreateAccountView.xib */,
+				D794FAAE127A3B2000B9F5B9 /* DownloadingView.xib */,
+				D794FAB0127A3B2000B9F5B9 /* GameList.xib */,
+				D794FAB2127A3B2000B9F5B9 /* Instructions.xib */,
+				D794FAB4127A3B2000B9F5B9 /* Localizable.strings */,
+				D794FAB6127A3B2000B9F5B9 /* MainView.xib */,
+				D794FABC127A3B2000B9F5B9 /* Images */,
+			);
+			path = "Resources-iPhone";
+			sourceTree = "<group>";
+		};
+		D794FABC127A3B2000B9F5B9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D794FABD127A3B2000B9F5B9 /* arrow_left.png */,
+				D794FABE127A3B2000B9F5B9 /* arrow_left_highlight.png */,
+				D794FABF127A3B2000B9F5B9 /* arrow_right.png */,
+				D794FAC0127A3B2000B9F5B9 /* arrow_right_highlight.png */,
+				D794FAC1127A3B2000B9F5B9 /* BackgroundTexture.png */,
+				D794FAC2127A3B2000B9F5B9 /* BackgroundTexture@2x.png */,
+				D794FAC3127A3B2000B9F5B9 /* Bowlboy.png */,
+				D794FAC4127A3B2000B9F5B9 /* Bowlboy@2x.png */,
+				D794FAC5127A3B2000B9F5B9 /* Default.png */,
+				D794FAC6127A3B2000B9F5B9 /* Default@2x.png */,
+				D794FAC7127A3B2000B9F5B9 /* dot_green.png */,
+				D794FAC8127A3B2000B9F5B9 /* dot_green@2x.png */,
+				D794FAC9127A3B2000B9F5B9 /* dot_red.png */,
+				D794FACA127A3B2000B9F5B9 /* dot_red@2x.png */,
+				D794FACB127A3B2000B9F5B9 /* dot_yellow.png */,
+				D794FACC127A3B2000B9F5B9 /* dot_yellow@2x.png */,
+				D794FACD127A3B2000B9F5B9 /* gradient.png */,
+				D794FACE127A3B2000B9F5B9 /* load_screen_progressbar.png */,
+				D794FACF127A3B2000B9F5B9 /* loading_screen_background_480.png */,
+				D794FAD0127A3B2000B9F5B9 /* Step1.png */,
+				D794FAD1127A3B2000B9F5B9 /* Step1@2x.png */,
+				D794FAD2127A3B2000B9F5B9 /* Step2.png */,
+				D794FAD3127A3B2000B9F5B9 /* Step2@2x.png */,
+				D794FAD4127A3B2000B9F5B9 /* Step2wifi.png */,
+				D794FAD5127A3B2000B9F5B9 /* Step2wifi@2x.png */,
+				D794FAD6127A3B2000B9F5B9 /* Step3.png */,
+				D794FAD7127A3B2000B9F5B9 /* Step3@2x.png */,
+				D794FAD8127A3B2000B9F5B9 /* Step4.png */,
+				D794FAD9127A3B2000B9F5B9 /* Step4@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		D7B5154A127A27850094BE21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C48A11A151BB0E000FA0A10 /* stubbg.png */,
+				7C059E94152CF31800EA2DF5 /* loading_spinner.png */,
+				3C7CEFD314D120C40049804C /* ModalActivityView.xib */,
+				3C9CD0E113F1C71D002BE2FD /* WebpageView.xib */,
+				3C9CD0D713F1BFB9002BE2FD /* KeyboardInputViewController.xib */,
+				3C426AFF14374E0200C564BB /* InAppWebView.xib */,
+				D794FA8A127A3B2000B9F5B9 /* Resources-iPad */,
+				D794FAA9127A3B2000B9F5B9 /* Resources-iPhone */,
+				D794FA82127A3B1500B9F5B9 /* Icon-72.png */,
+				D794FA83127A3B1500B9F5B9 /* Icon.png */,
+				D794FA84127A3B1500B9F5B9 /* Icon@2x.png */,
+				D794FA85127A3B1500B9F5B9 /* iTunesArtwork */,
+				D794FA7A127A3A3900B9F5B9 /* engine32.luo */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* GameSalad Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "GameSalad Viewer" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GameSalad Viewer";
+			productName = "GameSalad Viewer";
+			productReference = 1D6058910D05DD3D006BFB54 /* GameSalad Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GameSalad Viewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* GameSalad Viewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D794FA7B127A3A3900B9F5B9 /* engine32.luo in Resources */,
+				D794FA86127A3B1500B9F5B9 /* Icon-72.png in Resources */,
+				D794FA87127A3B1500B9F5B9 /* Icon.png in Resources */,
+				D794FA88127A3B1500B9F5B9 /* Icon@2x.png in Resources */,
+				D794FA89127A3B1500B9F5B9 /* iTunesArtwork in Resources */,
+				D794FADA127A3B2000B9F5B9 /* AccountView-iPad.xib in Resources */,
+				D794FADB127A3B2000B9F5B9 /* CreateAccountView-iPad.xib in Resources */,
+				D794FADC127A3B2000B9F5B9 /* DownloadingView-iPad.xib in Resources */,
+				D794FADD127A3B2000B9F5B9 /* GameList-iPad.xib in Resources */,
+				D794FADE127A3B2000B9F5B9 /* Instructions-iPad.xib in Resources */,
+				D794FADF127A3B2000B9F5B9 /* MainView-iPad.xib in Resources */,
+				D794FAE0127A3B2000B9F5B9 /* arrow_left-iPad.png in Resources */,
+				D794FAE1127A3B2000B9F5B9 /* arrow_left_highlight-iPad.png in Resources */,
+				D794FAE2127A3B2000B9F5B9 /* arrow_right-iPad.png in Resources */,
+				D794FAE3127A3B2000B9F5B9 /* arrow_right_highlight-iPad.png in Resources */,
+				D794FAE4127A3B2000B9F5B9 /* BackgroundTexture-iPad.png in Resources */,
+				D794FAE5127A3B2000B9F5B9 /* Bowlboy-iPad.png in Resources */,
+				D794FAE6127A3B2000B9F5B9 /* Default-iPad.png in Resources */,
+				D794FAE7127A3B2000B9F5B9 /* dot_green-iPad.png in Resources */,
+				D794FAE8127A3B2000B9F5B9 /* dot_red-iPad.png in Resources */,
+				D794FAE9127A3B2000B9F5B9 /* dot_yellow-iPad.png in Resources */,
+				D794FAEA127A3B2000B9F5B9 /* load_screen_progressbar-iPad.png in Resources */,
+				D794FAEB127A3B2000B9F5B9 /* loading_screen_background_1024-iPad.png in Resources */,
+				D794FAEC127A3B2000B9F5B9 /* Step1-iPad.png in Resources */,
+				D794FAED127A3B2000B9F5B9 /* Step2-iPad.png in Resources */,
+				D794FAEE127A3B2000B9F5B9 /* Step2wifi-iPad.png in Resources */,
+				D794FAEF127A3B2000B9F5B9 /* Step3-iPad.png in Resources */,
+				D794FAF0127A3B2000B9F5B9 /* Step4-iPad.png in Resources */,
+				D794FAF1127A3B2000B9F5B9 /* AccountView.xib in Resources */,
+				D794FAF2127A3B2000B9F5B9 /* CreateAccountView.xib in Resources */,
+				D794FAF3127A3B2000B9F5B9 /* DownloadingView.xib in Resources */,
+				D794FAF4127A3B2000B9F5B9 /* GameList.xib in Resources */,
+				D794FAF5127A3B2000B9F5B9 /* Instructions.xib in Resources */,
+				D794FAF6127A3B2000B9F5B9 /* Localizable.strings in Resources */,
+				D794FAF7127A3B2000B9F5B9 /* MainView.xib in Resources */,
+				D794FAFA127A3B2000B9F5B9 /* arrow_left.png in Resources */,
+				D794FAFB127A3B2000B9F5B9 /* arrow_left_highlight.png in Resources */,
+				D794FAFC127A3B2000B9F5B9 /* arrow_right.png in Resources */,
+				D794FAFD127A3B2000B9F5B9 /* arrow_right_highlight.png in Resources */,
+				D794FAFE127A3B2000B9F5B9 /* BackgroundTexture.png in Resources */,
+				D794FAFF127A3B2000B9F5B9 /* BackgroundTexture@2x.png in Resources */,
+				D794FB00127A3B2000B9F5B9 /* Bowlboy.png in Resources */,
+				D794FB01127A3B2000B9F5B9 /* Bowlboy@2x.png in Resources */,
+				D794FB02127A3B2000B9F5B9 /* Default.png in Resources */,
+				D794FB03127A3B2000B9F5B9 /* Default@2x.png in Resources */,
+				D794FB04127A3B2000B9F5B9 /* dot_green.png in Resources */,
+				D794FB05127A3B2000B9F5B9 /* dot_green@2x.png in Resources */,
+				D794FB06127A3B2000B9F5B9 /* dot_red.png in Resources */,
+				D794FB07127A3B2000B9F5B9 /* dot_red@2x.png in Resources */,
+				D794FB08127A3B2000B9F5B9 /* dot_yellow.png in Resources */,
+				D794FB09127A3B2000B9F5B9 /* dot_yellow@2x.png in Resources */,
+				D794FB0A127A3B2000B9F5B9 /* gradient.png in Resources */,
+				D794FB0B127A3B2000B9F5B9 /* load_screen_progressbar.png in Resources */,
+				D794FB0C127A3B2000B9F5B9 /* loading_screen_background_480.png in Resources */,
+				D794FB0D127A3B2000B9F5B9 /* Step1.png in Resources */,
+				D794FB0E127A3B2000B9F5B9 /* Step1@2x.png in Resources */,
+				D794FB0F127A3B2000B9F5B9 /* Step2.png in Resources */,
+				D794FB10127A3B2000B9F5B9 /* Step2@2x.png in Resources */,
+				D794FB11127A3B2000B9F5B9 /* Step2wifi.png in Resources */,
+				D794FB12127A3B2000B9F5B9 /* Step2wifi@2x.png in Resources */,
+				D794FB13127A3B2000B9F5B9 /* Step3.png in Resources */,
+				D794FB14127A3B2000B9F5B9 /* Step3@2x.png in Resources */,
+				D794FB15127A3B2000B9F5B9 /* Step4.png in Resources */,
+				D794FB16127A3B2000B9F5B9 /* Step4@2x.png in Resources */,
+				3C9CD0D813F1BFB9002BE2FD /* KeyboardInputViewController.xib in Resources */,
+				3C9CD0E213F1C71D002BE2FD /* WebpageView.xib in Resources */,
+				3C426B0014374E0200C564BB /* InAppWebView.xib in Resources */,
+				3C7CEFD414D120C40049804C /* ModalActivityView.xib in Resources */,
+				7C48A11B151BB0E000FA0A10 /* stubbg.png in Resources */,
+				7C059E95152CF31800EA2DF5 /* loading_spinner.png in Resources */,
+				E7C55BB7161F75D700DABFB1 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D794FA8B127A3B2000B9F5B9 /* AccountView-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FA8C127A3B2000B9F5B9 /* English */,
+			);
+			name = "AccountView-iPad.xib";
+			sourceTree = "<group>";
+		};
+		D794FA8D127A3B2000B9F5B9 /* CreateAccountView-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FA8E127A3B2000B9F5B9 /* English */,
+			);
+			name = "CreateAccountView-iPad.xib";
+			sourceTree = "<group>";
+		};
+		D794FA8F127A3B2000B9F5B9 /* DownloadingView-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FA90127A3B2000B9F5B9 /* English */,
+			);
+			name = "DownloadingView-iPad.xib";
+			sourceTree = "<group>";
+		};
+		D794FA91127A3B2000B9F5B9 /* GameList-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FA92127A3B2000B9F5B9 /* English */,
+			);
+			name = "GameList-iPad.xib";
+			sourceTree = "<group>";
+		};
+		D794FA93127A3B2000B9F5B9 /* Instructions-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FA94127A3B2000B9F5B9 /* English */,
+			);
+			name = "Instructions-iPad.xib";
+			sourceTree = "<group>";
+		};
+		D794FA95127A3B2000B9F5B9 /* MainView-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FA96127A3B2000B9F5B9 /* English */,
+			);
+			name = "MainView-iPad.xib";
+			sourceTree = "<group>";
+		};
+		D794FAAA127A3B2000B9F5B9 /* AccountView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FAAB127A3B2000B9F5B9 /* English */,
+			);
+			name = AccountView.xib;
+			sourceTree = "<group>";
+		};
+		D794FAAC127A3B2000B9F5B9 /* CreateAccountView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FAAD127A3B2000B9F5B9 /* English */,
+			);
+			name = CreateAccountView.xib;
+			sourceTree = "<group>";
+		};
+		D794FAAE127A3B2000B9F5B9 /* DownloadingView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FAAF127A3B2000B9F5B9 /* English */,
+			);
+			name = DownloadingView.xib;
+			sourceTree = "<group>";
+		};
+		D794FAB0127A3B2000B9F5B9 /* GameList.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FAB1127A3B2000B9F5B9 /* English */,
+			);
+			name = GameList.xib;
+			sourceTree = "<group>";
+		};
+		D794FAB2127A3B2000B9F5B9 /* Instructions.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FAB3127A3B2000B9F5B9 /* English */,
+			);
+			name = Instructions.xib;
+			sourceTree = "<group>";
+		};
+		D794FAB4127A3B2000B9F5B9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FAB5127A3B2000B9F5B9 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D794FAB6127A3B2000B9F5B9 /* MainView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D794FAB7127A3B2000B9F5B9 /* English */,
+			);
+			name = MainView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GameSalad_Viewer_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "GameSalad_Viewer-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "GameSalad Viewer";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GameSalad_Viewer_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "GameSalad_Viewer-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "GameSalad Viewer";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "GameSalad Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GameSalad Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

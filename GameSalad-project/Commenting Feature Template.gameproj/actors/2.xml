@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id964764" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">READ ME SECOND!!!</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">40</real>
+      <real id="height">40</real>
+    </size>
+    <angle id="rotation">90</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">Tank</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id773452" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note - Commenting Refresher</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">Behaviors can be disabled or enabled by clicking the ON/OFF button at the top of the header bar. The setting for the outer most behavior affects all behaviors within it in the case of the Group behavior, Rule behavior and Timer behavior.
+
+Enable or disable the Groups below or individual behaviors within them to see them work.</text>
+      </attributes>
+    </behavior>
+    <behavior id="id630555" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note - Tank Default</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">By default the tank will move using the arrow keys but you can disable direct input for automated input by commenting these options in and out.</text>
+      </attributes>
+    </behavior>
+    <behavior id="id740077" class="CollideBehavior" enabled="true">
+      <attributes>
+        <text id="name">Collide - with wall actor</text>
+        <text id="bundleName">Collide.behavior</text>
+        <text id="prototypeKey">id162329</text>
+        <text id="actorTag" />
+        <index id="mode">0</index>
+      </attributes>
+    </behavior>
+    <behavior id="id390156" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">Group User Controlled - tank style keyboard input</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id509882" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Enable this group if you would like to give player control of the vehicle with the arrow keys.
+</text>
+          </attributes>
+        </behavior>
+        <behavior id="id299679" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule - Press Left Arrow to rotate counter clockwise</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id428175" eventType="key">
+              <attributes>
+                <index id="conditionType">0</index>
+              </attributes>
+              <predicate type="key">
+                <attributes>
+                  <text id="mode">down</text>
+                  <text id="keyString">left</text>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id918354" class="RotateBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rotate</text>
+                <text id="bundleName">Rotate.behavior</text>
+                <real id="angularVelocity">120</real>
+                <index id="direction">1</index>
+                <boolean id="haltWhenBehaviorStops">true</boolean>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+        <behavior id="id622626" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule - Press Right Arrow to rotate clockwise</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id428175" eventType="key">
+              <attributes>
+                <index id="conditionType">0</index>
+              </attributes>
+              <predicate type="key">
+                <attributes>
+                  <text id="mode">down</text>
+                  <text id="keyString">right</text>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id918354" class="RotateBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rotate</text>
+                <text id="bundleName">Rotate.behavior</text>
+                <real id="angularVelocity">120</real>
+                <index id="direction">0</index>
+                <boolean id="haltWhenBehaviorStops">true</boolean>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+        <behavior id="id547506" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule - Press Up to move forward</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id428175" eventType="key">
+              <attributes>
+                <index id="conditionType">0</index>
+              </attributes>
+              <predicate type="key">
+                <attributes>
+                  <text id="mode">down</text>
+                  <text id="keyString">up</text>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id872262" class="NoteBehavior" enabled="true">
+              <attributes>
+                <text id="name">Note - Speed Variants</text>
+                <text id="bundleName">Note.behavior</text>
+                <text id="note">Test different speed variants by commenting them in and out below. </text>
+              </attributes>
+            </behavior>
+            <behavior id="id780384" class="MoveBehavior" enabled="true">
+              <attributes>
+                <text id="name">Move - Speed 1 Regular</text>
+                <text id="bundleName">Move.behavior</text>
+                <angle id="direction">0</angle>
+                <index id="space">0</index>
+                <index id="moveType">0</index>
+                <real id="speed">100</real>
+                <boolean id="haltWhenBehaviorStops">true</boolean>
+              </attributes>
+            </behavior>
+            <behavior id="id565908" class="MoveBehavior" enabled="false">
+              <attributes>
+                <text id="name">Move - Speed 2 Fast</text>
+                <text id="bundleName">Move.behavior</text>
+                <angle id="direction">0</angle>
+                <index id="space">0</index>
+                <index id="moveType">0</index>
+                <real id="speed">250</real>
+                <boolean id="haltWhenBehaviorStops">true</boolean>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+        <behavior id="id716601" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule - Press Down to move backwards</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id428175" eventType="key">
+              <attributes>
+                <index id="conditionType">0</index>
+              </attributes>
+              <predicate type="key">
+                <attributes>
+                  <text id="mode">down</text>
+                  <text id="keyString">down</text>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id110244" class="NoteBehavior" enabled="true">
+              <attributes>
+                <text id="name">Note - Speed Variants</text>
+                <text id="bundleName">Note.behavior</text>
+                <text id="note">Test different speed variants by commenting them in and out below. </text>
+              </attributes>
+            </behavior>
+            <behavior id="id780384" class="MoveBehavior" enabled="true">
+              <attributes>
+                <text id="name">Move - Speed 1 Regular</text>
+                <text id="bundleName">Move.behavior</text>
+                <angle id="direction">180</angle>
+                <index id="space">0</index>
+                <index id="moveType">0</index>
+                <real id="speed">100</real>
+                <boolean id="haltWhenBehaviorStops">true</boolean>
+              </attributes>
+            </behavior>
+            <behavior id="id232986" class="MoveBehavior" enabled="false">
+              <attributes>
+                <text id="name">Move - Speed 2 Fast</text>
+                <text id="bundleName">Move.behavior</text>
+                <angle id="direction">180</angle>
+                <index id="space">0</index>
+                <index id="moveType">0</index>
+                <real id="speed">250</real>
+                <boolean id="haltWhenBehaviorStops">true</boolean>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id588367" class="CompoundBehavior" enabled="false">
+      <attributes>
+        <text id="name">Group: Automatic movement - Winning Beacon</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id518905" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Enable this group iif you would like the tank to automatically travel to the lower (winning) beacon in the scene.
+</text>
+          </attributes>
+        </behavior>
+        <behavior id="id126136" class="RotateToAngleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rotate to Angle</text>
+            <text id="bundleName">RotateToAngle.behavior</text>
+            <boolean id="runToCompletion">false</boolean>
+            <angle id="angle">0</angle>
+            <index id="space">1</index>
+            <real id="angularVelocity">120</real>
+            <boolean id="continuousMovement">false</boolean>
+          </attributes>
+        </behavior>
+        <behavior id="id811979" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule: Move Right after rotating</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id177527" eventType="mouse button">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">self.attributes.rotation</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">=</text>
+                  <real id="RHS">0</real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id392753" class="InterpolateBehavior" enabled="true">
+              <attributes>
+                <text id="name">Interpolate</text>
+                <text id="bundleName">Interpolate.behavior</text>
+                <boolean id="runToCompletion">true</boolean>
+                <text id="targetAttribute">self.attributes.position.x</text>
+                <real id="finalValue">440</real>
+                <real id="duration">2</real>
+                <index id="easing">0</index>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+        <behavior id="id470786" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule: Rotate after moving right</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id177527" eventType="mouse button">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">self.attributes.position.x</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">=</text>
+                  <real id="RHS">440</real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id944833" class="RotateToAngleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rotate to Angle</text>
+                <text id="bundleName">RotateToAngle.behavior</text>
+                <boolean id="runToCompletion">false</boolean>
+                <angle id="angle">270</angle>
+                <index id="space">1</index>
+                <real id="angularVelocity">120</real>
+                <boolean id="continuousMovement">false</boolean>
+              </attributes>
+            </behavior>
+            <behavior id="id106321" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rule: Move Down after rotating</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id814184" eventType="mouse button">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">self.attributes.rotation</text>
+                  </attributes>
+                  <predicate type="number">
+                    <attributes>
+                      <text id="operator">=</text>
+                      <real id="RHS">270</real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id639058" class="InterpolateBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Interpolate</text>
+                    <text id="bundleName">Interpolate.behavior</text>
+                    <boolean id="runToCompletion">true</boolean>
+                    <text id="targetAttribute">self.attributes.position.y</text>
+                    <real id="finalValue">50</real>
+                    <real id="duration">2</real>
+                    <index id="easing">0</index>
+                  </attributes>
+                </behavior>
+              </behaviors>
+              <elseBehaviors />
+            </behavior>
+            <behavior id="id881084" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rule: Rotate after Moving Up</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id663523" eventType="mouse button">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">self.attributes.position.y</text>
+                  </attributes>
+                  <predicate type="number">
+                    <attributes>
+                      <text id="operator">=</text>
+                      <real id="RHS">50</real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id562456" class="RotateToAngleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Rotate to Angle</text>
+                    <text id="bundleName">RotateToAngle.behavior</text>
+                    <boolean id="runToCompletion">true</boolean>
+                    <angle id="angle">180</angle>
+                    <index id="space">1</index>
+                    <real id="angularVelocity">120</real>
+                    <boolean id="continuousMovement">false</boolean>
+                  </attributes>
+                </behavior>
+                <behavior id="id113110" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Rule: Move to the left after rotating</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id663523" eventType="mouse button">
+                      <attributes>
+                        <index id="conditionType">1</index>
+                        <text id="subjectAttribute">self.attributes.rotation</text>
+                      </attributes>
+                      <predicate type="number">
+                        <attributes>
+                          <text id="operator">=</text>
+                          <real id="RHS">180</real>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id847507" class="InterpolateBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Interpolate</text>
+                        <text id="bundleName">Interpolate.behavior</text>
+                        <boolean id="runToCompletion">true</boolean>
+                        <text id="targetAttribute">self.attributes.position.x</text>
+                        <real id="finalValue">190</real>
+                        <real id="duration">2</real>
+                        <index id="easing">0</index>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                  <elseBehaviors />
+                </behavior>
+              </behaviors>
+              <elseBehaviors />
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id253508" class="CompoundBehavior" enabled="false">
+      <attributes>
+        <text id="name">Group: Automatic movement - Losing Beacon</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id459560" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Enable this group if you would like the tank to automatically travel to the upper (losing) beacon in the scene.
+</text>
+          </attributes>
+        </behavior>
+        <behavior id="id126136" class="RotateToAngleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rotate to Angle</text>
+            <text id="bundleName">RotateToAngle.behavior</text>
+            <boolean id="runToCompletion">false</boolean>
+            <angle id="angle">180</angle>
+            <index id="space">1</index>
+            <real id="angularVelocity">120</real>
+            <boolean id="continuousMovement">false</boolean>
+          </attributes>
+        </behavior>
+        <behavior id="id811979" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule: Move Left after rotating</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id177527" eventType="mouse button">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">self.attributes.rotation</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">=</text>
+                  <real id="RHS">180</real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id392753" class="InterpolateBehavior" enabled="true">
+              <attributes>
+                <text id="name">Interpolate</text>
+                <text id="bundleName">Interpolate.behavior</text>
+                <boolean id="runToCompletion">true</boolean>
+                <text id="targetAttribute">self.attributes.position.x</text>
+                <real id="finalValue">40</real>
+                <real id="duration">2</real>
+                <index id="easing">0</index>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+        <behavior id="id470786" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule: Rotate after moving left</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id177527" eventType="mouse button">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">self.attributes.position.x</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">=</text>
+                  <real id="RHS">40</real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id944833" class="RotateToAngleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rotate to Angle</text>
+                <text id="bundleName">RotateToAngle.behavior</text>
+                <boolean id="runToCompletion">false</boolean>
+                <angle id="angle">90</angle>
+                <index id="space">1</index>
+                <real id="angularVelocity">120</real>
+                <boolean id="continuousMovement">false</boolean>
+              </attributes>
+            </behavior>
+            <behavior id="id106321" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rule: Move Up after rotating</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id814184" eventType="mouse button">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">self.attributes.rotation</text>
+                  </attributes>
+                  <predicate type="number">
+                    <attributes>
+                      <text id="operator">=</text>
+                      <real id="RHS">90</real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id639058" class="InterpolateBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Interpolate</text>
+                    <text id="bundleName">Interpolate.behavior</text>
+                    <boolean id="runToCompletion">true</boolean>
+                    <text id="targetAttribute">self.attributes.position.y</text>
+                    <real id="finalValue">270</real>
+                    <real id="duration">2</real>
+                    <index id="easing">0</index>
+                  </attributes>
+                </behavior>
+              </behaviors>
+              <elseBehaviors />
+            </behavior>
+            <behavior id="id881084" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rule: Rotate after Moving Up</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id663523" eventType="mouse button">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">self.attributes.position.y</text>
+                  </attributes>
+                  <predicate type="number">
+                    <attributes>
+                      <text id="operator">=</text>
+                      <real id="RHS">270</real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id562456" class="RotateToAngleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Rotate to Angle</text>
+                    <text id="bundleName">RotateToAngle.behavior</text>
+                    <boolean id="runToCompletion">true</boolean>
+                    <angle id="angle">0</angle>
+                    <index id="space">1</index>
+                    <real id="angularVelocity">120</real>
+                    <boolean id="continuousMovement">false</boolean>
+                  </attributes>
+                </behavior>
+                <behavior id="id113110" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Rule: Move to the right after rotating</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id663523" eventType="mouse button">
+                      <attributes>
+                        <index id="conditionType">1</index>
+                        <text id="subjectAttribute">self.attributes.rotation</text>
+                      </attributes>
+                      <predicate type="number">
+                        <attributes>
+                          <text id="operator">=</text>
+                          <real id="RHS">0</real>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id847507" class="InterpolateBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Interpolate</text>
+                        <text id="bundleName">Interpolate.behavior</text>
+                        <boolean id="runToCompletion">true</boolean>
+                        <text id="targetAttribute">self.attributes.position.x</text>
+                        <real id="finalValue">290</real>
+                        <real id="duration">2</real>
+                        <index id="easing">0</index>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                  <elseBehaviors />
+                </behavior>
+              </behaviors>
+              <elseBehaviors />
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+      </behaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">0</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">1</enumeration>
+        <real id="drag">120</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

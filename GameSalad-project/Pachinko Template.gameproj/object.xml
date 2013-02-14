@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.91" PGFVersion="0.17" title="Pachinko Template">
+  <tags>template, pachinko, plinko, peggle</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Click to create balls.  Land balls in the goal for points!</instructions>
+  <resolution>0</resolution>
+  <longDescription>A simple pachinko game template.</longDescription>
+  <prototypes>
+    <actor id="id273551" />
+    <actor id="id861809" />
+    <actor id="id573051" />
+    <actor id="id667937" />
+    <actor id="id175885" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey">dcac1305b83f2ea21e3f4a129782e941</text>
+      <text id="appSecret">OWY2ZDFjNzlmMTYxYTYyMWZiODJmZWJmZmQxYmU3ZTQ=
+</text>
+      <text id="achievementIdentifiers">ACHMNT_0001	ACHMNT_0002</text>
+      <text id="achievementNames">untitled	untitled 2</text>
+      <text id="leaderboardIdentifiers">LDRBRD_0002	LDRBRD_0001	LDRBRD_0003</text>
+      <text id="leaderboardNames">untitled 2	untitled	untitled 3</text>
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id269551" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags" />
+    <integer id="id240671" name="Score">0</integer>
+    <table id="id692007" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id244414" name="QQ Achievements">QQ Achievements</table>
+    <table id="id877695" name="Purchases">Purchases</table>
+  </attributes>
+</game>

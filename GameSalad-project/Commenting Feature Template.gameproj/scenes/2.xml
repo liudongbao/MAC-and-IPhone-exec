@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene PGFVersion="0.17" GSCVersion="0.9.91" id="id977513">
+  <layers>
+    <layer id="id672010">
+      <actors>
+        <actor id="id332837" prototype="id828856">
+          <attributes>
+            <point id="position">
+              <real id="x">240</real>
+              <real id="y">160</real>
+            </point>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Background</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+    <layer id="id592570">
+      <actors>
+        <actor id="id909025" prototype="id871975">
+          <attributes>
+            <point id="position">
+              <real id="x">334.5</real>
+              <real id="y">264.5</real>
+            </point>
+            <size id="size">
+              <real id="width">64</real>
+              <real id="height">64</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id968454" prototype="id340920">
+          <attributes>
+            <point id="position">
+              <real id="x">160</real>
+              <real id="y">53.5</real>
+            </point>
+            <size id="size">
+              <real id="width">64</real>
+              <real id="height">64</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id532407" prototype="id964764">
+          <attributes>
+            <point id="position">
+              <real id="x">238.5</real>
+              <real id="y">159</real>
+            </point>
+            <size id="size">
+              <real id="width">35</real>
+              <real id="height">35</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Tank and Goals</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+    <layer id="id618321">
+      <actors>
+        <actor id="id181899" prototype="id162329">
+          <attributes>
+            <point id="position">
+              <real id="x">385</real>
+              <real id="y">257.5</real>
+            </point>
+            <size id="size">
+              <real id="width">132</real>
+              <real id="height">24</real>
+            </size>
+            <angle id="rotation">90</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id851727" prototype="id162329">
+          <attributes>
+            <point id="position">
+              <real id="x">241.5</real>
+              <real id="y">202</real>
+            </point>
+            <size id="size">
+              <real id="width">311</real>
+              <real id="height">24</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id413307" prototype="id162329">
+          <attributes>
+            <point id="position">
+              <real id="x">99</real>
+              <real id="y">53.5</real>
+            </point>
+            <size id="size">
+              <real id="width">132</real>
+              <real id="height">24</real>
+            </size>
+            <angle id="rotation">90</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id282728" prototype="id162329">
+          <attributes>
+            <point id="position">
+              <real id="x">243</real>
+              <real id="y">118.5</real>
+            </point>
+            <size id="size">
+              <real id="width">312</real>
+              <real id="height">24</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id152703" prototype="id162329">
+          <attributes>
+            <point id="position">
+              <real id="x">240</real>
+              <real id="y">-13.5</real>
+            </point>
+            <size id="size">
+              <real id="width">492</real>
+              <real id="height">24</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id204638" prototype="id162329">
+          <attributes>
+            <point id="position">
+              <real id="x">238.5</real>
+              <real id="y">334.5</real>
+            </point>
+            <size id="size">
+              <real id="width">487</real>
+              <real id="height">24</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id401648" prototype="id162329">
+          <attributes>
+            <point id="position">
+              <real id="x">-12.5</real>
+              <real id="y">161</real>
+            </point>
+            <size id="size">
+              <real id="width">372</real>
+              <real id="height">26</real>
+            </size>
+            <angle id="rotation">270</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id433843" prototype="id162329">
+          <attributes>
+            <point id="position">
+              <real id="x">492.5</real>
+              <real id="y">160.5</real>
+            </point>
+            <size id="size">
+              <real id="width">371</real>
+              <real id="height">24</real>
+            </size>
+            <angle id="rotation">270</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Walls</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+  </layers>
+  <attributes>
+    <text id="name">Tank Maze</text>
+    <real id="time">0</real>
+    <size id="size">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <boolean id="wrapX">false</boolean>
+    <boolean id="wrapY">false</boolean>
+    <point id="gravity">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <color id="color">
+      <real id="red">0</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">1</real>
+    </color>
+    <rect id="camera">
+      <point id="origin">
+        <real id="x">0</real>
+        <real id="y">0</real>
+      </point>
+      <size id="size">
+        <real id="width">480</real>
+        <real id="height">320</real>
+      </size>
+      <size id="trackingArea">
+        <real id="width">156</real>
+        <real id="height">100</real>
+      </size>
+      <real id="rotation">0</real>
+    </rect>
+    <attributes id="autorotate">
+      <boolean id="landscapeLeft">true</boolean>
+      <boolean id="portrait">false</boolean>
+      <boolean id="landscapeRight">false</boolean>
+      <boolean id="portraitUpsideDown">false</boolean>
+    </attributes>
+  </attributes>
+</scene>

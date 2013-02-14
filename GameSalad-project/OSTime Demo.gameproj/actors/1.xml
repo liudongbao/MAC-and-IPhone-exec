@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id636499" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">Numbers</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">32</real>
+      <real id="height">48</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">0.970942</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">0</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id289124" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">Below are all of the constraints used to display the digital clock digits. In the scene, only the specific constraint for the corresponding digit needs to be in use but for your reference, all can be found within this prototype.
+
+The actor is being told to display the corresponding piece of art for each number based on the actual number of the system clock. So if it is one minute past the hour, the actor knows to use the image for the one digit, etc.</text>
+      </attributes>
+    </behavior>
+    <behavior id="id618411" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">YEAR</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id267945" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Turn on these constraints based on which digit you want to display for the year. Use only one constraint at a time.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id629130" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain Attribute - use for thousands</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.image</text>
+            <text id="RHS">
+              <expression>
+                <string>(floor(</string>
+                <reference keypath="game.devices.clock.year" />
+                <string>/1000))..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id613227" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name">Constrain Attribute - use for hundreds</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.image</text>
+            <text id="RHS">
+              <expression>
+                <string>(floor((</string>
+                <reference keypath="game.devices.clock.year" />
+                <string>%1000)/100))..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id902500" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name">Constrain Attribute - use for tens</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.image</text>
+            <text id="RHS">
+              <expression>
+                <string>(floor((</string>
+                <reference keypath="game.devices.clock.year" />
+                <string>%100)/10))..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id443965" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name">Constrain Attribute - use for ones</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.image</text>
+            <text id="RHS">
+              <expression>
+                <string>(</string>
+                <reference keypath="game.devices.clock.year" />
+                <string>%10)..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id818620" class="CompoundBehavior" enabled="false">
+      <attributes>
+        <text id="name">MONTH</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id957543" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Turn on these constraints based on which digit you want to display for the Month. Use only one constraint at a time.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id110903" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name">Constrain Attribute - use for tens</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.image</text>
+            <text id="RHS">
+              <expression>
+                <string>(floor(</string>
+                <reference keypath="game.devices.clock.month" />
+                <string>/10))..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id318619" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name">Constrain Attribute - use for ones</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.image</text>
+            <text id="RHS">
+              <expression>
+                <string>(</string>
+                <reference keypath="game.devices.clock.month" />
+                <string>%10)..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id680026" class="CompoundBehavior" enabled="false">
+      <attributes>
+        <text id="name">DAY</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id879905" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Turn on these constraints based on which digit you want to display for the day. Use only one constraint at a time.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id240773" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name">Constrain Attribute - use for tens</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.image</text>
+            <text id="RHS">
+              <expression>
+                <string>(floor(</string>
+                <reference keypath="game.devices.clock.day" />
+                <string>/10))..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id381452" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name">Constrain Attribute - use for ones</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.image</text>
+            <text id="RHS">
+              <expression>
+                <string>(</string>
+                <reference keypath="game.devices.clock.day" />
+                <string>%10)..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id425872" class="CompoundBehavior" enabled="false">
+      <attributes>
+        <text id="name">TIME</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id361044" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Turn on these constraints based on which digit you want to display for the time. Use only one constraint at a time.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id859620" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name">Constrain Attribute - Use for Hours - Tens Digit</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.image</text>
+            <text id="RHS">
+              <expression>
+                <string>(floor((</string>
+                <reference keypath="game.devices.clock.hour" />
+                <string>%12)/10))..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id338240" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name" name="Name">Constrain Attribute - Use for Hours - Ones Digit</text>
+            <text id="bundleName" name="Bundle Name">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute" name="Target Attribute">self.attributes.image</text>
+            <text id="RHS" name="RHS">
+              <expression>
+                <string>((</string>
+                <reference keypath="game.devices.clock.hour" />
+                <string>%12)%10)..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id138311" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name" name="Name">Constrain Attribute - Use for Minutes - Tens Digit</text>
+            <text id="bundleName" name="Bundle Name">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute" name="Target Attribute">self.attributes.image</text>
+            <text id="RHS" name="RHS">
+              <expression>
+                <string>(floor(</string>
+                <reference keypath="game.devices.clock.minute" />
+                <string>/10))..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id294410" class="ConstrainAttributeBehavior" enabled="false">
+          <attributes>
+            <text id="name" name="Name">Constrain Attribute - Use for Minutes - Ones Digit</text>
+            <text id="bundleName" name="Bundle Name">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute" name="Target Attribute">self.attributes.image</text>
+            <text id="RHS" name="RHS">
+              <expression>
+                <string>(</string>
+                <reference keypath="game.devices.clock.minute" />
+                <string>%10)..".png"</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

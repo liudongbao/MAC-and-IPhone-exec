@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.91" PGFVersion="0.17" title="Official Cross-Platform Controller Template">
+  <tags>template, control, twin stick, analog, dpad, touch pad, HTML5, web</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>**If you have not started your game project yet it is a good idea to start building it straight from this template. All of the logic is set up and ready to go for the various control setups. Just be sure to SAVE AS a different file name so that you do not overwrite this template. 
+
+Open the "READ ME FIRST!" actor for additional information.</instructions>
+  <resolution>0</resolution>
+  <longDescription>This is the OFFICIAL cross-platform controller template built from the ground up to be ready to fully support touch screen inputs as well as keyboard inputs all within the same actors. By using the contents of this template you will be able to better prepare your game to reach the maximum number of players across all supported platforms. Certified HTML5 Ready!</longDescription>
+  <prototypes>
+    <actor id="id389270" />
+    <actor id="id974449" />
+    <actor id="id306711" />
+    <actor id="id155766" />
+    <actor id="id216419" />
+    <actor id="id365931" />
+    <actor id="id313783" />
+    <actor id="id789763" />
+    <actor id="id953923" />
+    <actor id="id891417" />
+    <actor id="id739261" />
+    <actor id="id636132" />
+    <actor id="id681150" />
+    <actor id="id373731" />
+    <actor id="id991164" />
+    <actor id="id342506" />
+    <actor id="id468561" />
+    <actor id="id340806" />
+    <actor id="id219564" />
+    <actor id="id792779" />
+    <actor id="id754501" />
+    <actor id="id694649" />
+    <actor id="id350861" />
+    <actor id="id451427" />
+    <actor id="id222069" />
+    <actor id="id728499" />
+    <actor id="id978687" />
+    <actor id="id537461" />
+    <actor id="id238005" />
+    <actor id="id752761" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey" />
+      <text id="appSecret" />
+      <text id="achievementIdentifiers" />
+      <text id="achievementNames" />
+      <text id="leaderboardIdentifiers" />
+      <text id="leaderboardNames" />
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id745450" />
+    <scene id="id837828" />
+    <scene id="id503221" />
+    <scene id="id978164" />
+    <scene id="id800794" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags">ControllerActors	DemoActors</text>
+    <boolean id="id531199" name="Left Pressed">false</boolean>
+    <boolean id="id468037" name="Right Pressed">false</boolean>
+    <boolean id="id901403" name="Up Pressed">false</boolean>
+    <boolean id="id790869" name="Down Pressed">false</boolean>
+    <boolean id="id297243" name="Dial Pressed">false</boolean>
+    <real id="id930721" name="Dial Radius">0</real>
+    <integer id="id337834" name="Counter">0</integer>
+    <boolean id="id373683" name="ButtonsActive">true</boolean>
+    <real id="id699995" name="Base 1 X">0</real>
+    <real id="id628099" name="Base 1 Y">0</real>
+    <real id="id975494" name="Base 2 X">0</real>
+    <real id="id429465" name="Base 2 Y">0</real>
+    <real id="id627103" name="Base 1 Radius">0</real>
+    <real id="id420666" name="Base 2 Radius">0</real>
+    <real id="id343851" name="Angle 1">0</real>
+    <real id="id805815" name="Angle 2">0</real>
+    <real id="id737732" name="Distance From Center 1">0</real>
+    <real id="id371849" name="Distance From Center 2">0</real>
+    <boolean id="id669834" name="Stick 1 Active">false</boolean>
+    <boolean id="id404764" name="Stick 2 Active">false</boolean>
+    <boolean id="id288229" name="Button 1 Pressed">false</boolean>
+    <boolean id="id173134" name="Button 2 Pressed">false</boolean>
+    <boolean id="id700593" name="ControlVisibiltyOn">true</boolean>
+    <table id="id745213" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id622528" name="QQ Achievements">QQ Achievements</table>
+    <table id="id721489" name="Purchases">Purchases</table>
+  </attributes>
+</game>

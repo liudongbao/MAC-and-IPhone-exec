@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id878169" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">HeroName</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">100</real>
+      <real id="height">100</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">0</real>
+    </color>
+    <image id="image" />
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id301929" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">This is the logic for entering a hero name on the hero name screen. Press anywhere to pull up the keyboard prompt and enter a name. Once name has been set, the button to advance to the next scene will spawn into place.</text>
+      </attributes>
+    </behavior>
+    <behavior id="id666709" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id919130" eventType="mouse button">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">game.attributes.id145664</text>
+          </attributes>
+          <predicate type="string">
+            <attributes>
+              <text id="operator">is</text>
+              <text id="RHS" />
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id506533" class="DisplayTextBehavior" enabled="true">
+          <attributes>
+            <text id="name">Display Text</text>
+            <text id="bundleName">DisplayText.behavior</text>
+            <text id="text">ENTER A HERO NAME</text>
+            <text id="font">Arial</text>
+            <real id="size">20</real>
+            <index id="alignment">1</index>
+            <boolean id="wrap">true</boolean>
+            <color id="color">
+              <real id="red">1</real>
+              <real id="green">1</real>
+              <real id="blue">1</real>
+              <real id="alpha">1</real>
+            </color>
+          </attributes>
+        </behavior>
+        <behavior id="id950429" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id582325" eventType="mouse button">
+              <attributes>
+                <index id="conditionType">0</index>
+              </attributes>
+              <predicate type="mouse" mouseState="down">
+                <attributes />
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id984150" class="KeyboardInputAction" enabled="true">
+              <attributes>
+                <text id="name">Keyboard Input</text>
+                <text id="bundleName">KeyboardInput.behavior</text>
+                <text id="targetAttribute">game.attributes.id145664</text>
+                <text id="keyboardPrompt">NAME YOUR HERO</text>
+              </attributes>
+            </behavior>
+            <behavior id="id420755" class="TimerBehavior" enabled="true">
+              <attributes>
+                <text id="name">Timer</text>
+                <text id="bundleName">Timer.behavior</text>
+                <index id="timerType">1</index>
+                <real id="interval">0.2</real>
+                <boolean id="runToCompletion">true</boolean>
+              </attributes>
+              <behaviors>
+                <behavior id="id945523" class="SpawnAction" enabled="true">
+                  <attributes>
+                    <text id="name">Spawn Actor</text>
+                    <text id="bundleName">Spawn.behavior</text>
+                    <text id="prototypeKey">id589838</text>
+                    <angle id="direction">0</angle>
+                    <index id="directionSpace">0</index>
+                    <real id="x">360</real>
+                    <real id="y">48</real>
+                    <index id="positionSpace">1</index>
+                    <index id="layerOrder">0</index>
+                  </attributes>
+                </behavior>
+              </behaviors>
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+      </behaviors>
+      <elseBehaviors>
+        <behavior id="id642607" class="DisplayTextBehavior" enabled="true">
+          <attributes>
+            <text id="name">Display Text</text>
+            <text id="bundleName">DisplayText.behavior</text>
+            <text id="text">
+              <expression>
+                <reference keypath="game.attributes.id145664" />
+              </expression>
+            </text>
+            <text id="font">Arial</text>
+            <real id="size">22</real>
+            <index id="alignment">1</index>
+            <boolean id="wrap">true</boolean>
+            <color id="color">
+              <real id="red">1</real>
+              <real id="green">1</real>
+              <real id="blue">1</real>
+              <real id="alpha">1</real>
+            </color>
+          </attributes>
+        </behavior>
+      </elseBehaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

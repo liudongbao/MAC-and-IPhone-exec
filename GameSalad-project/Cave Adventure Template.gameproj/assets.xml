@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.17" GSCVersion="0.9.91">
+  <sounds />
+  <images>
+    <image name="Cave-iPhone-480x320-512x512">
+      <file name="Cave-iPhone-480x320-512x512.png" size="89498" />
+    </image>
+    <image name="zsivvus_heart-128">
+      <file name="zsivvus_heart-128.png" size="12460" />
+    </image>
+    <image name="hero-paper-left-64x128">
+      <file name="hero-paper-left-64x128.png" size="12487" />
+    </image>
+    <image name="hero-paper-right-64x128">
+      <file name="hero-paper-right-64x128.png" size="12616" />
+    </image>
+    <image name="CaveCreature-left-64x128">
+      <file name="CaveCreature-left-64x128.png" size="17552" />
+    </image>
+    <image name="CaveCreature-right-64x128">
+      <file name="CaveCreature-right-64x128.png" size="17589" />
+    </image>
+    <image name="treasure_chest">
+      <file name="treasure_chest.png" size="26546" />
+    </image>
+    <image name="Seal-of-Agare">
+      <file name="Seal-of-Agare.png" size="17149" />
+    </image>
+    <image name="splash">
+      <file name="splash.png" size="67243" />
+    </image>
+    <image name="win">
+      <file name="win.png" size="2791" />
+    </image>
+    <image name="lose">
+      <file name="lose.png" size="2662" />
+    </image>
+    <image name="win-lose">
+      <file name="win-lose.png" size="57579" />
+    </image>
+  </images>
+  <behaviors />
+</assets>

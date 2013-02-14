@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.92" PGFVersion="0.17" title="Crazy Ball Wall Breaker Template">
+  <tags>template, wall breaker</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Use mouse left and right to move the paddle and keep the ball in play while removing bricks from the top of the screen. click to launch a ball.</instructions>
+  <resolution>0</resolution>
+  <longDescription>A game not unlike--perhaps bordering on flattery of--Breakout.</longDescription>
+  <prototypes>
+    <actor id="id475737" />
+    <actor id="id718095" />
+    <actor id="id218384" />
+    <actor id="id780044" />
+    <actor id="id669143" />
+    <actor id="id170718" />
+    <actor id="id604343" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey">dcac1305b83f2ea21e3f4a129782e941</text>
+      <text id="appSecret">OWY2ZDFjNzlmMTYxYTYyMWZiODJmZWJmZmQxYmU3ZTQ=
+</text>
+      <text id="achievementIdentifiers">ACHMNT_0001	ACHMNT_0002</text>
+      <text id="achievementNames">untitled	untitled 2</text>
+      <text id="leaderboardIdentifiers">LDRBRD_0002	LDRBRD_0001	LDRBRD_0003</text>
+      <text id="leaderboardNames">untitled 2	untitled	untitled 3</text>
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id160158" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags">Bounceable objects	Destroyable objects</text>
+    <integer id="id104387" name="Game Score">0</integer>
+    <integer id="id494600" name="Bricks On Screen">21</integer>
+    <boolean id="id677639" name="Ball on Screen?">false</boolean>
+    <real id="id340355" name="Paddle Velocity Offset">0</real>
+    <table id="id119195" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id159847" name="QQ Achievements">QQ Achievements</table>
+    <table id="id130235" name="Purchases">Purchases</table>
+  </attributes>
+</game>

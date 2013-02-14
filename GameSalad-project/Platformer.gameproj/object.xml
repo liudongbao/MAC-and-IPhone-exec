@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.91" PGFVersion="0.17" title="Platformer Template">
+  <tags>template, platformer</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Move left and right with the arrow keys. Press space to jump.</instructions>
+  <resolution>0</resolution>
+  <longDescription>Describe your project here.</longDescription>
+  <prototypes>
+    <actor id="id183830" />
+    <actor id="id295030" />
+    <actor id="id344393" />
+    <actor id="id892234" />
+    <actor id="id590977" />
+    <actor id="id495883" />
+    <actor id="id669251" />
+    <actor id="id196921" />
+    <actor id="id387676" />
+    <actor id="id214699" />
+    <actor id="id397075" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey">dcac1305b83f2ea21e3f4a129782e941</text>
+      <text id="appSecret">OWY2ZDFjNzlmMTYxYTYyMWZiODJmZWJmZmQxYmU3ZTQ=
+</text>
+      <text id="achievementIdentifiers">ACHMNT_0001	ACHMNT_0002</text>
+      <text id="achievementNames">untitled	untitled 2</text>
+      <text id="leaderboardIdentifiers">LDRBRD_0002	LDRBRD_0001	LDRBRD_0003</text>
+      <text id="leaderboardNames">untitled 2	untitled	untitled 3</text>
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id269551" />
+    <scene id="id526375" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags" />
+    <table id="id339530" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id374154" name="QQ Achievements">QQ Achievements</table>
+    <table id="id377105" name="Purchases">Purchases</table>
+  </attributes>
+</game>

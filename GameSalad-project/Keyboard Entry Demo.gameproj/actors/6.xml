@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id250849" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">KeyboardButton</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">100</real>
+      <real id="height">100</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">0.970942</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image" />
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+    <integer id="id190489" name="ID">0</integer>
+  </attributes>
+  <behaviors>
+    <behavior id="id666195" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">This button is invisible in the scene, but it acts as a trigger to bring up the keyboard console. Use the self ID to specify which of the rule conditions below to activate.</text>
+      </attributes>
+    </behavior>
+    <behavior id="id645976" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Touch with Self ID 1</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id217436" eventType="touch">
+          <attributes>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="touch" conditionType="pressed">
+            <attributes />
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id250894" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">1</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id268399" eventType="mouse button">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">self.attributes.id190489</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">=</text>
+                  <real id="RHS">1</real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id536386" class="KeyboardInputAction" enabled="true">
+              <attributes>
+                <text id="name">Keyboard Input</text>
+                <text id="bundleName">KeyboardInput.behavior</text>
+                <text id="targetAttribute">game.attributes.id710859</text>
+                <text id="keyboardPrompt">Enter A Location</text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <elseBehaviors>
+            <behavior id="id490584" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Touch with Self ID 2</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id268399" eventType="mouse button">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">self.attributes.id190489</text>
+                  </attributes>
+                  <predicate type="number">
+                    <attributes>
+                      <text id="operator">=</text>
+                      <real id="RHS">2</real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id536386" class="KeyboardInputAction" enabled="true">
+                  <attributes>
+                    <text id="name">Keyboard Input</text>
+                    <text id="bundleName">KeyboardInput.behavior</text>
+                    <text id="targetAttribute">game.attributes.id707086</text>
+                    <text id="keyboardPrompt">Enter An Animal</text>
+                  </attributes>
+                </behavior>
+              </behaviors>
+              <elseBehaviors>
+                <behavior id="id505463" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Touch with Self ID 3</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id268399" eventType="mouse button">
+                      <attributes>
+                        <index id="conditionType">1</index>
+                        <text id="subjectAttribute">self.attributes.id190489</text>
+                      </attributes>
+                      <predicate type="number">
+                        <attributes>
+                          <text id="operator">=</text>
+                          <real id="RHS">3</real>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id536386" class="KeyboardInputAction" enabled="true">
+                      <attributes>
+                        <text id="name">Keyboard Input</text>
+                        <text id="bundleName">KeyboardInput.behavior</text>
+                        <text id="targetAttribute">game.attributes.id388623</text>
+                        <text id="keyboardPrompt">Enter A Verb (Past Tense)</text>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                  <elseBehaviors>
+                    <behavior id="id187427" class="RuleBehavior" enabled="true">
+                      <attributes>
+                        <text id="name">Touch with Self ID 4</text>
+                        <text id="bundleName">Rule.behavior</text>
+                        <real id="compoundConditionKind">0</real>
+                      </attributes>
+                      <conditions>
+                        <condition id="id268399" eventType="mouse button">
+                          <attributes>
+                            <index id="conditionType">1</index>
+                            <text id="subjectAttribute">self.attributes.id190489</text>
+                          </attributes>
+                          <predicate type="number">
+                            <attributes>
+                              <text id="operator">=</text>
+                              <real id="RHS">4</real>
+                            </attributes>
+                          </predicate>
+                        </condition>
+                      </conditions>
+                      <behaviors>
+                        <behavior id="id536386" class="KeyboardInputAction" enabled="true">
+                          <attributes>
+                            <text id="name">Keyboard Input</text>
+                            <text id="bundleName">KeyboardInput.behavior</text>
+                            <text id="targetAttribute">game.attributes.id543157</text>
+                            <text id="keyboardPrompt">Enter A Weapon</text>
+                          </attributes>
+                        </behavior>
+                      </behaviors>
+                      <elseBehaviors>
+                        <behavior id="id642415" class="RuleBehavior" enabled="true">
+                          <attributes>
+                            <text id="name">Touch with Self ID 5</text>
+                            <text id="bundleName">Rule.behavior</text>
+                            <real id="compoundConditionKind">0</real>
+                          </attributes>
+                          <conditions>
+                            <condition id="id268399" eventType="mouse button">
+                              <attributes>
+                                <index id="conditionType">1</index>
+                                <text id="subjectAttribute">self.attributes.id190489</text>
+                              </attributes>
+                              <predicate type="number">
+                                <attributes>
+                                  <text id="operator">=</text>
+                                  <real id="RHS">5</real>
+                                </attributes>
+                              </predicate>
+                            </condition>
+                          </conditions>
+                          <behaviors>
+                            <behavior id="id536386" class="KeyboardInputAction" enabled="true">
+                              <attributes>
+                                <text id="name">Keyboard Input</text>
+                                <text id="bundleName">KeyboardInput.behavior</text>
+                                <text id="targetAttribute">game.attributes.id191836</text>
+                                <text id="keyboardPrompt">Enter A Body Part</text>
+                              </attributes>
+                            </behavior>
+                          </behaviors>
+                          <elseBehaviors>
+                            <behavior id="id521988" class="RuleBehavior" enabled="true">
+                              <attributes>
+                                <text id="name">Touch with Self ID 6</text>
+                                <text id="bundleName">Rule.behavior</text>
+                                <real id="compoundConditionKind">0</real>
+                              </attributes>
+                              <conditions>
+                                <condition id="id268399" eventType="mouse button">
+                                  <attributes>
+                                    <index id="conditionType">1</index>
+                                    <text id="subjectAttribute">self.attributes.id190489</text>
+                                  </attributes>
+                                  <predicate type="number">
+                                    <attributes>
+                                      <text id="operator">=</text>
+                                      <real id="RHS">6</real>
+                                    </attributes>
+                                  </predicate>
+                                </condition>
+                              </conditions>
+                              <behaviors>
+                                <behavior id="id536386" class="KeyboardInputAction" enabled="true">
+                                  <attributes>
+                                    <text id="name">Keyboard Input</text>
+                                    <text id="bundleName">KeyboardInput.behavior</text>
+                                    <text id="targetAttribute">game.attributes.id617635</text>
+                                    <text id="keyboardPrompt">Enter A Person</text>
+                                  </attributes>
+                                </behavior>
+                              </behaviors>
+                              <elseBehaviors>
+                                <behavior id="id959630" class="RuleBehavior" enabled="true">
+                                  <attributes>
+                                    <text id="name">Touch with Self ID 7</text>
+                                    <text id="bundleName">Rule.behavior</text>
+                                    <real id="compoundConditionKind">0</real>
+                                  </attributes>
+                                  <conditions>
+                                    <condition id="id268399" eventType="mouse button">
+                                      <attributes>
+                                        <index id="conditionType">1</index>
+                                        <text id="subjectAttribute">self.attributes.id190489</text>
+                                      </attributes>
+                                      <predicate type="number">
+                                        <attributes>
+                                          <text id="operator">=</text>
+                                          <real id="RHS">7</real>
+                                        </attributes>
+                                      </predicate>
+                                    </condition>
+                                  </conditions>
+                                  <behaviors>
+                                    <behavior id="id536386" class="KeyboardInputAction" enabled="true">
+                                      <attributes>
+                                        <text id="name">Keyboard Input</text>
+                                        <text id="bundleName">KeyboardInput.behavior</text>
+                                        <text id="targetAttribute">game.attributes.id613758</text>
+                                        <text id="keyboardPrompt">Enter A Verb</text>
+                                      </attributes>
+                                    </behavior>
+                                  </behaviors>
+                                  <elseBehaviors>
+                                    <behavior id="id107181" class="RuleBehavior" enabled="true">
+                                      <attributes>
+                                        <text id="name">Touch with Self ID 8</text>
+                                        <text id="bundleName">Rule.behavior</text>
+                                        <real id="compoundConditionKind">0</real>
+                                      </attributes>
+                                      <conditions>
+                                        <condition id="id268399" eventType="mouse button">
+                                          <attributes>
+                                            <index id="conditionType">1</index>
+                                            <text id="subjectAttribute">self.attributes.id190489</text>
+                                          </attributes>
+                                          <predicate type="number">
+                                            <attributes>
+                                              <text id="operator">=</text>
+                                              <real id="RHS">8</real>
+                                            </attributes>
+                                          </predicate>
+                                        </condition>
+                                      </conditions>
+                                      <behaviors>
+                                        <behavior id="id536386" class="KeyboardInputAction" enabled="true">
+                                          <attributes>
+                                            <text id="name">Keyboard Input</text>
+                                            <text id="bundleName">KeyboardInput.behavior</text>
+                                            <text id="targetAttribute">game.attributes.id887439</text>
+                                            <text id="keyboardPrompt">Enter A Food</text>
+                                          </attributes>
+                                        </behavior>
+                                      </behaviors>
+                                      <elseBehaviors />
+                                    </behavior>
+                                  </elseBehaviors>
+                                </behavior>
+                              </elseBehaviors>
+                            </behavior>
+                          </elseBehaviors>
+                        </behavior>
+                      </elseBehaviors>
+                    </behavior>
+                  </elseBehaviors>
+                </behavior>
+              </elseBehaviors>
+            </behavior>
+          </elseBehaviors>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">false</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

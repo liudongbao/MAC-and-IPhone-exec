@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.91" PGFVersion="0.17" title="Commenting Feature Demo">
+  <tags>demo, debug, disable, commenting, comment, iteration</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Each of the two included scenes shows a different demonstration of Commenting behaviors. 
+
+Please look inside of the Flower and Tank actors (named READ ME FIRST and READ ME SECOND) for further details and instructions.</instructions>
+  <resolution>0</resolution>
+  <longDescription>This demo shows various ways you can comment behaviors and entire groups or rulesets in and out for many different results.
+
+Commenting behaviors in and out will allow for a smoother testing and debugging process, as well as allow you to prototype more freely and efficiently.</longDescription>
+  <prototypes>
+    <actor id="id174712" />
+    <actor id="id964764" />
+    <actor id="id871975" />
+    <actor id="id340920" />
+    <actor id="id162329" />
+    <actor id="id327592" />
+    <actor id="id828856" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey" />
+      <text id="appSecret" />
+      <text id="achievementIdentifiers" />
+      <text id="achievementNames" />
+      <text id="leaderboardIdentifiers" />
+      <text id="leaderboardNames" />
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id269551" />
+    <scene id="id977513" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags" />
+    <table id="id376442" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id164534" name="QQ Achievements">QQ Achievements</table>
+    <table id="id382889" name="Purchases">Purchases</table>
+  </attributes>
+</game>

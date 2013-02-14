@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id979632" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">Flower</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">313</real>
+      <real id="height">320</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">Flower1</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+    <real id="id759103" name="Timestamp">0</real>
+  </attributes>
+  <behaviors>
+    <behavior id="id816025" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">Initial Loading</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id784714" class="LoadAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Load Attribute</text>
+            <text id="bundleName">LoadAtribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id759103</text>
+            <text id="key">flower</text>
+          </attributes>
+        </behavior>
+        <behavior id="id535095" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Loading the saved attribute for the flower's self timestamp will let the game know how long it has been since the last time the plant was watered.</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id193428" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Timer - Initialization</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">1</index>
+        <real id="interval">0.05</real>
+        <boolean id="runToCompletion">false</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id702210" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">This will give a delay in setting an initial timestamp so the attributes can be populated with data.
+The timestamp below will give an approximation in minutes for time since January 1st 2011.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id556718" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id416740" eventType="mouse button">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">self.attributes.id759103</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">=</text>
+                  <real id="RHS">0</real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id385279" class="ChangeAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Change Attribute</text>
+                <text id="bundleName">ChangeAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.id759103</text>
+                <text id="RHS">
+                  <expression>
+                    <string>(</string>
+                    <reference keypath="game.devices.clock.year" />
+                    <string>-2011)*365*24+floor((</string>
+                    <reference keypath="game.devices.clock.month" />
+                    <string>-1)*30.5)*24*60+(</string>
+                    <reference keypath="game.devices.clock.day" />
+                    <string>-1)*24*60+</string>
+                    <reference keypath="game.devices.clock.hour" />
+                    <string>*60+</string>
+                    <reference keypath="game.devices.clock.minute" />
+                    <string>+</string>
+                    <reference keypath="game.devices.clock.second" />
+                    <string>/60</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+            <behavior id="id619968" class="SaveAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Save Attribute</text>
+                <text id="bundleName">SaveAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.id759103</text>
+                <text id="key">flower</text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <elseBehaviors />
+        </behavior>
+        <behavior id="id815840" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Below is a rule stack that defines which images of the flower to display based on how long it has been in real time since the flower was watered by pressing the water meter in the corner of the screen.
+
+Check the otherwise sections for additional behaviors.
+</text>
+          </attributes>
+        </behavior>
+        <behavior id="id991330" class="RuleBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rule: 4 minutes past the time stamp</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
+          </attributes>
+          <conditions>
+            <condition id="id943765" eventType="mouse button">
+              <attributes>
+                <index id="conditionType">1</index>
+                <text id="subjectAttribute">self.attributes.id759103</text>
+              </attributes>
+              <predicate type="number">
+                <attributes>
+                  <text id="operator">&lt;=</text>
+                  <real id="RHS">
+                    <expression>
+                      <string>-1.5+((</string>
+                      <reference keypath="game.devices.clock.year" />
+                      <string>-2011)*365*24+floor((</string>
+                      <reference keypath="game.devices.clock.month" />
+                      <string>-1)*30.5)*24*60+(</string>
+                      <reference keypath="game.devices.clock.day" />
+                      <string>-1)*24*60+</string>
+                      <reference keypath="game.devices.clock.hour" />
+                      <string>*60+</string>
+                      <reference keypath="game.devices.clock.minute" />
+                      <string>+</string>
+                      <reference keypath="game.devices.clock.second" />
+                      <string>/60)</string>
+                    </expression>
+                  </real>
+                </attributes>
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id395154" class="ChangeImageAction" enabled="true">
+              <attributes>
+                <text id="name">Change Image - dying flower 3</text>
+                <text id="bundleName">ChangeImage.behavior</text>
+                <image id="image">Flower4</image>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <elseBehaviors>
+            <behavior id="id146564" class="RuleBehavior" enabled="true">
+              <attributes>
+                <text id="name">Rule: 3 minutes past the time stamp</text>
+                <text id="bundleName">Rule.behavior</text>
+                <real id="compoundConditionKind">0</real>
+              </attributes>
+              <conditions>
+                <condition id="id943765" eventType="mouse button">
+                  <attributes>
+                    <index id="conditionType">1</index>
+                    <text id="subjectAttribute">self.attributes.id759103</text>
+                  </attributes>
+                  <predicate type="number">
+                    <attributes>
+                      <text id="operator">&lt;=</text>
+                      <real id="RHS">
+                        <expression>
+                          <string>-1+((</string>
+                          <reference keypath="game.devices.clock.year" />
+                          <string>-2011)*365*24+floor((</string>
+                          <reference keypath="game.devices.clock.month" />
+                          <string>-1)*30.5)*24*60+(</string>
+                          <reference keypath="game.devices.clock.day" />
+                          <string>-1)*24*60+</string>
+                          <reference keypath="game.devices.clock.hour" />
+                          <string>*60+</string>
+                          <reference keypath="game.devices.clock.minute" />
+                          <string>+</string>
+                          <reference keypath="game.devices.clock.second" />
+                          <string>/60)</string>
+                        </expression>
+                      </real>
+                    </attributes>
+                  </predicate>
+                </condition>
+              </conditions>
+              <behaviors>
+                <behavior id="id306556" class="ChangeImageAction" enabled="true">
+                  <attributes>
+                    <text id="name">Change Image - dying flower 2</text>
+                    <text id="bundleName">ChangeImage.behavior</text>
+                    <image id="image">Flower3</image>
+                  </attributes>
+                </behavior>
+              </behaviors>
+              <elseBehaviors>
+                <behavior id="id385818" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Rule: 2 minutes past the time stamp</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id943765" eventType="mouse button">
+                      <attributes>
+                        <index id="conditionType">1</index>
+                        <text id="subjectAttribute">self.attributes.id759103</text>
+                      </attributes>
+                      <predicate type="number">
+                        <attributes>
+                          <text id="operator">&lt;=</text>
+                          <real id="RHS">
+                            <expression>
+                              <string>-.5+((</string>
+                              <reference keypath="game.devices.clock.year" />
+                              <string>-2011)*365*24+floor((</string>
+                              <reference keypath="game.devices.clock.month" />
+                              <string>-1)*30.5)*24*60+(</string>
+                              <reference keypath="game.devices.clock.day" />
+                              <string>-1)*24*60+</string>
+                              <reference keypath="game.devices.clock.hour" />
+                              <string>*60+</string>
+                              <reference keypath="game.devices.clock.minute" />
+                              <string>+</string>
+                              <reference keypath="game.devices.clock.second" />
+                              <string>/60)</string>
+                            </expression>
+                          </real>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id611620" class="ChangeImageAction" enabled="true">
+                      <attributes>
+                        <text id="name">Change Image dying flower 1</text>
+                        <text id="bundleName">ChangeImage.behavior</text>
+                        <image id="image">Flower2</image>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                  <elseBehaviors>
+                    <behavior id="id547491" class="ChangeImageAction" enabled="true">
+                      <attributes>
+                        <text id="name">Change Image - default full flower</text>
+                        <text id="bundleName">ChangeImage.behavior</text>
+                        <image id="image">Flower1</image>
+                      </attributes>
+                    </behavior>
+                  </elseBehaviors>
+                </behavior>
+              </elseBehaviors>
+            </behavior>
+          </elseBehaviors>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id931764" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule - Plant is watered and timestamp is renewed</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id864945" eventType="mouse button">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">game.attributes.id448290</text>
+          </attributes>
+          <predicate type="boolean">
+            <attributes>
+              <index id="RHS">1</index>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id470198" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">When the flower gets watered when the player clicks the water meter, the flower's self timestamp attribute will be redefined as the current time and get saved. This is so that if you leave the game and come back, the flower will have been operating off of actual time versus game time. This means you can close the game and come back to it a day later and see the flower is dead or dying because it has not received water.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id762048" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id759103</text>
+            <text id="RHS">
+              <expression>
+                <string>(</string>
+                <reference keypath="game.devices.clock.year" />
+                <string>-2011)*365*24+floor((</string>
+                <reference keypath="game.devices.clock.month" />
+                <string>-1)*30.5)*24*60+(</string>
+                <reference keypath="game.devices.clock.day" />
+                <string>-1)*24*60+</string>
+                <reference keypath="game.devices.clock.hour" />
+                <string>*60+</string>
+                <reference keypath="game.devices.clock.minute" />
+                <string>+</string>
+                <reference keypath="game.devices.clock.second" />
+                <string>/60</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id577878" class="SaveAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Save Attribute</text>
+            <text id="bundleName">SaveAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id759103</text>
+            <text id="key">flower</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table version="0.000000" name="Purchases" numRows="1" numCols="8" flags="58" tableType="3">
+    <rows>
+        <row id="0" name=""/>
+    </rows>
+    <columns>
+        <column id="0" name="ID" type="1" readonly="1">      </column>
+        <column id="1" name="Description" type="1" readonly="1">      </column>
+        <column id="2" name="Consumable" type="4" readonly="1">     False</column>
+        <column id="3" name="Qty of Consumable" type="2" readonly="1">     0</column>
+        <column id="4" name="Price" type="3" readonly="1">     0</column>
+        <column id="5" name="Purchase Status" type="4" readonly="1">     False</column>
+        <column id="6" name="Total Qty Purchased" type="2" readonly="1">     0</column>
+        <column id="7" name="Attempting Purchase" type="4" readonly="1">     False</column>
+    </columns>
+</table>

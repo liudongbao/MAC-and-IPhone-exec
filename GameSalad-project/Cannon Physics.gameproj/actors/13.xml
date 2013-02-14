@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id999065" PGFVersion="0.17" GSCVersion="0.9.85">
+  <attributes>
+    <text id="name">ForegroundCloud</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">300</real>
+      <real id="height">150</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">0.956072</real>
+      <real id="green">0.956072</real>
+      <real id="blue">0.956072</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">cloudswhite</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+    <real id="id969364" name="StartY">0</real>
+  </attributes>
+  <behaviors>
+    <behavior id="id190533" class="MoveBehavior" enabled="true">
+      <attributes>
+        <text id="name">Move: Slowly move to the left</text>
+        <text id="bundleName">Move.behavior</text>
+        <angle id="direction">180</angle>
+        <index id="space">0</index>
+        <index id="moveType">1</index>
+        <real id="speed">20</real>
+        <boolean id="haltWhenBehaviorStops">true</boolean>
+      </attributes>
+    </behavior>
+    <behavior id="id289067" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">Group: Maintain the Y position of the actor</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id763388" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id969364</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.position.y" />
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id465884" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain Attribute</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.y</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.id969364" />
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id441526" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Wrap back</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id913538" eventType="overlaps or collides">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">self.attributes.position.x</text>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="number">
+            <attributes>
+              <text id="operator">&lt;</text>
+              <real id="RHS">
+                <expression>
+                  <reference keypath="self.attributes.size.width" />
+                  <string>/-2</string>
+                </expression>
+              </real>
+              <text id="name">default name</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id827906" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.x</text>
+            <text id="RHS">
+              <expression>
+                <string>2048+(</string>
+                <reference keypath="self.attributes.size.width" />
+                <string>/2)</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id877220" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">Confirm1</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">200</real>
+      <real id="height">80</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">Confirm1</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id908156" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">On touch, switch view over to the story text.</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id830317" eventType="touch">
+          <attributes>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="touch" conditionType="released">
+            <attributes />
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id231140" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id981974</text>
+            <text id="RHS">true</text>
+          </attributes>
+        </behavior>
+        <behavior id="id515359" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">This attribute below is used in a scene instance to reposition the camera. In order to do this, you must drag this actor into the scene, unlock it and then modify the camera origin position.
+</text>
+          </attributes>
+        </behavior>
+        <behavior id="id940408" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute" />
+            <text id="RHS">480</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id610790" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule - press states - art</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id435814" eventType="touch">
+          <attributes>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="touch" conditionType="inside">
+            <attributes />
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id299321" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">Confirm2</image>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors>
+        <behavior id="id969760" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">Confirm1</image>
+          </attributes>
+        </behavior>
+      </elseBehaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

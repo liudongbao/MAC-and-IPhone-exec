@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene PGFVersion="0.17" GSCVersion="0.9.91" id="id269551">
+  <layers>
+    <layer id="id552331">
+      <actors>
+        <actor id="id746939" prototype="id492162">
+          <attributes>
+            <point id="position">
+              <real id="x">162.5</real>
+              <real id="y">238</real>
+            </point>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id140900" prototype="id316015">
+          <attributes>
+            <point id="position">
+              <real id="x">-0.5</real>
+              <real id="y">486</real>
+            </point>
+            <size id="size">
+              <real id="width">10</real>
+              <real id="height">10</real>
+            </size>
+            <integer id="id362821" name="StarSpeed">90</integer>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id815673" prototype="id316015">
+          <attributes>
+            <point id="position">
+              <real id="x">-0.5</real>
+              <real id="y">497</real>
+            </point>
+            <size id="size">
+              <real id="width">10</real>
+              <real id="height">10</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Stars</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+    <layer id="id818714">
+      <actors>
+        <actor id="id708889" prototype="id894113">
+          <attributes>
+            <point id="position">
+              <real id="x">332</real>
+              <real id="y">239.5</real>
+            </point>
+            <size id="size">
+              <real id="width">24</real>
+              <real id="height">480</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id699128" prototype="id270645">
+          <attributes>
+            <point id="position">
+              <real id="x">-12</real>
+              <real id="y">240</real>
+            </point>
+            <size id="size">
+              <real id="width">24</real>
+              <real id="height">481</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id540632" prototype="id137305">
+          <attributes>
+            <point id="position">
+              <real id="x">161.5</real>
+              <real id="y">2</real>
+            </point>
+            <size id="size">
+              <real id="width">346</real>
+              <real id="height">346</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">ControlBoundaries</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+    <layer id="id627120">
+      <actors>
+        <actor id="id134181" prototype="id420973">
+          <attributes>
+            <point id="position">
+              <real id="x">142</real>
+              <real id="y">27.5</real>
+            </point>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id749416" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">26.5</real>
+              <real id="y">446.5</real>
+            </point>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id414204" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">54.5</real>
+              <real id="y">446.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id626249" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">82.5</real>
+              <real id="y">446.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id562090" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">110.5</real>
+              <real id="y">446.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id508565" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">138.5</real>
+              <real id="y">446.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id695588" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">166.5</real>
+              <real id="y">446.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id316866" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">194.5</real>
+              <real id="y">446.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id697459" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">221.5</real>
+              <real id="y">446.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id536508" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">39.5</real>
+              <real id="y">408.5</real>
+            </point>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id569335" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">68.5</real>
+              <real id="y">408.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id930592" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">97.5</real>
+              <real id="y">408.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id783544" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">125.5</real>
+              <real id="y">408.5</real>
+            </point>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id256373" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">152.5</real>
+              <real id="y">408.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id565623" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">179.5</real>
+              <real id="y">408.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id778265" prototype="id293917">
+          <attributes>
+            <point id="position">
+              <real id="x">207.5</real>
+              <real id="y">408.5</real>
+            </point>
+            <size id="size">
+              <real id="width">30</real>
+              <real id="height">30</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Ships</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+  </layers>
+  <attributes>
+    <text id="name">Scene 1</text>
+    <real id="time">0</real>
+    <size id="size">
+      <real id="width">320</real>
+      <real id="height">480</real>
+    </size>
+    <boolean id="wrapX">false</boolean>
+    <boolean id="wrapY">false</boolean>
+    <point id="gravity">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <color id="color">
+      <real id="red">0</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">1</real>
+    </color>
+    <rect id="camera">
+      <point id="origin">
+        <real id="x">0</real>
+        <real id="y">0</real>
+      </point>
+      <size id="size">
+        <real id="width">320</real>
+        <real id="height">480</real>
+      </size>
+      <size id="trackingArea">
+        <real id="width">240</real>
+        <real id="height">400</real>
+      </size>
+      <real id="rotation">0</real>
+    </rect>
+    <attributes id="autorotate">
+      <boolean id="landscapeLeft">false</boolean>
+      <boolean id="portrait">true</boolean>
+      <boolean id="landscapeRight">false</boolean>
+      <boolean id="portraitUpsideDown">true</boolean>
+    </attributes>
+  </attributes>
+</scene>

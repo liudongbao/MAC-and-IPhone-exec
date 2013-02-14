@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.91" PGFVersion="0.17" title="Space Rocks Template">
+  <tags>template, space rocks</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Use left and right arrow keys to rotate player, spacebar to fire, up arrow key to accelerate, and down arrow key to warp.</instructions>
+  <resolution>0</resolution>
+  <longDescription>Similar to an Atari game I played once. Proof of concept. You have 3 lives to remove all the rocks from the screen. Good luck.</longDescription>
+  <prototypes>
+    <actor id="id780044" />
+    <actor id="id512785" />
+    <actor id="id579490" />
+    <actor id="id297063" />
+    <actor id="id142340" />
+    <actor id="id917984" />
+    <actor id="id364178" />
+    <actor id="id290199" />
+    <actor id="id814191" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey">dcac1305b83f2ea21e3f4a129782e941</text>
+      <text id="appSecret">OWY2ZDFjNzlmMTYxYTYyMWZiODJmZWJmZmQxYmU3ZTQ=
+</text>
+      <text id="achievementIdentifiers">ACHMNT_0001	ACHMNT_0002</text>
+      <text id="achievementNames">untitled	untitled 2</text>
+      <text id="leaderboardIdentifiers">LDRBRD_0002	LDRBRD_0001	LDRBRD_0003</text>
+      <text id="leaderboardNames">untitled 2	untitled	untitled 3</text>
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id218384" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags">Player objects	Enemies</text>
+    <integer id="id636920" name="Game Score">0</integer>
+    <integer id="id751292" name="Lives">3</integer>
+    <boolean id="id567526" name="Player on Screen?">false</boolean>
+    <integer id="id388032" name="Enemies On Screen">4</integer>
+    <integer id="id932224" name="Player X">0</integer>
+    <integer id="id400095" name="Player Y">0</integer>
+    <table id="id722933" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id468045" name="QQ Achievements">QQ Achievements</table>
+    <table id="id549813" name="Purchases">Purchases</table>
+  </attributes>
+</game>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene PGFVersion="0.17" GSCVersion="0.9.92" id="id567474">
+  <layers>
+    <layer id="id663665">
+      <actors>
+        <actor id="id354934" prototype="id175426">
+          <attributes>
+            <point id="position">
+              <real id="x">238.5</real>
+              <real id="y">-51</real>
+            </point>
+            <size id="size">
+              <real id="width">588</real>
+              <real id="height">100</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id481725" class="CollideBehavior" enabled="true">
+              <attributes>
+                <text id="name">Collide</text>
+                <text id="bundleName">Collide.behavior</text>
+                <text id="prototypeKey">id847868</text>
+                <text id="actorTag">Collidable Objects</text>
+                <index id="mode">1</index>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id960335" prototype="id842421">
+          <attributes>
+            <point id="position">
+              <real id="x">-32</real>
+              <real id="y">163</real>
+            </point>
+            <size id="size">
+              <real id="width">62</real>
+              <real id="height">351</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id776682" prototype="id175426">
+          <attributes>
+            <point id="position">
+              <real id="x">231</real>
+              <real id="y">370.5</real>
+            </point>
+            <size id="size">
+              <real id="width">560</real>
+              <real id="height">100</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id481725" class="CollideBehavior" enabled="true">
+              <attributes>
+                <text id="name">Collide</text>
+                <text id="bundleName">Collide.behavior</text>
+                <text id="prototypeKey">id847868</text>
+                <text id="actorTag">Collidable Objects</text>
+                <index id="mode">1</index>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id138721" prototype="id374371">
+          <attributes>
+            <point id="position">
+              <real id="x">505.5</real>
+              <real id="y">175.5</real>
+            </point>
+            <size id="size">
+              <real id="width">57</real>
+              <real id="height">401</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id961577" prototype="id641624">
+          <attributes>
+            <point id="position">
+              <real id="x">240</real>
+              <real id="y">160</real>
+            </point>
+            <size id="size">
+              <real id="width">2</real>
+              <real id="height">320</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Walls</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+    <layer id="id445151">
+      <actors>
+        <actor id="id143498" prototype="id131114">
+          <attributes>
+            <point id="position">
+              <real id="x">461</real>
+              <real id="y">156.5</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">128</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id229505" prototype="id847868">
+          <attributes>
+            <point id="position">
+              <real id="x">19</real>
+              <real id="y">158</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">128</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id605979" prototype="id293162">
+          <attributes>
+            <point id="position">
+              <real id="x">203.5</real>
+              <real id="y">303</real>
+            </point>
+            <size id="size">
+              <real id="width">100</real>
+              <real id="height">100</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id357102" prototype="id288668">
+          <attributes>
+            <point id="position">
+              <real id="x">276.5</real>
+              <real id="y">303</real>
+            </point>
+            <size id="size">
+              <real id="width">100</real>
+              <real id="height">100</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id709790" prototype="id597260">
+          <attributes>
+            <point id="position">
+              <real id="x">233</real>
+              <real id="y">274.5</real>
+            </point>
+            <size id="size">
+              <real id="width">100</real>
+              <real id="height">100</real>
+            </size>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Background</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+  </layers>
+  <attributes>
+    <text id="name">Table Tennis Scene</text>
+    <real id="time">0</real>
+    <size id="size">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <boolean id="wrapX">false</boolean>
+    <boolean id="wrapY">false</boolean>
+    <point id="gravity">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <color id="color">
+      <real id="red">0</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">1</real>
+    </color>
+    <rect id="camera">
+      <point id="origin">
+        <real id="x">0</real>
+        <real id="y">0</real>
+      </point>
+      <size id="size">
+        <real id="width">480</real>
+        <real id="height">320</real>
+      </size>
+      <size id="trackingArea">
+        <real id="width">400</real>
+        <real id="height">260</real>
+      </size>
+      <real id="rotation">0</real>
+    </rect>
+    <attributes id="autorotate">
+      <boolean id="landscapeLeft">true</boolean>
+      <boolean id="portrait">false</boolean>
+      <boolean id="landscapeRight">false</boolean>
+      <boolean id="portraitUpsideDown">false</boolean>
+    </attributes>
+  </attributes>
+</scene>

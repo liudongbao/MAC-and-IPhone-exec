@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.17" GSCVersion="0.9.92">
+  <sounds />
+  <images>
+    <image name="paddle">
+      <file name="paddle.png" size="786" />
+    </image>
+    <image name="ballfading">
+      <file name="ballfading.png" size="5282" />
+    </image>
+  </images>
+  <behaviors>
+    <file name="Template Info.behavior" />
+  </behaviors>
+</assets>

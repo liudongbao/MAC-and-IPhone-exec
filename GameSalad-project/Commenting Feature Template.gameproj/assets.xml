@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.17" GSCVersion="0.9.91">
+  <sounds />
+  <images>
+    <image name="TankBackground">
+      <file name="TankBackground.png" size="107743" />
+    </image>
+    <image name="BrickTile">
+      <file name="BrickTile.png" size="2975" />
+    </image>
+    <image name="Tank">
+      <file name="Tank.png" size="4306" />
+    </image>
+    <image name="Shape1">
+      <file name="Shape1.png" size="5127" />
+    </image>
+    <image name="Shape1WIN">
+      <file name="Shape1WIN.png" size="6722" />
+    </image>
+    <image name="Shape1LOSE">
+      <file name="Shape1LOSE.png" size="6070" />
+    </image>
+    <image name="Flower">
+      <file name="Flower.png" size="6420" />
+    </image>
+    <image name="FlowerBackground">
+      <file name="FlowerBackground.png" size="31609" />
+    </image>
+    <image name="Pollen">
+      <file name="Pollen.png" size="789" />
+    </image>
+  </images>
+  <behaviors />
+</assets>

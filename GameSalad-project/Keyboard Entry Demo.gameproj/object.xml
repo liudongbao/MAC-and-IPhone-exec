@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.91" PGFVersion="0.17" title="Keyboard Entry Demo">
+  <tags>keyboard, demo, template, player name, custom text, story</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>The RADLibs scene shows a simple way to create Mad Libs style custom story text and value.
+
+CharacterName and Outdoors shows how you can name your in game hero something unique and have it display dynamically in the game scene.</instructions>
+  <resolution>0</resolution>
+  <longDescription>This demo showcases different ways to implement the Keyboard Entry features new to 0.9.7. </longDescription>
+  <prototypes>
+    <actor id="id667507" />
+    <actor id="id548265" />
+    <actor id="id344924" />
+    <actor id="id683865" />
+    <actor id="id877220" />
+    <actor id="id250849" />
+    <actor id="id856294" />
+    <actor id="id589838" />
+    <actor id="id878169" />
+    <actor id="id434921" />
+    <actor id="id592727" />
+    <actor id="id469187" />
+    <actor id="id348576" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey" />
+      <text id="appSecret" />
+      <text id="achievementIdentifiers" />
+      <text id="achievementNames" />
+      <text id="leaderboardIdentifiers" />
+      <text id="leaderboardNames" />
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id269551" />
+    <scene id="id596704" />
+    <scene id="id562963" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags" />
+    <text id="id710859" name="TextField1">Enter A Location</text>
+    <text id="id707086" name="TextField2">Enter An Animal</text>
+    <text id="id388623" name="TextField3">Enter A Verb</text>
+    <text id="id543157" name="TextField4">Enter A Weapon</text>
+    <text id="id191836" name="TextField5">Enter A Body Part</text>
+    <text id="id617635" name="TextField6">Enter A Person</text>
+    <text id="id613758" name="TextField7">Enter A Verb</text>
+    <text id="id887439" name="TextField8">Enter A Food</text>
+    <boolean id="id981974" name="StoryWatch">false</boolean>
+    <text id="id145664" name="HeroName" />
+    <real id="id249994" name="PlayerX">0</real>
+    <real id="id781198" name="PlayerY">0</real>
+    <table id="id283737" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id876669" name="QQ Achievements">QQ Achievements</table>
+    <table id="id111422" name="Purchases">Purchases</table>
+  </attributes>
+</game>

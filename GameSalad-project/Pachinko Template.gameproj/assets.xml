@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.17" GSCVersion="0.9.91">
+  <sounds>
+    <sound name="plink">
+      <file name="plink.ogg" size="5528" />
+    </sound>
+    <sound name="chime">
+      <file name="chime.ogg" size="49441" />
+    </sound>
+  </sounds>
+  <images>
+    <image name="background">
+      <file name="background.png" size="52636" />
+    </image>
+    <image name="peg">
+      <file name="peg.png" size="504" />
+    </image>
+    <image name="ball">
+      <file name="ball.png" size="1148" />
+    </image>
+    <image name="goal">
+      <file name="goal.png" size="581" />
+    </image>
+  </images>
+  <behaviors />
+</assets>

@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scene PGFVersion="0.17" GSCVersion="0.9.91" id="id269551">
+  <layers>
+    <layer id="id112326">
+      <actors>
+        <actor id="id968072" prototype="id360567">
+          <attributes>
+            <point id="position">
+              <real id="x">240</real>
+              <real id="y">160</real>
+            </point>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id843421" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">382</real>
+              <real id="y">200</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">48</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <behaviors>
+            <behavior id="id979928" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.image</text>
+                <text id="RHS">
+                  <expression>
+                    <string>(floor((</string>
+                    <reference keypath="game.devices.clock.year" />
+                    <string>%100)/10))..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id445802" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">416</real>
+              <real id="y">200</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">48</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id979928" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.image</text>
+                <text id="RHS">
+                  <expression>
+                    <string>(</string>
+                    <reference keypath="game.devices.clock.year" />
+                    <string>%10)..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id700026" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">348</real>
+              <real id="y">200</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">48</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id979928" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.image</text>
+                <text id="RHS">
+                  <expression>
+                    <string>(floor((</string>
+                    <reference keypath="game.devices.clock.year" />
+                    <string>%1000)/100))..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id909948" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">314</real>
+              <real id="y">200</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">48</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id403854" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">239</real>
+              <real id="y">200</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">48</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id979928" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.image</text>
+                <text id="RHS">
+                  <expression>
+                    <string>(</string>
+                    <reference keypath="game.devices.clock.month" />
+                    <string>%10)..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id228880" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">205</real>
+              <real id="y">200</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">48</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id979928" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.image</text>
+                <text id="RHS">
+                  <expression>
+                    <string>(floor(</string>
+                    <reference keypath="game.devices.clock.month" />
+                    <string>/10))..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id684308" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">124</real>
+              <real id="y">200</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">48</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id979928" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.image</text>
+                <text id="RHS">
+                  <expression>
+                    <string>(</string>
+                    <reference keypath="game.devices.clock.day" />
+                    <string>%10)..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id333736" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">90</real>
+              <real id="y">200</real>
+            </point>
+            <size id="size">
+              <real id="width">32</real>
+              <real id="height">48</real>
+            </size>
+          </attributes>
+          <behaviors>
+            <behavior id="id979928" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.image</text>
+                <text id="RHS">
+                  <expression>
+                    <string>(floor(</string>
+                    <reference keypath="game.devices.clock.day" />
+                    <string>/10))..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id851437" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">138.5</real>
+              <real id="y">115</real>
+            </point>
+            <size id="size">
+              <real id="width">52</real>
+              <real id="height">88</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <behaviors>
+            <behavior id="id979928" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.image</text>
+                <text id="RHS">
+                  <expression>
+                    <string>(floor((</string>
+                    <reference keypath="game.devices.clock.hour" />
+                    <string>%12)/10))..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id347826" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">198.5</real>
+              <real id="y">115</real>
+            </point>
+            <size id="size">
+              <real id="width">52</real>
+              <real id="height">88</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <behaviors>
+            <behavior id="id487037" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name" name="Name">Constrain Attribute</text>
+                <text id="bundleName" name="Bundle Name">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute" name="Target Attribute">self.attributes.image</text>
+                <text id="RHS" name="RHS">
+                  <expression>
+                    <string>((</string>
+                    <reference keypath="game.devices.clock.hour" />
+                    <string>%12)%10)..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id225986" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">276.5</real>
+              <real id="y">115</real>
+            </point>
+            <size id="size">
+              <real id="width">52</real>
+              <real id="height">88</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <behaviors>
+            <behavior id="id624547" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name" name="Name">Constrain Attribute</text>
+                <text id="bundleName" name="Bundle Name">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute" name="Target Attribute">self.attributes.image</text>
+                <text id="RHS" name="RHS">
+                  <expression>
+                    <string>(floor(</string>
+                    <reference keypath="game.devices.clock.minute" />
+                    <string>/10))..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id697894" prototype="id636499">
+          <attributes>
+            <point id="position">
+              <real id="x">335.5</real>
+              <real id="y">115</real>
+            </point>
+            <size id="size">
+              <real id="width">52</real>
+              <real id="height">88</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <behaviors>
+            <behavior id="id387943" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name" name="Name">Constrain Attribute</text>
+                <text id="bundleName" name="Bundle Name">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute" name="Target Attribute">self.attributes.image</text>
+                <text id="RHS" name="RHS">
+                  <expression>
+                    <string>(</string>
+                    <reference keypath="game.devices.clock.minute" />
+                    <string>%10)..".png"</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+        <actor id="id991360" prototype="id226795">
+          <attributes>
+            <point id="position">
+              <real id="x">240</real>
+              <real id="y">115</real>
+            </point>
+            <size id="size">
+              <real id="width">52</real>
+              <real id="height">88</real>
+            </size>
+            <angle id="rotation">0</angle>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes />
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
+      </actors>
+      <attributes>
+        <text id="name">Background</text>
+        <boolean id="scrollable">true</boolean>
+      </attributes>
+    </layer>
+  </layers>
+  <attributes>
+    <text id="name">Digital Clock</text>
+    <real id="time">0</real>
+    <size id="size">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <boolean id="wrapX">false</boolean>
+    <boolean id="wrapY">false</boolean>
+    <point id="gravity">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <color id="color">
+      <real id="red">0</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">1</real>
+    </color>
+    <rect id="camera">
+      <point id="origin">
+        <real id="x">0</real>
+        <real id="y">0</real>
+      </point>
+      <size id="size">
+        <real id="width">480</real>
+        <real id="height">320</real>
+      </size>
+      <size id="trackingArea">
+        <real id="width">400</real>
+        <real id="height">260</real>
+      </size>
+      <real id="rotation">0</real>
+    </rect>
+    <attributes id="autorotate">
+      <boolean id="landscapeLeft">true</boolean>
+      <boolean id="portrait">false</boolean>
+      <boolean id="landscapeRight">false</boolean>
+      <boolean id="portraitUpsideDown">false</boolean>
+    </attributes>
+  </attributes>
+</scene>

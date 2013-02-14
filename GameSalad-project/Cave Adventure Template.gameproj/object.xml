@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.91" PGFVersion="0.17" title="Cave Adventure Template">
+  <tags>template, adventure</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Arrow keys move player. After treasure is found, spells are cast using the spacebar.</instructions>
+  <resolution>0</resolution>
+  <longDescription>A basic fantasy scene. Avoid the monster! Get the treasure!  Cast spells!</longDescription>
+  <prototypes>
+    <actor id="id733462" />
+    <actor id="id414774" />
+    <actor id="id601740" />
+    <actor id="id755469" />
+    <actor id="id686265" />
+    <actor id="id441459" />
+    <actor id="id433870" />
+    <actor id="id387242" />
+    <actor id="id677337" />
+    <actor id="id471749" />
+    <actor id="id483610" />
+    <actor id="id779291" />
+    <actor id="id772553" />
+    <actor id="id968047" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey">dcac1305b83f2ea21e3f4a129782e941</text>
+      <text id="appSecret">OWY2ZDFjNzlmMTYxYTYyMWZiODJmZWJmZmQxYmU3ZTQ=
+</text>
+      <text id="achievementIdentifiers">ACHMNT_0001	ACHMNT_0002</text>
+      <text id="achievementNames">untitled	untitled 2</text>
+      <text id="leaderboardIdentifiers">LDRBRD_0002	LDRBRD_0001	LDRBRD_0003</text>
+      <text id="leaderboardNames">untitled 2	untitled	untitled 3</text>
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id496819" />
+    <scene id="id612609" />
+    <scene id="id359300" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags">Walls</text>
+    <boolean id="id853018" name="Player Has Treasure">false</boolean>
+    <text id="id561463" name="Player Direction">Right</text>
+    <boolean id="id818595" name="Monster Defeated">false</boolean>
+    <integer id="id865161" name="Player Health">3</integer>
+    <integer id="id512155" name="Player Spells">0</integer>
+    <boolean id="id179506" name="Win">false</boolean>
+    <boolean id="id921463" name="Reset">false</boolean>
+    <table id="id385354" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id618626" name="QQ Achievements">QQ Achievements</table>
+    <table id="id671776" name="Purchases">Purchases</table>
+  </attributes>
+</game>

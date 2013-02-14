@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id589838" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">GoButton1</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">154</real>
+      <real id="height">110</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">GoButton1</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id785616" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Button States</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id309783" eventType="touch">
+          <attributes>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="touch" conditionType="inside">
+            <attributes />
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id425189" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">Button Push States
+</text>
+          </attributes>
+        </behavior>
+        <behavior id="id961785" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">GoButton2</image>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors>
+        <behavior id="id393719" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">GoButton1</image>
+          </attributes>
+        </behavior>
+      </elseBehaviors>
+    </behavior>
+    <behavior id="id875705" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id463893" eventType="touch">
+          <attributes>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="touch" conditionType="released">
+            <attributes />
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id173059" class="ChangeSceneAction" enabled="true">
+          <attributes>
+            <text id="name">Change Scene</text>
+            <text id="bundleName">ChangeScene.behavior</text>
+            <text id="sceneKey">id562963</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

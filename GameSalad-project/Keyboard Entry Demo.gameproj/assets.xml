@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.17" GSCVersion="0.9.91">
+  <sounds />
+  <images>
+    <image name="Confirm1">
+      <file name="Confirm1.png" size="2519" />
+    </image>
+    <image name="Confirm2">
+      <file name="Confirm2.png" size="2495" />
+    </image>
+    <image name="EnterText">
+      <file name="EnterText.png" size="9653" />
+    </image>
+    <image name="StoryText1">
+      <file name="StoryText1.png" size="58321" />
+    </image>
+    <image name="TextBG1">
+      <file name="TextBG1.png" size="14989" />
+    </image>
+    <image name="GoButton2">
+      <file name="GoButton2.png" size="1922" />
+    </image>
+    <image name="LifeBarMock">
+      <file name="LifeBarMock.png" size="2911" />
+    </image>
+    <image name="Buddy2">
+      <file name="Buddy2.png" size="5303" />
+    </image>
+    <image name="Buddy1">
+      <file name="Buddy1.png" size="5355" />
+    </image>
+    <image name="rock">
+      <file name="rock.png" size="65030" />
+    </image>
+    <image name="GoButton1">
+      <file name="GoButton1.png" size="1817" />
+    </image>
+    <image name="HeroBG">
+      <file name="HeroBG.png" size="42301" />
+    </image>
+  </images>
+  <behaviors />
+</assets>

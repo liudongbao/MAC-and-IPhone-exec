@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id368753" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">WaterMeter1</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">88</real>
+      <real id="height">88</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">WaterMeter1</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+    <real id="id319324" name="Timestamp">0</real>
+  </attributes>
+  <behaviors>
+    <behavior id="id693366" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule - Empty water pail when full and pressed</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id219556" eventType="touch">
+          <attributes>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="touch" conditionType="pressed">
+            <attributes />
+          </predicate>
+        </condition>
+        <condition id="id813229" eventType="mouse button">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">game.attributes.id253374</text>
+          </attributes>
+          <predicate type="number">
+            <attributes>
+              <text id="operator">=</text>
+              <real id="RHS">100</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id830059" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id448290</text>
+            <text id="RHS">true</text>
+          </attributes>
+        </behavior>
+        <behavior id="id713283" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">The attribute above will tell the game that the plant is watered, thus bringing it back to life if it was dying.
+
+The attributes below reset some values. The first resets the WaterReady game attribute which will result in the water meter being full depleted. The other attribute changes the actor's self attribute for timestamp to the current time in order to accurately calculate when the next full water pail should be full again based on real time, and not just game time.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id813551" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute - Water Empty and not ready</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id253374</text>
+            <text id="RHS">0</text>
+          </attributes>
+        </behavior>
+        <behavior id="id849391" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute - New Timestamp</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id319324</text>
+            <text id="RHS">
+              <expression>
+                <string>(</string>
+                <reference keypath="game.devices.clock.year" />
+                <string>-2011)*365*24*60*60+floor((</string>
+                <reference keypath="game.devices.clock.month" />
+                <string>-1)*30.5)*24*60*60+(</string>
+                <reference keypath="game.devices.clock.day" />
+                <string>-1)*24*60*60+</string>
+                <reference keypath="game.devices.clock.hour" />
+                <string>*60*60+</string>
+                <reference keypath="game.devices.clock.minute" />
+                <string>*60+</string>
+                <reference keypath="game.devices.clock.second" />
+                <string>+</string>
+                <reference keypath="game.devices.clock.millisecond" />
+                <string>/1000</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id779094" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule - Water Pail display images and incrementing</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id115837" eventType="mouse button">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">game.attributes.id253374</text>
+          </attributes>
+          <predicate type="number">
+            <attributes>
+              <text id="operator">&lt;</text>
+              <real id="RHS">100</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id339867" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">display faded non-clickable version of the water pail when WaterReadyPercent is less than 100
+</text>
+          </attributes>
+        </behavior>
+        <behavior id="id552372" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">WaterMeter2</image>
+          </attributes>
+        </behavior>
+        <behavior id="id753243" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">The constraint below controls the rate at which WaterReadyPercent increases. This behavior only functions when WaterReadyPercent is less than 100, so when it is completely full it will stop incrementing.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id466074" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain Attribute</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id253374</text>
+            <text id="RHS">
+              <expression>
+                <string>10*min(10,(</string>
+                <reference keypath="game.devices.clock.year" />
+                <string>-2011)*365*24*60*60+floor((</string>
+                <reference keypath="game.devices.clock.month" />
+                <string>-1)*30.5)*24*60*60+(</string>
+                <reference keypath="game.devices.clock.day" />
+                <string>-1)*24*60*60+</string>
+                <reference keypath="game.devices.clock.hour" />
+                <string>*60*60+</string>
+                <reference keypath="game.devices.clock.minute" />
+                <string>*60+</string>
+                <reference keypath="game.devices.clock.second" />
+                <string>+</string>
+                <reference keypath="game.devices.clock.millisecond" />
+                <string>/1000-</string>
+                <reference keypath="self.attributes.id319324" />
+                <string>)</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors>
+        <behavior id="id351738" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">display full/clickable version of water pail when WaterReadyPercent is 100</text>
+          </attributes>
+        </behavior>
+        <behavior id="id402632" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">WaterMeter1</image>
+          </attributes>
+        </behavior>
+        <behavior id="id300965" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id448290</text>
+            <text id="RHS">false</text>
+          </attributes>
+        </behavior>
+      </elseBehaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

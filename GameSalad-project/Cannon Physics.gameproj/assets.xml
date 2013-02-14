@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.17" GSCVersion="0.9.85">
+  <sounds>
+    <sound name="Cannon_Blast_Long">
+      <file name="Cannon_Blast_Long.ogg" size="41675" />
+    </sound>
+    <sound name="Impact_Earth">
+      <file name="Impact_Earth.ogg" size="12098" />
+    </sound>
+    <sound name="ballhit">
+      <file name="ballhit.ogg" size="5210" />
+    </sound>
+    <sound name="Impact_Stone_on_Stone_5">
+      <file name="Impact_Stone_on_Stone_5.ogg" size="10240" />
+    </sound>
+    <sound name="Impact_Wood_and_Roll">
+      <file name="Impact_Wood_and_Roll.ogg" size="13630" />
+    </sound>
+  </sounds>
+  <images>
+    <image name="cannon_front_wheel">
+      <file name="cannon_front_wheel.png" size="25619" />
+    </image>
+    <image name="cannon_front_base">
+      <file name="cannon_front_base.png" size="39757" />
+    </image>
+    <image name="cannon_back_base">
+      <file name="cannon_back_base.png" size="29019" />
+    </image>
+    <image name="cannon_back_wheel">
+      <file name="cannon_back_wheel.png" size="14760" />
+    </image>
+    <image name="cannon_barrel">
+      <file name="cannon_barrel.png" size="56671" />
+    </image>
+    <image name="cloud-dark-fuzz">
+      <file name="cloud-dark-fuzz.png" size="75170" />
+    </image>
+    <image name="cloudswhite">
+      <file name="cloudswhite.png" size="73753" />
+    </image>
+    <image name="grass8">
+      <file name="grass8.png" size="25985" />
+    </image>
+    <image name="grass9">
+      <file name="grass9.png" size="18937" />
+    </image>
+    <image name="brick_flush_orig">
+      <file name="brick_flush_orig.png" size="62374" />
+    </image>
+    <image name="cannon_ball_noh">
+      <file name="cannon_ball_noh.png" size="159783" />
+    </image>
+  </images>
+  <behaviors />
+</assets>

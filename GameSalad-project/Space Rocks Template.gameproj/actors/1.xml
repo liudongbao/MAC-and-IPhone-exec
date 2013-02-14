@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id780044" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">Player</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">50</real>
+      <real id="height">50</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">ship-paper-64x64</image>
+    <text id="tags">Player objects</text>
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id184878" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">Study the behaviors on this actor to understand how to create movement in GameSalad.</text>
+      </attributes>
+    </behavior>
+    <behavior id="id904478" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Press Left, Rotate Counter Clockwise Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id401208" eventType="key">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="key">
+            <attributes>
+              <text id="mode">down</text>
+              <text id="keyString">left</text>
+              <text id="name">default name</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id275734" class="RotateBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rotate</text>
+            <text id="bundleName">Rotate.behavior</text>
+            <real id="angularVelocity">90</real>
+            <index id="direction">1</index>
+            <boolean id="haltWhenBehaviorStops">true</boolean>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id766290" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Press Right, Rotate Clockwise Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id401208" eventType="key">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="key">
+            <attributes>
+              <text id="mode">down</text>
+              <text id="keyString">right</text>
+              <text id="name">default name</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id275734" class="RotateBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rotate</text>
+            <text id="bundleName">Rotate.behavior</text>
+            <real id="angularVelocity">90</real>
+            <index id="direction">0</index>
+            <boolean id="haltWhenBehaviorStops">true</boolean>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id602847" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Press Space, Spawn Missile</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id912229" eventType="key">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="key">
+            <attributes>
+              <text id="mode">down</text>
+              <text id="keyString">space</text>
+              <text id="name">default name</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id190417" class="PlaySoundAction" enabled="true">
+          <attributes>
+            <text id="name">Play Sound</text>
+            <text id="bundleName">PlaySound.behavior</text>
+            <sound id="soundName">classic_fire</sound>
+            <boolean id="loop">false</boolean>
+            <boolean id="runToCompletion">true</boolean>
+            <boolean id="positional">false</boolean>
+            <boolean id="dopplerShift">false</boolean>
+            <real id="volume">1</real>
+            <real id="pitch">1</real>
+            <boolean id="usePositionalSound">false</boolean>
+          </attributes>
+        </behavior>
+        <behavior id="id666096" class="SpawnAction" enabled="true">
+          <attributes>
+            <text id="name">Spawn Actor</text>
+            <text id="bundleName">Spawn.behavior</text>
+            <text id="prototypeKey">id297063</text>
+            <angle id="direction">0</angle>
+            <index id="directionSpace">0</index>
+            <real id="x">0</real>
+            <real id="y">32</real>
+            <index id="positionSpace">0</index>
+            <index id="layerOrder">0</index>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id301945" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Press Up, Accelerate</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id465538" eventType="key">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="key">
+            <attributes>
+              <text id="mode">down</text>
+              <text id="keyString">up</text>
+              <text id="name">default name</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id291580" class="AccelerateBehavior" enabled="true">
+          <attributes>
+            <text id="name">Accelerate</text>
+            <text id="bundleName">Accelerate.behavior</text>
+            <angle id="direction">90</angle>
+            <index id="space">0</index>
+            <real id="acceleration">100</real>
+            <real id="maxSpeed">1000</real>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id689309" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">Drag</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id520491" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.aspects.physics.attributes.drag</text>
+            <text id="RHS">5</text>
+          </attributes>
+        </behavior>
+        <behavior id="id799706" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.aspects.physics.attributes.angularDrag</text>
+            <text id="RHS">0.02</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id963341" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Collide Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">1</real>
+      </attributes>
+      <conditions>
+        <condition id="id864309" eventType="overlaps or collides">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id142340</text>
+              <text id="actorTag">Enemies</text>
+              <real id="mode">1</real>
+              <text id="name">default name</text>
+              <boolean id="walls">false</boolean>
+              <boolean id="otherActors">true</boolean>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id234930" class="DestroyAction" enabled="true">
+          <attributes>
+            <text id="name">Destroy</text>
+            <text id="bundleName">Destroy.behavior</text>
+          </attributes>
+        </behavior>
+        <behavior id="id228626" class="PlaySoundAction" enabled="true">
+          <attributes>
+            <text id="name">Play Sound</text>
+            <text id="bundleName">PlaySound.behavior</text>
+            <sound id="soundName">explode</sound>
+            <boolean id="loop">false</boolean>
+            <boolean id="runToCompletion">true</boolean>
+            <boolean id="positional">false</boolean>
+            <boolean id="dopplerShift">false</boolean>
+            <real id="volume">1</real>
+            <real id="pitch">1</real>
+            <boolean id="usePositionalSound">false</boolean>
+          </attributes>
+        </behavior>
+        <behavior id="id466071" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id567526</text>
+            <text id="RHS">0</text>
+          </attributes>
+        </behavior>
+        <behavior id="id552794" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id751292</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="game.attributes.id751292" />
+                <string>-1</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id474694" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Hyperspace Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id738702" eventType="key">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="key">
+            <attributes>
+              <text id="mode">down</text>
+              <text id="keyString">down</text>
+              <text id="name">default name</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id511968" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.x</text>
+            <text id="RHS">
+              <expression>
+                <string>random(10,470)</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id361166" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.y</text>
+            <text id="RHS">
+              <expression>
+                <string>random(10,310)</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id641492" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">Update My Position for Enemy Ship (Group)</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id168308" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain X Attribute</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id932224</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.position.x" />
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id653678" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain Y Attribute</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">game.attributes.id400095</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.position.y" />
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

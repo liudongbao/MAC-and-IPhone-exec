@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id755469" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">Walls</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">100</real>
+      <real id="height">100</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">0</real>
+      <real id="blue">0</real>
+      <real id="alpha">0</real>
+    </color>
+    <image id="image" />
+    <text id="tags">Walls</text>
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id961190" class="CollideBehavior" enabled="true">
+      <attributes>
+        <text id="name">Collide</text>
+        <text id="bundleName">Collide.behavior</text>
+        <text id="prototypeKey">id733462</text>
+        <text id="actorTag">Walls</text>
+        <index id="mode">1</index>
+      </attributes>
+    </behavior>
+    <behavior id="id813341" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">Since these are collision walls and not visible in the scene, the Movable attribute has been turned off in Physics, and Density has been set to 0. To see the collision walls, turn the Alpha attribute in color to a value between 0 and 1.</text>
+      </attributes>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">5</real>
+        <real id="restitution">0.1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">false</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

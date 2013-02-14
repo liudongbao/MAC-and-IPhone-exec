@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.91" PGFVersion="0.17" title="Basic Shoot Em Up">
+  <tags>template, tutorial, shmup</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Learn how to create this game at
+http://gamesalad.com/wiki/tutorials:basic_shoot_em_up</instructions>
+  <resolution>0</resolution>
+  <longDescription>Shoot anything that moves. You're indestructible! Spaz out!</longDescription>
+  <prototypes>
+    <actor id="id930615" />
+    <actor id="id926383" />
+    <actor id="id472900" />
+    <actor id="id768623" />
+    <actor id="id794126" />
+    <actor id="id167738" />
+    <actor id="id981838" />
+    <actor id="id751213" />
+    <actor id="id151461" />
+    <actor id="id544776" />
+    <actor id="id779656" />
+    <actor id="id591440" />
+    <actor id="id289207" />
+    <actor id="id846875" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey">dcac1305b83f2ea21e3f4a129782e941</text>
+      <text id="appSecret">OWY2ZDFjNzlmMTYxYTYyMWZiODJmZWJmZmQxYmU3ZTQ=
+</text>
+      <text id="achievementIdentifiers">ACHMNT_0001	ACHMNT_0002</text>
+      <text id="achievementNames">untitled	untitled 2</text>
+      <text id="leaderboardIdentifiers">LDRBRD_0002	LDRBRD_0001	LDRBRD_0003</text>
+      <text id="leaderboardNames">untitled 2	untitled	untitled 3</text>
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id269551" />
+    <scene id="id781812" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags">Enemy Targets</text>
+    <real id="id109120" name="Player X">0</real>
+    <real id="id388541" name="Player Y">0</real>
+    <boolean id="id139344" name="Game Over">false</boolean>
+    <boolean id="id148203" name="Boss Survived">true</boolean>
+    <integer id="id351029" name="Score">0</integer>
+    <table id="id517893" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id613242" name="QQ Achievements">QQ Achievements</table>
+    <table id="id454764" name="Purchases">Purchases</table>
+  </attributes>
+</game>

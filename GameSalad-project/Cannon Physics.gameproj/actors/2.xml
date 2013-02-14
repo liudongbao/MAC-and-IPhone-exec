@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id617458" PGFVersion="0.17" GSCVersion="0.9.85">
+  <attributes>
+    <text id="name">Cannon</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">100</real>
+      <real id="height">56.5</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">cannon_barrel</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+    <real id="id658462" name="StartTime">0</real>
+    <real id="id748277" name="StartY">0</real>
+    <boolean id="id277953" name="Loading">false</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id636933" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule: Powerup the cannon and control camera</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id103030" eventType="mouse button">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="mouse" mouseState="down">
+            <attributes>
+              <text id="name">default name</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id264494" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute: Set attribute to show you are about to fire</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id277953</text>
+            <text id="RHS">true</text>
+          </attributes>
+        </behavior>
+        <behavior id="id429713" class="CompoundBehavior" enabled="true">
+          <attributes>
+            <text id="name">Group: Calculate Power</text>
+            <text id="bundleName">Group.behavior</text>
+          </attributes>
+          <behaviors>
+            <behavior id="id308432" class="NoteBehavior" enabled="true">
+              <attributes>
+                <text id="name">Note</text>
+                <text id="bundleName">Note.behavior</text>
+                <text id="note">Calculate the power of the fired cannonball using time as the counter relative to the start time.</text>
+              </attributes>
+            </behavior>
+            <behavior id="id292104" class="ChangeAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Change Attribute</text>
+                <text id="bundleName">ChangeAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.id658462</text>
+                <text id="RHS">
+                  <expression>
+                    <reference keypath="self.attributes.time" />
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+            <behavior id="id495686" class="ConstrainAttributeBehavior" enabled="true">
+              <attributes>
+                <text id="name">Constrain Attribute</text>
+                <text id="bundleName">ConstrainAttribute.behavior</text>
+                <text id="targetAttribute">game.attributes.id428783</text>
+                <text id="RHS">
+                  <expression>
+                    <string>min(2,</string>
+                    <reference keypath="self.attributes.time" />
+                    <string>-</string>
+                    <reference keypath="self.attributes.id658462" />
+                    <string>)</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+        <behavior id="id483950" class="RotateToPositionBehavior" enabled="true">
+          <attributes>
+            <text id="name">Rotate to Position: Follow the mouse to direct the cannon</text>
+            <text id="bundleName">RotateToPosition.behavior</text>
+            <boolean id="runToCompletion">false</boolean>
+            <angle id="angle">0</angle>
+            <index id="space">1</index>
+            <real id="angularVelocity">150</real>
+            <boolean id="continuousMovement">true</boolean>
+            <point id="position">
+              <real id="x">
+                <expression>
+                  <string>max(</string>
+                  <reference keypath="game.devices.mouse.position.x" />
+                  <string>,</string>
+                  <reference keypath="self.attributes.position.x" />
+                  <string>)</string>
+                </expression>
+              </real>
+              <real id="y">
+                <expression>
+                  <string>max(</string>
+                  <reference keypath="game.devices.mouse.position.y" />
+                  <string>,</string>
+                  <reference keypath="self.attributes.position.y" />
+                  <string>)</string>
+                </expression>
+              </real>
+            </point>
+            <angle id="offsetAngle">0</angle>
+          </attributes>
+        </behavior>
+        <behavior id="id423231" class="CompoundBehavior" enabled="true">
+          <attributes>
+            <text id="name">Group: Cannonball count and camera control</text>
+            <text id="bundleName">Group.behavior</text>
+          </attributes>
+          <behaviors>
+            <behavior id="id885920" class="NoteBehavior" enabled="true">
+              <attributes>
+                <text id="name">Note</text>
+                <text id="bundleName">Note.behavior</text>
+                <text id="note">Increment an attribute for camera control. See cannonball actor.</text>
+              </attributes>
+            </behavior>
+            <behavior id="id255409" class="ChangeAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Change Attribute</text>
+                <text id="bundleName">ChangeAttribute.behavior</text>
+                <text id="targetAttribute">game.attributes.id271718</text>
+                <text id="RHS">
+                  <expression>
+                    <reference keypath="game.attributes.id271718" />
+                    <string>+1</string>
+                  </expression>
+                </text>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+        <behavior id="id460008" class="TimerBehavior" enabled="true">
+          <attributes>
+            <text id="name">Timer: Reset the camera control to the cannon.</text>
+            <text id="bundleName">Timer.behavior</text>
+            <index id="timerType">2</index>
+            <real id="interval">0.1</real>
+            <boolean id="runToCompletion">false</boolean>
+          </attributes>
+          <behaviors>
+            <behavior id="id514329" class="NoteBehavior" enabled="true">
+              <attributes>
+                <text id="name">Note</text>
+                <text id="bundleName">Note.behavior</text>
+                <text id="note">Take over the camera just long enough to return the view here before camera control is taken by the cannonball fired.</text>
+              </attributes>
+            </behavior>
+            <behavior id="id474877" class="ControlCameraBehavior" enabled="true">
+              <attributes>
+                <text id="name">Control Camera</text>
+                <text id="bundleName">ControlCamera.behavior</text>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id579872" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule: Fire Cannonball and produce smoke effect</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id941445" eventType="mouse button">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="mouse" mouseState="up">
+            <attributes>
+              <text id="name">default name</text>
+            </attributes>
+          </predicate>
+        </condition>
+        <condition id="id854868" eventType="mouse position">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">self.attributes.id277953</text>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="boolean">
+            <attributes>
+              <index id="RHS">1</index>
+              <text id="name">default name</text>
+              <text id="operator">=</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id799616" class="TimerBehavior" enabled="true">
+          <attributes>
+            <text id="name">Timer</text>
+            <text id="bundleName">Timer.behavior</text>
+            <index id="timerType">2</index>
+            <real id="interval">0.4</real>
+            <boolean id="runToCompletion">true</boolean>
+          </attributes>
+          <behaviors>
+            <behavior id="id952683" class="ParticlesBehavior" enabled="true">
+              <attributes>
+                <text id="name">Particles</text>
+                <text id="bundleName">Particles.behavior</text>
+                <index id="numParticles">100</index>
+                <real id="size">15</real>
+                <real id="lifetime">0.6</real>
+                <real id="startupTime">0.2</real>
+                <angle id="direction">
+                  <expression>
+                    <string>random(-85,85)</string>
+                  </expression>
+                </angle>
+                <real id="speed">55</real>
+                <image id="image">cloudswhite</image>
+                <angle id="rotation">
+                  <expression>
+                    <string>random(0,259)</string>
+                  </expression>
+                </angle>
+                <real id="angularVelocity">40</real>
+                <index id="directionRelativity">0</index>
+                <real id="emitterOffsetX">
+                  <expression>
+                    <string>52*cos(</string>
+                    <reference keypath="self.attributes.rotation" />
+                    <string>)</string>
+                  </expression>
+                </real>
+                <real id="emitterOffsetY">
+                  <expression>
+                    <string>52*sin(</string>
+                    <reference keypath="self.attributes.rotation" />
+                    <string>)</string>
+                  </expression>
+                </real>
+                <boolean id="colorChange">false</boolean>
+                <boolean id="sizeChange">false</boolean>
+                <real id="colorTransitionTime">1</real>
+                <real id="sizeTarget">5</real>
+                <real id="sizeTransitionTime">0</real>
+                <color id="color">
+                  <real id="red">1</real>
+                  <real id="green">1</real>
+                  <real id="blue">1</real>
+                  <real id="alpha">1</real>
+                </color>
+                <color id="colorTarget">
+                  <real id="red">1</real>
+                  <real id="green">1</real>
+                  <real id="blue">1</real>
+                  <real id="alpha">1</real>
+                </color>
+                <boolean id="affectedByGravity">false</boolean>
+                <enumeration id="blendingMode">0</enumeration>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+        <behavior id="id773712" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id277953</text>
+            <text id="RHS">false</text>
+          </attributes>
+        </behavior>
+        <behavior id="id144970" class="PlaySoundAction" enabled="true">
+          <attributes>
+            <text id="name">Play Sound</text>
+            <text id="bundleName">PlaySound.behavior</text>
+            <sound id="soundName">Cannon_Blast_Long</sound>
+            <boolean id="loop">false</boolean>
+            <boolean id="runToCompletion">true</boolean>
+            <boolean id="positional">false</boolean>
+            <boolean id="dopplerShift">false</boolean>
+            <real id="volume">1</real>
+            <real id="pitch">1</real>
+            <boolean id="usePositionalSound">false</boolean>
+          </attributes>
+        </behavior>
+        <behavior id="id418517" class="SpawnAction" enabled="true">
+          <attributes>
+            <text id="name">Spawn Actor</text>
+            <text id="bundleName">Spawn.behavior</text>
+            <text id="prototypeKey">id811887</text>
+            <angle id="direction">0</angle>
+            <index id="directionSpace">0</index>
+            <real id="x">
+              <expression>
+                <string>70</string>
+              </expression>
+            </real>
+            <real id="y">
+              <expression>
+                <string>0</string>
+              </expression>
+            </real>
+            <index id="positionSpace">0</index>
+            <index id="layerOrder">0</index>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id322827" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">Group: Self Position</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id207089" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">These 3 rules will set the vertical position of the actor so it won't be affected by gravity but is able to rotate. Linear Velocity will still be affected by gravity, so the accelerate behavior will counteract it.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id532494" class="AccelerateBehavior" enabled="true">
+          <attributes>
+            <text id="name">Accelerate: Counteract Gravity</text>
+            <text id="bundleName">Accelerate.behavior</text>
+            <angle id="direction">90</angle>
+            <index id="space">1</index>
+            <real id="acceleration">120</real>
+          </attributes>
+        </behavior>
+        <behavior id="id267104" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id748277</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.position.y" />
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id627572" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain Attribute</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.y</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.id748277" />
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

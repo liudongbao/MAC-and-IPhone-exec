@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id968047" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">Monster</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">50</real>
+      <real id="height">100</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">CaveCreature-left-64x128</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+    <integer id="id838082" name="Monster Health">3</integer>
+  </attributes>
+  <behaviors>
+    <behavior id="id981919" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">Note that Fixed Rotation is set to True in Physics for this actor so that when it collides with anything it will not spin. Note that the rules below have been given useful names so that when they're collapsed, there is still useful information.</text>
+      </attributes>
+    </behavior>
+    <behavior id="id127629" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Hit By Spell Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id164203" eventType="overlaps or collides">
+          <attributes>
+            <index id="conditionType">0</index>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id686265</text>
+              <text id="actorTag">Walls</text>
+              <real id="mode">0</real>
+              <text id="name">default name</text>
+              <boolean id="walls">false</boolean>
+              <boolean id="otherActors">true</boolean>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id658575" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.color.green</text>
+            <text id="RHS">0</text>
+          </attributes>
+        </behavior>
+        <behavior id="id180339" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.color.blue</text>
+            <text id="RHS">0</text>
+          </attributes>
+        </behavior>
+        <behavior id="id373951" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.id838082</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.id838082" />
+                <string>-1</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id229254" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Hide Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id896391" eventType="overlaps or collides">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">self.attributes.id838082</text>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="number">
+            <attributes>
+              <text id="operator">&lt;</text>
+              <real id="RHS">1</real>
+              <text id="name">default name</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id307812" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.x</text>
+            <text id="RHS">
+              <expression>
+                <reference keypath="self.attributes.position.x" />
+                <string>+225</string>
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+        <behavior id="id891054" class="TimerBehavior" enabled="true">
+          <attributes>
+            <text id="name">Timer</text>
+            <text id="bundleName">Timer.behavior</text>
+            <index id="timerType">1</index>
+            <real id="interval">1</real>
+            <boolean id="runToCompletion">false</boolean>
+          </attributes>
+          <behaviors>
+            <behavior id="id491482" class="ChangeAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Change Attribute</text>
+                <text id="bundleName">ChangeAttribute.behavior</text>
+                <text id="targetAttribute">game.attributes.id179506</text>
+                <text id="RHS">true</text>
+              </attributes>
+            </behavior>
+            <behavior id="id714399" class="ChangeSceneAction" enabled="true">
+              <attributes>
+                <text id="name">Change Scene</text>
+                <text id="bundleName">ChangeScene.behavior</text>
+                <text id="sceneKey">id359300</text>
+                <boolean id="preserveCurrentScene">false</boolean>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+    <behavior id="id148671" class="TimerBehavior" enabled="true">
+      <attributes>
+        <text id="name">Reset Color Timer</text>
+        <text id="bundleName">Timer.behavior</text>
+        <index id="timerType">0</index>
+        <real id="interval">0.5</real>
+        <boolean id="runToCompletion">false</boolean>
+      </attributes>
+      <behaviors>
+        <behavior id="id290332" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.color.green</text>
+            <text id="RHS">1</text>
+          </attributes>
+        </behavior>
+        <behavior id="id422252" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.color.blue</text>
+            <text id="RHS">1</text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id922523" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Appear When Player Has Treasure Rule</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id287308" eventType="overlaps or collides">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">game.attributes.id853018</text>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="boolean">
+            <attributes>
+              <index id="RHS">1</index>
+              <text id="name">default name</text>
+              <text id="operator">=</text>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id293820" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.x</text>
+            <text id="RHS">280</text>
+          </attributes>
+        </behavior>
+        <behavior id="id173518" class="ChangeAttributeAction" enabled="true">
+          <attributes>
+            <text id="name">Change Attribute</text>
+            <text id="bundleName">ChangeAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.position.y</text>
+            <text id="RHS">190</text>
+          </attributes>
+        </behavior>
+        <behavior id="id805722" class="TimerBehavior" enabled="true">
+          <attributes>
+            <text id="name">Timer</text>
+            <text id="bundleName">Timer.behavior</text>
+            <index id="timerType">2</index>
+            <real id="interval">0.5</real>
+            <boolean id="runToCompletion">true</boolean>
+          </attributes>
+          <behaviors>
+            <behavior id="id973115" class="GrowShrinkBehavior" enabled="true">
+              <attributes>
+                <text id="name">Change Size</text>
+                <text id="bundleName">ChangeSize.behavior</text>
+                <real id="growthRate">1.5</real>
+                <real id="duration">0.5</real>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+      <elseBehaviors />
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.91" PGFVersion="0.17" title="OSTime Demo">
+  <tags>demo, time, clock, system</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Digital Clock scene shows a very basic way to display the actual date and time within your game.
+
+Time Lapse shows various other implementations of actual time recognition. Day to night cycle, time based deterioration and analog clock.</instructions>
+  <resolution>0</resolution>
+  <longDescription>This demo shows various examples of how to use the operating system clock to calculate very accurate values for your game logic. </longDescription>
+  <prototypes>
+    <actor id="id636499" />
+    <actor id="id226795" />
+    <actor id="id447889" />
+    <actor id="id996950" />
+    <actor id="id683086" />
+    <actor id="id290071" />
+    <actor id="id137556" />
+    <actor id="id368753" />
+    <actor id="id937256" />
+    <actor id="id979632" />
+    <actor id="id259996" />
+    <actor id="id360567" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey" />
+      <text id="appSecret" />
+      <text id="achievementIdentifiers" />
+      <text id="achievementNames" />
+      <text id="leaderboardIdentifiers" />
+      <text id="leaderboardNames" />
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id269551" />
+    <scene id="id190699" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags" />
+    <integer id="id757951" name="YearTarget1">2011</integer>
+    <integer id="id890517" name="MonthTarget1">7</integer>
+    <integer id="id521976" name="DayTarget1">26</integer>
+    <integer id="id257718" name="HourTarget1">10</integer>
+    <integer id="id376009" name="MinuteTarget1">39</integer>
+    <integer id="id384864" name="SecondTarget1">0</integer>
+    <boolean id="id448290" name="Plant Watered">false</boolean>
+    <real id="id253374" name="WaterReadyPercent">100</real>
+    <angle id="id937994" name="SkyRotation">0</angle>
+    <table id="id454938" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id273555" name="QQ Achievements">QQ Achievements</table>
+    <table id="id781897" name="Purchases">Purchases</table>
+  </attributes>
+</game>

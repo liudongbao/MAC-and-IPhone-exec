@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.85" PGFVersion="0.17" title="Cannon Physics">
+  <tags>template, physics</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Click mouse to power up the cannon and rotate the barrel. Release mouse button to fire.</instructions>
+  <resolution>0</resolution>
+  <longDescription>Physics Template</longDescription>
+  <prototypes>
+    <actor id="id335757" />
+    <actor id="id617458" />
+    <actor id="id192571" />
+    <actor id="id464053" />
+    <actor id="id811887" />
+    <actor id="id684910" />
+    <actor id="id161363" />
+    <actor id="id157263" />
+    <actor id="id328710" />
+    <actor id="id516607" />
+    <actor id="id603356" />
+    <actor id="id437025" />
+    <actor id="id999065" />
+    <actor id="id496781" />
+    <actor id="id312295" />
+    <actor id="id353525" />
+    <actor id="id342561" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey">dcac1305b83f2ea21e3f4a129782e941</text>
+      <text id="appSecret">OWY2ZDFjNzlmMTYxYTYyMWZiODJmZWJmZmQxYmU3ZTQ=
+</text>
+      <text id="achievementIdentifiers">ACHMNT_0001	ACHMNT_0002</text>
+      <text id="achievementNames">untitled	untitled 2</text>
+      <text id="leaderboardIdentifiers">LDRBRD_0002	LDRBRD_0001	LDRBRD_0003</text>
+      <text id="leaderboardNames">untitled 2	untitled	untitled 3</text>
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id269551" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags">Ground	PhysicalStuff</text>
+    <real id="id428783" name="Power">0</real>
+    <integer id="id271718" name="TotalShotCam">0</integer>
+    <table id="id551138" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id448122" name="QQ Achievements">QQ Achievements</table>
+    <table id="id429457" name="Purchases">Purchases</table>
+  </attributes>
+</game>

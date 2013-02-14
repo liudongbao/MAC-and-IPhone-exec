@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game GSCVersion="0.9.92" PGFVersion="0.17" title="Basic Table Tennis Template">
+  <tags>template, 2 player</tags>
+  <resolutionIndependence>0</resolutionIndependence>
+  <instructions>Player one uses W key for up, S key for down. Player two uses up and down arrow keys to move. Spacebar serves for either player.</instructions>
+  <resolution>0</resolution>
+  <longDescription>2 Player game. First to 11 wins.</longDescription>
+  <prototypes>
+    <actor id="id847868" />
+    <actor id="id131114" />
+    <actor id="id148115" />
+    <actor id="id175426" />
+    <actor id="id293162" />
+    <actor id="id288668" />
+    <actor id="id597260" />
+    <actor id="id842421" />
+    <actor id="id374371" />
+    <actor id="id641624" />
+  </prototypes>
+  <plugins>
+    <attributes id="kiip">
+      <text id="appKey">dcac1305b83f2ea21e3f4a129782e941</text>
+      <text id="appSecret">OWY2ZDFjNzlmMTYxYTYyMWZiODJmZWJmZmQxYmU3ZTQ=
+</text>
+      <text id="achievementIdentifiers">ACHMNT_0001	ACHMNT_0002</text>
+      <text id="achievementNames">untitled	untitled 2</text>
+      <text id="leaderboardIdentifiers">LDRBRD_0002	LDRBRD_0001	LDRBRD_0003</text>
+      <text id="leaderboardNames">untitled 2	untitled	untitled 3</text>
+    </attributes>
+    <attributes id="playhaven" />
+  </plugins>
+  <scenes>
+    <scene id="id567474" />
+  </scenes>
+  <attributes>
+    <text id="name">default name</text>
+    <real id="time">0</real>
+    <size id="displaySize">
+      <real id="width">480</real>
+      <real id="height">320</real>
+    </size>
+    <text id="actorTags">Collidable Objects</text>
+    <integer id="id445269" name="p1 score">0</integer>
+    <integer id="id752264" name="p2 score">0</integer>
+    <boolean id="id527137" name="p1 serve">true</boolean>
+    <boolean id="id732183" name="ball in play?">false</boolean>
+    <table id="id854370" name="QQ Scoreboard">QQ Scoreboard</table>
+    <table id="id549627" name="QQ Achievements">QQ Achievements</table>
+    <table id="id512860" name="Purchases">Purchases</table>
+  </attributes>
+</game>

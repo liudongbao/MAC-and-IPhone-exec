@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id290071" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">RotatingSky</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">846</real>
+      <real id="height">846</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">1</real>
+      <real id="green">1</real>
+      <real id="blue">1</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">SkyCircle</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+    <real id="id558076" name="TimelapseMultiplier">1</real>
+  </attributes>
+  <behaviors>
+    <behavior id="id183613" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">Use the TimelapseMultiplier attribute to make the time(rotation) go faster.
+1=Normal Time (accuracy by hour)
+24 = One cycle happens in 1 hour. (accuracy by minutes)
+1440 = One cycle happens in 1 minute. (accuracy by seconds)</text>
+      </attributes>
+    </behavior>
+    <behavior id="id114001" class="CompoundBehavior" enabled="true">
+      <attributes>
+        <text id="name">SkyDome Rotation</text>
+        <text id="bundleName">Group.behavior</text>
+      </attributes>
+      <behaviors>
+        <behavior id="id707100" class="NoteBehavior" enabled="true">
+          <attributes>
+            <text id="name">Note</text>
+            <text id="bundleName">Note.behavior</text>
+            <text id="note">The behavior below will rotate this sky dome at real time with the day cycle. With the timelapse multiplier at 1, the skydome will rotate once every 24 hours.</text>
+          </attributes>
+        </behavior>
+        <behavior id="id226501" class="ConstrainAttributeBehavior" enabled="true">
+          <attributes>
+            <text id="name">Constrain Attribute: Actual Time with Timelapse</text>
+            <text id="bundleName">ConstrainAttribute.behavior</text>
+            <text id="targetAttribute">self.attributes.rotation</text>
+            <text id="RHS">
+              <expression>
+                <string>180+(</string>
+                <reference keypath="game.devices.clock.hour" />
+                <string>+</string>
+                <reference keypath="game.devices.clock.minute" />
+                <string>/60+</string>
+                <reference keypath="game.devices.clock.second" />
+                <string>/3600+</string>
+                <reference keypath="game.devices.clock.millisecond" />
+                <string>/3600000)*15*</string>
+                <reference keypath="self.attributes.id558076" />
+              </expression>
+            </text>
+          </attributes>
+        </behavior>
+      </behaviors>
+    </behavior>
+    <behavior id="id170637" class="ConstrainAttributeBehavior" enabled="true">
+      <attributes>
+        <text id="name">Constrain Attribute - set global attribute for "Sky Rotation" with self rotation value.</text>
+        <text id="bundleName">ConstrainAttribute.behavior</text>
+        <text id="targetAttribute">game.attributes.id937994</text>
+        <text id="RHS">
+          <expression>
+            <reference keypath="self.attributes.rotation" />
+          </expression>
+        </text>
+      </attributes>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">0</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>

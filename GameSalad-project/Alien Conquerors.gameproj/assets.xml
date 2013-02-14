@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets PGFVersion="0.17" GSCVersion="0.9.91">
+  <sounds>
+    <sound name="laser">
+      <file name="laser.ogg" size="18422" />
+    </sound>
+  </sounds>
+  <images>
+    <image name="paper_ship">
+      <file name="paper_ship.png" size="2712" />
+    </image>
+    <image name="paper_alien">
+      <file name="paper_alien.png" size="3860" />
+    </image>
+    <image name="planet">
+      <file name="planet.png" size="253443" />
+    </image>
+    <image name="ship-paper-64x64">
+      <file name="ship-paper-64x64.png" size="5858" />
+    </image>
+    <image name="ballfading">
+      <file name="ballfading.png" size="5282" />
+    </image>
+    <image name="AlienShip">
+      <file name="AlienShip.png" size="5336" />
+    </image>
+    <image name="StarField_Alpha">
+      <file name="StarField_Alpha.png" size="5941" />
+    </image>
+  </images>
+  <behaviors />
+</assets>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actor id="id871975" PGFVersion="0.17" GSCVersion="0.9.91">
+  <attributes>
+    <text id="name">Exit_Lose</text>
+    <real id="time">0</real>
+    <point id="position">
+      <real id="x">0</real>
+      <real id="y">0</real>
+    </point>
+    <size id="size">
+      <real id="width">64</real>
+      <real id="height">64</real>
+    </size>
+    <angle id="rotation">0</angle>
+    <color id="color">
+      <real id="red">0.875</real>
+      <real id="green">0.875</real>
+      <real id="blue">0.875</real>
+      <real id="alpha">1</real>
+    </color>
+    <image id="image">Shape1</image>
+    <text id="tags" />
+    <boolean id="preloadArt">true</boolean>
+  </attributes>
+  <behaviors>
+    <behavior id="id984562" class="NoteBehavior" enabled="true">
+      <attributes>
+        <text id="name">Note</text>
+        <text id="bundleName">Note.behavior</text>
+        <text id="note">This is the actor that is used to represent the LOSING exit of this demonstration.
+
+By default we have a version that swaps out the actor image with another when the car touches it. You can see below there is an alternative choice that will turn the actor red if you turn the CHANGE IMAGE behavior OFF and turn the COLOR CHANGE group ON. You can even turn them both ON for a mix of the two!</text>
+      </attributes>
+    </behavior>
+    <behavior id="id917361" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">Rule - show losing state when car touches target</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id956566" eventType="overlaps or collides">
+          <attributes>
+            <index id="conditionType">0</index>
+          </attributes>
+          <predicate type="collision">
+            <attributes>
+              <text id="prototypeKey">id964764</text>
+              <text id="actorTag" />
+              <real id="mode">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id800749" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">Shape1LOSE</image>
+          </attributes>
+        </behavior>
+        <behavior id="id527891" class="CompoundBehavior" enabled="false">
+          <attributes>
+            <text id="name">Color Change - alternative</text>
+            <text id="bundleName">Group.behavior</text>
+          </attributes>
+          <behaviors>
+            <behavior id="id670442" class="ChangeAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Change Attribute - Color Red to 1</text>
+                <text id="bundleName">ChangeAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.color.red</text>
+                <text id="RHS">1</text>
+              </attributes>
+            </behavior>
+            <behavior id="id720585" class="ChangeAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Change Attribute - Color Green to 0</text>
+                <text id="bundleName">ChangeAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.color.green</text>
+                <text id="RHS">0</text>
+              </attributes>
+            </behavior>
+            <behavior id="id174589" class="ChangeAttributeAction" enabled="true">
+              <attributes>
+                <text id="name">Change Attribute - Color Blue to 0</text>
+                <text id="bundleName">ChangeAttribute.behavior</text>
+                <text id="targetAttribute">self.attributes.color.blue</text>
+                <text id="RHS">0</text>
+              </attributes>
+            </behavior>
+          </behaviors>
+        </behavior>
+      </behaviors>
+      <elseBehaviors>
+        <behavior id="id196308" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">Shape1</image>
+          </attributes>
+        </behavior>
+      </elseBehaviors>
+    </behavior>
+  </behaviors>
+  <aspects>
+    <graphics>
+      <attributes>
+        <boolean id="visible">true</boolean>
+        <enumeration id="blendingMode">0</enumeration>
+        <enumeration id="horizontalWrap">0</enumeration>
+        <enumeration id="verticalWrap">0</enumeration>
+        <enumeration id="horizontalAnchor">0</enumeration>
+        <enumeration id="verticalAnchor">0</enumeration>
+        <boolean id="flipHorizontally">false</boolean>
+        <boolean id="flipVertically">false</boolean>
+      </attributes>
+    </graphics>
+    <motion>
+      <attributes>
+        <point id="linearVelocity">
+          <real id="x">0</real>
+          <real id="y">0</real>
+        </point>
+        <real id="angularVelocity">0</real>
+        <real id="maxSpeed">0</real>
+        <boolean id="applyMaxSpeed">false</boolean>
+      </attributes>
+    </motion>
+    <physics>
+      <attributes>
+        <real id="density">1</real>
+        <real id="friction">3</real>
+        <real id="restitution">1</real>
+        <boolean id="fixedRotation">false</boolean>
+        <boolean id="movable">true</boolean>
+        <enumeration id="collisionShape">1</enumeration>
+        <real id="drag">0</real>
+        <real id="angularDrag">0</real>
+      </attributes>
+    </physics>
+  </aspects>
+</actor>
